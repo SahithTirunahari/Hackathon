@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PolicyImpact AI</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; background: #07070c; color: #e2e8f0; min-height: 100vh; }
+    .bg { position: fixed; inset: 0; pointer-events: none; background: radial-gradient(ellipse 60% 45% at 50% -5%, rgba(99,102,241,.05) 0%, transparent 55%), radial-gradient(ellipse 40% 30% at 85% 90%, rgba(16,185,129,.03) 0%, transparent 50%); }
+    .container { position: relative; z-index: 1; max-width: 860px; margin: 0 auto; padding: 0 20px; }
+    .badge { display: inline-block; padding: 3px 12px; border-radius: 14px; background: rgba(99,102,241,.08); border: 1px solid rgba(99,102,241,.12); font-size: 10px; color: #818cf8; font-family: 'DM Mono', monospace; font-weight: 500; letter-spacing: .06em; margin-bottom: 14px; }
+    h1 { font-size: 38px; font-weight: 700; line-height: 1.1; margin-bottom: 8px; background: linear-gradient(135deg, #e2e8f0 25%, #818cf8 65%, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .subtitle { font-size: 14px; color: #5a6478; max-width: 500px; margin: 0 auto; line-height: 1.6; }
+    .card { background: rgba(255,255,255,.02); border: 1px solid rgba(255,255,255,.05); border-radius: 12px; padding: 24px; margin-bottom: 24px; }
+    .label { font-size: 10px; color: #556; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 5px; display: block; font-family: 'DM Mono', monospace; font-weight: 500; }
+    .inp { width: 100%; padding: 10px 13px; border-radius: 7px; background: rgba(255,255,255,.035); border: 1px solid rgba(255,255,255,.07); color: #e2e8f0; font-size: 14px; font-family: 'DM Sans', sans-serif; outline: none; transition: border-color .2s; }
+    .inp:focus { border-color: rgba(99,102,241,.45); }
+    .inp::placeholder { color: #3e4555; }
+    textarea.inp { resize: vertical; line-height: 1.55; }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .mb { margin-bottom: 14px; }
+    .btn { width: 100%; padding: 12px 18px; border-radius: 9px; border: none; color: #fff; font-size: 14px; font-weight: 600; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: all .2s; }
+    .btn-primary { background: linear-gradient(135deg, #6366f1, #4f46e5); box-shadow: 0 4px 18px rgba(99,102,241,.22); }
+    .btn-primary:hover { box-shadow: 0 6px 24px rgba(99,102,241,.35); transform: translateY(-1px); }
+    .btn-primary:disabled { background: rgba(99,102,241,.12); box-shadow: none; cursor: wait; }
+    .ex-btn { padding: 6px 13px; border-radius: 6px; border: 1px solid rgba(255,255,255,.06); background: rgba(255,255,255,.02); color: #8893a7; font-size: 12px; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: all .15s; }
+    .ex-btn:hover { background: rgba(99,102,241,.07); color: #c7d2fe; border-color: rgba(99,102,241,.2); }
+    .error { padding: 9px 13px; border-radius: 7px; margin-bottom: 12px; background: rgba(239,68,68,.07); border: 1px solid rgba(239,68,68,.12); color: #f87171; font-size: 13px; }
+    .success-badge { padding: 7px 12px; border-radius: 7px; background: rgba(16,185,129,.05); border: 1px solid rgba(16,185,129,.1); font-size: 11px; color: #10b981; font-family: 'DM Mono', monospace; margin-bottom: 14px; }
+    .loader { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 14px; }
+    .spinner { width: 16px; height: 16px; border: 2px solid transparent; border-top-color: #818cf8; border-radius: 50%; animation: spin .7s linear infinite; }
+    .loader-text { font-size: 12px; color: #818cf8; font-family: 'DM Mono', monospace; animation: pulse 1.5s infinite; }
+    .tabs { display: flex; gap: 2px; padding: 2px; background: rgba(255,255,255,.025); border-radius: 9px; margin-bottom: 22px; }
+    .tab { flex: 1; padding: 9px 12px; border-radius: 7px; border: none; cursor: pointer; font-size: 13px; font-weight: 600; font-family: 'DM Sans', sans-serif; transition: all .12s; text-align: center; background: transparent; color: #556; }
+    .tab.active { background: rgba(99,102,241,.1); color: #c7d2fe; }
+    .tab-sub { font-size: 8px; margin-top: 1px; font-family: 'DM Mono', monospace; text-transform: uppercase; letter-spacing: .1em; }
+    .tab.active .tab-sub { color: #818cf8; }
+    .summary { font-size: 13px; color: #9aa3b5; line-height: 1.7; margin-bottom: 20px; padding: 12px 16px; background: rgba(255,255,255,.015); border-left: 3px solid rgba(99,102,241,.25); border-radius: 0 7px 7px 0; }
+    .dim-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin-bottom: 20px; }
+    .dim-card { background: rgba(255,255,255,.02); border: 1px solid rgba(255,255,255,.045); border-radius: 9px; padding: 13px; transition: transform .15s; }
+    .dim-card:hover { transform: translateY(-1px); }
+    .dim-header { display: flex; align-items: center; gap: 5px; margin-bottom: 7px; }
+    .dim-label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; font-family: 'DM Mono', monospace; }
+    .trend-badge { margin-left: auto; font-size: 9px; padding: 1px 6px; border-radius: 10px; font-weight: 600; font-family: 'DM Mono', monospace; }
+    .trend-positive { background: rgba(16,185,129,.1); color: #10b981; }
+    .trend-negative { background: rgba(239,68,68,.1); color: #ef4444; }
+    .trend-neutral { background: rgba(255,255,255,.05); color: #556; }
+    .bar-wrap { display: flex; align-items: center; gap: 8px; }
+    .bar-bg { flex: 1; height: 7px; background: rgba(255,255,255,.05); border-radius: 4px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 4px; transition: width .9s cubic-bezier(.4,0,.2,1); }
+    .bar-val { font-size: 11px; font-weight: 600; min-width: 42px; text-align: right; font-family: 'DM Mono', monospace; }
+    .dim-detail { font-size: 11px; color: #7a8494; margin-top: 7px; line-height: 1.5; }
+    .risk-opp { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .risk-box { background: rgba(239,68,68,.03); border: 1px solid rgba(239,68,68,.08); border-radius: 9px; padding: 14px; }
+    .opp-box { background: rgba(16,185,129,.03); border: 1px solid rgba(16,185,129,.08); border-radius: 9px; padding: 14px; }
+    .ro-title { font-size: 9px; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 9px; font-family: 'DM Mono', monospace; font-weight: 500; }
+    .ro-item { font-size: 11px; margin-bottom: 5px; padding-left: 9px; line-height: 1.5; }
+    .risk-item { color: #f87171; border-left: 2px solid rgba(239,68,68,.12); }
+    .opp-item { color: #34d399; border-left: 2px solid rgba(16,185,129,.12); }
+    .ethics { margin-top: 22px; padding: 12px 14px; border-radius: 7px; background: rgba(245,158,11,.03); border: 1px solid rgba(245,158,11,.08); }
+    .ethics-title { font-size: 9px; color: #f59e0b; font-family: 'DM Mono', monospace; font-weight: 500; margin-bottom: 3px; text-transform: uppercase; letter-spacing: .08em; }
+    .ethics-text { font-size: 11px; color: #7a8494; line-height: 1.5; }
+    .gauge { flex-shrink: 0; }
+    .result-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; flex-wrap: wrap; gap: 14px; }
+    footer { text-align: center; padding-bottom: 28px; font-size: 10px; color: #1a1f2e; font-family: 'DM Mono', monospace; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .4; } }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+    .fade-up { animation: fadeUp .45s ease-out both; }
+    #results { display: none; }
+    #results.show { display: block; }
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="container">
+
+    <header style="padding-top:44px;padding-bottom:32px;text-align:center">
+      <div class="badge">GOVERNANCE TRACK — SOCIAL IMPACT HACKATHON</div>
+      <h1>PolicyImpact AI</h1>
+      <p class="subtitle">Analyze multi-dimensional policy impact over 1, 5, and 10 year horizons powered by Claude AI.</p>
+    </header>
+
+    <!-- Examples -->
+    <div style="margin-bottom:22px">
+      <div class="label" style="margin-bottom:7px">Quick start — try an example</div>
+      <div style="display:flex;gap:7px;flex-wrap:wrap">
+        <button class="ex-btn" onclick="loadExample(0)">Universal Basic Income</button>
+        <button class="ex-btn" onclick="loadExample(1)">Ban Single-Use Plastics</button>
+        <button class="ex-btn" onclick="loadExample(2)">Four-Day Work Week</button>
+        <button class="ex-btn" onclick="loadExample(3)">Free Public Transit</button>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div class="card">
+      <div class="mb"><label class="label">Policy Title *</label><input class="inp" id="title" placeholder="e.g., Universal Basic Income Implementation"></div>
+      <div class="mb"><label class="label">Description *</label><textarea class="inp" id="desc" rows="4" placeholder="What does this policy do? Who does it affect? How is it funded?"></textarea></div>
+      <div class="row mb">
+        <div><label class="label">Sector</label><input class="inp" id="sector" placeholder="e.g., Economic"></div>
+        <div><label class="label">Region</label><input class="inp" id="region" placeholder="e.g., United States"></div>
+      </div>
+      <div id="error" class="error" style="display:none"></div>
+      <button class="btn btn-primary" id="analyzeBtn" onclick="analyze()">Analyze Policy Impact</button>
+      <div class="loader" id="loader" style="display:none">
+        <div class="spinner"></div>
+        <span class="loader-text" id="statusText">Connecting to Claude API...</span>
+      </div>
+    </div>
+
+    <!-- Results -->
+    <div id="results" class="card fade-up">
+      <div id="sourceBadge" class="success-badge"></div>
+      <div class="result-header">
+        <div>
+          <h2 style="font-size:20px;font-weight:700;margin-bottom:3px;color:#e2e8f0">Impact Analysis</h2>
+          <p id="resultTitle" style="font-size:13px;color:#5a6478"></p>
+        </div>
+        <div class="gauge" id="gaugeContainer"></div>
+      </div>
+      <div class="tabs" id="tabs"></div>
+      <div id="horizonContent"></div>
+      <div class="ethics">
+        <p class="ethics-title">Ethical Notice</p>
+        <p class="ethics-text">This analysis supports human decision-making — it does not replace it. Real policy decisions require stakeholder consultation, empirical research, and democratic deliberation.</p>
+      </div>
+    </div>
+
+    <footer>PolicyImpact AI — Claude Social Impact Hackathon 2025 • Governance Track</footer>
+  </div>
+
+<script>
+const EXAMPLES = [
+  { title: "Universal Basic Income ($1000/month)", description: "Implement a universal basic income of $1000/month for all adult citizens, funded through value-added tax and wealth tax.", sector: "Economic Policy", region: "United States" },
+  { title: "Ban on Single-Use Plastics", description: "Complete ban on manufacturing, importing, and selling single-use plastic products including bags, straws, cutlery, and packaging.", sector: "Environmental", region: "European Union" },
+  { title: "Four-Day Work Week Mandate", description: "Mandate a maximum 32-hour, four-day work week for all companies with more than 50 employees, with no reduction in pay.", sector: "Labor Policy", region: "United Kingdom" },
+  { title: "Free Public Transit for All", description: "Eliminate all fares for public buses, metro, and light rail. Funded through parking fees, congestion charges, and road budget reallocation.", sector: "Transportation", region: "Canada" },
+];
+
+const DIMS = [
+  { key: "economic", label: "Economic", icon: "📊", color: "#10b981" },
+  { key: "social", label: "Social", icon: "👥", color: "#6366f1" },
+  { key: "environmental", label: "Environmental", icon: "🌍", color: "#f59e0b" },
+  { key: "political", label: "Political", icon: "🏛️", color: "#ef4444" },
+  { key: "technological", label: "Technological", icon: "⚡", color: "#8b5cf6" },
+];
+
+const HORIZONS = [
+  { years: 1, label: "1 Year", sub: "Short-term" },
+  { years: 5, label: "5 Years", sub: "Mid-term" },
+  { years: 10, label: "10 Years", sub: "Long-term" },
+];
+
+let currentAnalysis = null;
+let currentTab = 0;
+
+function loadExample(i) {
+  const ex = EXAMPLES[i];
+  document.getElementById('title').value = ex.title;
+  document.getElementById('desc').value = ex.description;
+  document.getElementById('sector').value = ex.sector;
+  document.getElementById('region').value = ex.region;
+  document.getElementById('results').classList.remove('show');
+  document.getElementById('error').style.display = 'none';
+}
+
+function showError(msg) {
+  const el = document.getElementById('error');
+  el.textContent = msg;
+  el.style.display = 'block';
+}
+
+function setStatus(msg) {
+  document.getElementById('statusText').textContent = msg;
+}
+
+async function analyze() {
+  const title = document.getElementById('title').value.trim();
+  const desc = document.getElementById('desc').value.trim();
+  const sector = document.getElementById('sector').value.trim();
+  const region = document.getElementById('region').value.trim();
+
+  if (!title || !desc) { showError('Please provide a policy title and description.'); return; }
+
+  document.getElementById('error').style.display = 'none';
+  document.getElementById('results').classList.remove('show');
+  document.getElementById('loader').style.display = 'flex';
+  document.getElementById('analyzeBtn').disabled = true;
+
+  setStatus('Connecting to Claude API...');
+
+  try {
+    const resp = await fetch('/api/analyze', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ policy: { title, description: desc, sector, region } }),
+      signal: AbortSignal.timeout(60000),
+    });
+
+    setStatus('Processing Claude response...');
+
+    if (!resp.ok) {
+      const err = await resp.json().catch(() => ({ error: `HTTP ${resp.status}` }));
+      throw new Error(err.error || `Server error ${resp.status}`);
+    }
+
+    const data = await resp.json();
+
+    if (!data.analysis?.horizons) throw new Error('Invalid analysis format');
+
+    currentAnalysis = data.analysis;
+    currentTab = 0;
+    renderResults(title, region, data.source === 'claude-api' ? '✦ Powered by Claude API — AI-driven evidence-based analysis' : '⚡ Analysis complete');
+  } catch (err) {
+    showError('Could not connect to backend. Make sure server.js is running on port 3001. Error: ' + err.message);
+  } finally {
+    document.getElementById('loader').style.display = 'none';
+    document.getElementById('analyzeBtn').disabled = false;
+  }
+}
+
+function renderResults(title, region, sourceMsg) {
+  document.getElementById('sourceBadge').textContent = sourceMsg;
+  document.getElementById('resultTitle').textContent = title + (region ? ` • ${region}` : '');
+
+  // Render tabs
+  const tabsEl = document.getElementById('tabs');
+  tabsEl.innerHTML = HORIZONS.map((h, i) =>
+    `<button class="tab ${i === currentTab ? 'active' : ''}" onclick="switchTab(${i})">
+      <div>${h.label}</div><div class="tab-sub">${h.sub}</div>
+    </button>`
+  ).join('');
+
+  renderHorizon();
+  document.getElementById('results').classList.add('show');
+  document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+}
+
+function switchTab(i) {
+  currentTab = i;
+  document.querySelectorAll('.tab').forEach((t, j) => t.classList.toggle('active', j === i));
+  renderHorizon();
+}
+
+function renderHorizon() {
+  const h = HORIZONS[currentTab];
+  const data = currentAnalysis.horizons[`${h.years}_year`];
+  if (!data) return;
+
+  // Gauge
+  const score = data.overallScore || 50;
+  const col = score >= 68 ? '#10b981' : score >= 48 ? '#f59e0b' : '#ef4444';
+  const r = 50, c = 2 * Math.PI * r;
+  const off = c - (score / 100) * c;
+  document.getElementById('gaugeContainer').innerHTML = `
+    <svg width="120" height="120" viewBox="0 0 120 120">
+      <circle cx="60" cy="60" r="${r}" fill="none" stroke="rgba(255,255,255,.04)" stroke-width="6"/>
+      <circle cx="60" cy="60" r="${r}" fill="none" stroke="${col}" stroke-width="6"
+        stroke-dasharray="${c}" stroke-dashoffset="${off}" stroke-linecap="round"
+        transform="rotate(-90 60 60)" style="transition:stroke-dashoffset 1s ease-out"/>
+      <text x="60" y="57" text-anchor="middle" fill="${col}" font-size="24" font-weight="700" font-family="'DM Mono',monospace">${score}</text>
+      <text x="60" y="74" text-anchor="middle" fill="#475569" font-size="8" font-family="'DM Mono',monospace" letter-spacing="0.1em">IMPACT</text>
+    </svg>`;
+
+  // Content
+  let html = `<p class="summary">${data.summary}</p><div class="dim-grid">`;
+
+  DIMS.forEach(dim => {
+    const d = data.dimensions?.[dim.key] || { score: 50, trend: 'neutral', detail: 'N/A' };
+    const tc = d.trend === 'positive' ? 'trend-positive' : d.trend === 'negative' ? 'trend-negative' : 'trend-neutral';
+    const arrow = d.trend === 'positive' ? '↑' : d.trend === 'negative' ? '↓' : '→';
+    html += `
+      <div class="dim-card">
+        <div class="dim-header">
+          <span style="font-size:14px">${dim.icon}</span>
+          <span class="dim-label" style="color:${dim.color}">${dim.label}</span>
+          <span class="trend-badge ${tc}">${arrow} ${d.trend}</span>
+        </div>
+        <div class="bar-wrap">
+          <div class="bar-bg"><div class="bar-fill" style="width:${d.score}%;background:linear-gradient(90deg,${dim.color}aa,${dim.color});box-shadow:0 0 10px ${dim.color}22"></div></div>
+          <span class="bar-val" style="color:${dim.color}">${d.score}</span>
+        </div>
+        <p class="dim-detail">${d.detail}</p>
+      </div>`;
+  });
+
+  html += `</div><div class="risk-opp">`;
+  html += `<div class="risk-box"><p class="ro-title" style="color:#ef4444">Key Risks</p>`;
+  (data.risks || []).forEach(r => { html += `<p class="ro-item risk-item">${r}</p>`; });
+  html += `</div><div class="opp-box"><p class="ro-title" style="color:#10b981">Opportunities</p>`;
+  (data.opportunities || []).forEach(o => { html += `<p class="ro-item opp-item">${o}</p>`; });
+  html += `</div></div>`;
+
+  document.getElementById('horizonContent').innerHTML = html;
+}
+</script>
+</body>
+</html>
