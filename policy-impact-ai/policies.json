@@ -1,0 +1,377 @@
+[
+  {
+    "id": "pol_1774714058508_pj3h47",
+    "title": "Four-Day Work Week Mandate",
+    "description": "Mandate a maximum 32-hour, four-day work week for all companies with more than 50 employees, with no reduction in pay. Overtime allowed voluntarily at 1.5x rate.",
+    "sector": "Labor Policy",
+    "region": "New York",
+    "analysis": {
+      "horizons": {
+        "1_year": {
+          "summary": "Initial implementation faces significant business resistance and compliance challenges, similar to France's 35-hour workweek rollout in 2000. Short-term economic disruption likely as companies struggle to maintain productivity while worker wellbeing and environmental benefits begin to emerge.",
+          "overallScore": 45,
+          "dimensions": {
+            "economic": {
+              "score": 35,
+              "trend": "negative",
+              "detail": "Immediate compliance costs and productivity disruption similar to Seattle's $15 minimum wage initial impact. Small business layoffs likely as companies struggle with labor cost increases. GDP growth slows 0.5-1% as businesses adapt. Some companies relocate to neighboring states like Connecticut or New Jersey to avoid mandate."
+            },
+            "social": {
+              "score": 75,
+              "trend": "positive",
+              "detail": "Worker stress reduction and improved work-life balance mirror Microsoft Japan's 2019 four-day trial results showing 40% productivity gain. Mental health improvements and increased family time. However, income inequality may worsen as lower-wage workers face potential job cuts while salaried employees benefit most."
+            },
+            "environmental": {
+              "score": 60,
+              "trend": "positive",
+              "detail": "Reduced commuting leads to 15-20% decrease in weekday traffic, similar to Utah's state employee four-day schedule (2008-2011) which cut emissions 6,000 tons annually. Office energy consumption drops 20% on designated off-days. However, increased leisure travel may partially offset gains."
+            },
+            "political": {
+              "score": 30,
+              "trend": "negative",
+              "detail": "Intense business lobbying and legal challenges similar to California's AB5 gig worker classification fights. Republican opposition frames as job-killing overreach. Polling shows mixed public support with 55% approval but strong partisan divide. Federal preemption challenges likely."
+            },
+            "technological": {
+              "score": 65,
+              "trend": "positive",
+              "detail": "Accelerated adoption of productivity tools and automation as companies seek efficiency gains, mirroring pandemic-era digital transformation. Investment in AI and workflow optimization increases 25-30%. Remote work technology advancement continues."
+            }
+          },
+          "risks": [
+            "Mass business exodus to neighboring states",
+            "Small business bankruptcies and layoffs",
+            "Legal challenges blocking implementation"
+          ],
+          "opportunities": [
+            "Talent attraction from other states",
+            "Innovation in productivity technologies",
+            "Pioneer advantage in future of work"
+          ]
+        },
+        "5_year": {
+          "summary": "Adaptation period shows mixed results as businesses optimize operations while worker benefits solidify. New York becomes testing ground for national policy debate, with economic impacts stabilizing but competitive disadvantages persisting.",
+          "overallScore": 58,
+          "dimensions": {
+            "economic": {
+              "score": 50,
+              "trend": "neutral",
+              "detail": "Productivity gains from well-rested workers offset initial disruption, similar to Iceland's 2015-2019 four-day trials showing maintained output. However, New York loses 8-12% of eligible companies to other states. Tourism and creative industries benefit from improved worker satisfaction. Manufacturing struggles most with rigid production schedules."
+            },
+            "social": {
+              "score": 78,
+              "trend": "positive",
+              "detail": "Significant improvements in work-life balance, mental health, and family relationships established. Reduced burnout rates by 35% similar to Belgium's flexible work arrangements. Educational outcomes improve as parents spend more time with children. Gender equity advances as domestic responsibilities become more balanced."
+            },
+            "environmental": {
+              "score": 70,
+              "trend": "positive",
+              "detail": "Sustained 18% reduction in commute-related emissions. Office buildings report 25% energy savings on off-days. However, increased domestic energy use and leisure travel partially offset gains. New York's carbon footprint from work-related activities drops 12% overall."
+            },
+            "political": {
+              "score": 55,
+              "trend": "positive",
+              "detail": "Public support solidifies at 62% as benefits become apparent. Policy becomes model for other progressive states like California and Washington. However, federal political battles intensify with 2028 presidential election making this a key issue. Business community remains split."
+            },
+            "technological": {
+              "score": 72,
+              "trend": "positive",
+              "detail": "New York emerges as hub for workplace productivity innovation. AI-driven scheduling and task management systems advance significantly. Remote collaboration tools mature. However, some industries struggle to fully automate processes, limiting benefits."
+            }
+          },
+          "risks": [
+            "Continued business relocation",
+            "Federal intervention attempts",
+            "Economic competitiveness concerns"
+          ],
+          "opportunities": [
+            "National policy leadership",
+            "Workforce wellness innovation hub",
+            "Attraction of progressive businesses and workers"
+          ]
+        },
+        "10_year": {
+          "summary": "Long-term adaptation shows New York as pioneer in post-industrial work arrangements with strong social and environmental benefits, though economic competitiveness remains challenged. Policy influences national and international labor standards.",
+          "overallScore": 68,
+          "dimensions": {
+            "economic": {
+              "score": 62,
+              "trend": "positive",
+              "detail": "Mature implementation shows productivity at pre-mandate levels with higher worker satisfaction, similar to Netherlands' part-time work culture success. New York attracts quality-focused businesses while losing quantity-focused operations. GDP per capita grows 2.1% annually, matching national average despite initial concerns. Labor market tightens, driving innovation."
+            },
+            "social": {
+              "score": 85,
+              "trend": "positive",
+              "detail": "Generational shift in work culture with significantly improved mental health outcomes, reduced healthcare costs by 15%. Educational achievement rises as parental involvement increases. Community engagement and civic participation strengthen. Income inequality persists but work-life balance inequality reduces dramatically."
+            },
+            "environmental": {
+              "score": 75,
+              "trend": "positive",
+              "detail": "Embedded behavior changes lead to sustained 22% reduction in work-related carbon emissions. Urban air quality improves measurably. Reduced commercial real estate demand allows for green space conversion. Model influences national environmental policy discussions."
+            },
+            "political": {
+              "score": 70,
+              "trend": "positive",
+              "detail": "Policy proven successful enough that 12 other states adopt similar measures by 2034. New York politicians gain national prominence on labor issues. Business opposition softens as adaptation proves manageable. International recognition as policy innovation leader."
+            },
+            "technological": {
+              "score": 80,
+              "trend": "positive",
+              "detail": "Decade of innovation produces world-leading productivity technologies. New York companies export workplace efficiency solutions globally. AI integration in workflow management becomes standard. However, concerns emerge about job displacement from automation driven by labor constraints."
+            }
+          },
+          "risks": [
+            "Automation-driven job displacement",
+            "Federal preemption under different administration",
+            "Competitive pressure from low-regulation states"
+          ],
+          "opportunities": [
+            "Global leadership in future of work",
+            "Export of productivity innovations",
+            "Attraction of top talent nationwide"
+          ]
+        }
+      }
+    },
+    "author": "You",
+    "status": "published",
+    "publishedAt": null,
+    "votes": {
+      "up": 22,
+      "down": 20
+    },
+    "comments": [
+      {
+        "id": "c_1774714088969",
+        "text": "great policy",
+        "sentiment": "support",
+        "author": "Citizen",
+        "createdAt": 1774714088969
+      },
+      {
+        "id": "c_1774721172017",
+        "text": "I support the policy!",
+        "sentiment": "support",
+        "author": "Citizen",
+        "createdAt": 1774721172017
+      },
+      {
+        "id": "c_1774722228600",
+        "text": "Great policy",
+        "sentiment": "support",
+        "author": "Citizen",
+        "createdAt": 1774722228600
+      },
+      {
+        "id": "c_1774728073907",
+        "text": "I oppose the policy",
+        "sentiment": "oppose",
+        "author": "Citizen",
+        "createdAt": 1774728073907
+      },
+      {
+        "id": "c_1774728641587",
+        "text": "Can you tell me the reason for opposing it?",
+        "sentiment": "neutral",
+        "author": "Publisher",
+        "createdAt": 1774728641587
+      }
+    ],
+    "summary": {
+      "executiveSummary": "Public sentiment analysis of the Four-Day Work Week Mandate reveals strong majority support (75%) among respondents, with 3 out of 4 comments expressing favorable views. However, the limited sample size and lack of detailed feedback suggest need for broader public engagement before implementation.",
+      "sentimentBreakdown": {
+        "support": 3,
+        "oppose": 1,
+        "neutral": 0,
+        "supportPct": 75,
+        "opposePct": 25,
+        "neutralPct": 0
+      },
+      "keyThemes": [
+        {
+          "theme": "General Policy Approval",
+          "count": 3,
+          "description": "Supporters consistently characterized the policy as 'great' without providing specific reasoning"
+        },
+        {
+          "theme": "Binary Opposition",
+          "count": 1,
+          "description": "Opposition expressed as simple disagreement without elaboration on concerns"
+        },
+        {
+          "theme": "Lack of Substantive Feedback",
+          "count": 4,
+          "description": "All comments lack detailed reasoning, economic concerns, or implementation considerations"
+        }
+      ],
+      "representativeVoices": {
+        "support": "Great policy - I support the policy!",
+        "oppose": "I oppose the policy",
+        "neutral": "No neutral comments received"
+      },
+      "recommendations": [
+        "Conduct comprehensive public forums and surveys to gather detailed feedback on implementation concerns, economic impacts, and industry-specific considerations",
+        "Engage key stakeholder groups including business associations, labor unions, and sector-specific organizations to understand practical implications",
+        "Pilot the program with volunteer companies before mandatory implementation to generate concrete data and case studies for public review"
+      ],
+      "overallAssessment": "While initial public sentiment appears favorable toward the Four-Day Work Week Mandate, the extremely limited feedback pool (4 comments) and lack of substantive commentary indicate insufficient public engagement for informed policymaking. The 75% support rate is encouraging but must be viewed cautiously given the small sample size and absence of detailed concerns or benefits articulated by respondents. Policymakers should prioritize expanded public consultation to capture the complexity of economic, social, and operational considerations this significant workplace reform would entail before proceeding with implementation."
+    },
+    "createdAt": 1774714058508,
+    "implementedAt": null,
+    "pinnedComments": [
+      "c_1774728641587"
+    ]
+  },
+  {
+    "id": "pol_1774713879370_iew164",
+    "title": "Ban on Single-Use Plastics",
+    "description": "Complete ban on manufacturing, importing, and selling single-use plastic products including bags, straws, cutlery, and food packaging. Companies must switch to biodegradable alternatives within 2 years.",
+    "sector": "Environmental",
+    "region": "United States",
+    "analysis": {
+      "horizons": {
+        "1_year": {
+          "summary": "Initial implementation faces significant economic disruption and political resistance, similar to California's plastic bag ban backlash in 2014-2015. Short-term costs outweigh environmental benefits as industries scramble to adapt.",
+          "overallScore": 42,
+          "dimensions": {
+            "economic": {
+              "score": 25,
+              "trend": "negative",
+              "detail": "Massive supply chain disruption affects 15,000+ plastic manufacturing jobs and $35B industry. Food costs increase 8-15% due to expensive alternatives, similar to Kenya's 2017 plastic bag ban initial shock. Small restaurants face 20-30% packaging cost increases, forcing closures reminiscent of Seattle's plastic straw ban early impacts."
+            },
+            "social": {
+              "score": 55,
+              "trend": "positive",
+              "detail": "Disproportionate burden on low-income households facing higher food costs, but reduced plastic litter improves urban aesthetics. Public health benefits minimal in year one. Social justice concerns emerge as seen in New York's plastic bag fee debates affecting minority communities."
+            },
+            "environmental": {
+              "score": 45,
+              "trend": "positive",
+              "detail": "Limited immediate environmental impact as alternatives may have higher carbon footprint initially. Plastic waste reduction of 20-30% offset by increased paper production emissions. Recycling systems disrupted, similar to China's 2018 waste import ban creating temporary waste management crisis."
+            },
+            "political": {
+              "score": 35,
+              "trend": "negative",
+              "detail": "Intense lobbying and legal challenges from $400B plastic industry, similar to successful challenges against NYC plastic foam ban 2013-2015. Republican-led states threaten federal lawsuits. Public approval drops as economic costs materialize, echoing backlash against Washington state's failed carbon tax initiatives."
+            },
+            "technological": {
+              "score": 65,
+              "trend": "positive",
+              "detail": "Massive R&D investment surge in biodegradable materials, similar to $2.1B invested post-EU single-use plastics directive 2019. Patent applications for alternative materials increase 300%. Startups like Notpla and Ecovative see venture funding boom as happened during renewable energy policy pushes."
+            }
+          },
+          "risks": [
+            "Economic recession in manufacturing regions",
+            "Legal injunctions delaying implementation",
+            "Consumer backlash over higher prices"
+          ],
+          "opportunities": [
+            "Green technology innovation boom",
+            "Export potential for alternative materials",
+            "Public health co-benefits from reduced microplastics"
+          ]
+        },
+        "5_year": {
+          "summary": "Market adaptation stabilizes costs while environmental benefits become measurable. Political opposition softens as green alternatives mature and economic disruption subsides, following patterns from European plastic reduction policies.",
+          "overallScore": 68,
+          "dimensions": {
+            "economic": {
+              "score": 65,
+              "trend": "positive",
+              "detail": "Alternative packaging industry creates 80,000 new jobs, offsetting initial losses. Production costs decrease 40% due to scale economies, mirroring solar panel cost curves post-policy support. US becomes major exporter of biodegradable packaging, capturing $15B global market similar to Denmark's wind energy export success."
+            },
+            "social": {
+              "score": 75,
+              "trend": "positive",
+              "detail": "Cost burden equalizes as alternatives reach price parity. Significant health improvements from 60% reduction in microplastic exposure, particularly benefiting children and pregnant women. Environmental justice communities see cleaner neighborhoods, reversing historical pollution patterns."
+            },
+            "environmental": {
+              "score": 80,
+              "trend": "positive",
+              "detail": "Dramatic 70% reduction in plastic marine debris, comparable to results from European Union's plastic reduction achieving 50% decrease by 2024. Ocean cleanup costs reduced by $2B annually. Biodiversity recovery in coastal areas mirrors improvements seen around plastic-free zones in national parks."
+            },
+            "political": {
+              "score": 70,
+              "trend": "positive",
+              "detail": "Bipartisan support emerges as economic benefits materialize and environmental improvements become visible. Similar political evolution seen with smoking bans - initial resistance transformed to broad acceptance. International leadership position strengthens diplomatic relationships with EU and other green policy leaders."
+            },
+            "technological": {
+              "score": 85,
+              "trend": "positive",
+              "detail": "US leads global innovation in biodegradable materials with 40% of patents. Advanced recycling technologies for alternatives create circular economy. Breakthrough developments in seaweed and mycelium-based packaging, positioning US companies as global leaders similar to early internet technology dominance."
+            }
+          },
+          "risks": [
+            "Trade disputes over plastic alternative standards",
+            "Unintended environmental consequences of alternatives",
+            "Regional economic inequality in adaptation"
+          ],
+          "opportunities": [
+            "Global technology export leadership",
+            "Green jobs revolution in manufacturing",
+            "Enhanced international climate diplomacy credibility"
+          ]
+        },
+        "10_year": {
+          "summary": "Policy achieves transformational success with full economic adaptation, substantial environmental restoration, and broad political consensus. The US emerges as global leader in sustainable packaging, similar to how vehicle emission standards drove automotive innovation.",
+          "overallScore": 82,
+          "dimensions": {
+            "economic": {
+              "score": 85,
+              "trend": "positive",
+              "detail": "Sustainable packaging sector contributes $50B annually to GDP with 300,000 high-skill jobs. US exports biodegradable alternatives globally worth $25B annually. Innovation spillovers boost bio-manufacturing across sectors, creating economic transformation comparable to digital revolution's broader impacts on productivity and growth."
+            },
+            "social": {
+              "score": 80,
+              "trend": "positive",
+              "detail": "Generational shift in consumption patterns with 90% public support. Measurable reduction in plastic-related health issues saves $8B in healthcare costs annually. Environmental justice communities experience significant quality of life improvements through reduced pollution exposure and increased green space development."
+            },
+            "environmental": {
+              "score": 90,
+              "trend": "positive",
+              "detail": "Near-elimination of single-use plastic pollution enables marine ecosystem recovery comparable to Montreal Protocol's ozone layer success. 85% reduction in plastic-related wildlife deaths. Ocean plastic cleanup accelerated by prevention, creating virtuous cycle of environmental restoration and reduced cleanup costs."
+            },
+            "political": {
+              "score": 85,
+              "trend": "positive",
+              "detail": "Policy becomes deeply institutionalized with bipartisan support exceeding 75%. International reputation enhanced through environmental leadership, strengthening trade relationships and climate diplomacy. Model policy adopted by 50+ countries, establishing US as environmental policy innovator similar to democratic governance export."
+            },
+            "technological": {
+              "score": 90,
+              "trend": "positive",
+              "detail": "Revolutionary advances in bio-materials create new industries beyond packaging. US holds 60% of critical patents in next-generation biodegradable materials. Technology transfer to developing nations generates soft power influence while advanced recycling systems achieve 95% circular economy efficiency in packaging sector."
+            }
+          },
+          "risks": [
+            "Complacency reducing continued innovation",
+            "Emerging contaminants from new materials",
+            "International competitive response threatening US leadership"
+          ],
+          "opportunities": [
+            "Next-generation environmental policy leadership",
+            "Biotechnology revolution spillovers",
+            "Model for global environmental governance"
+          ]
+        }
+      }
+    },
+    "author": "You",
+    "status": "implemented",
+    "publishedAt": null,
+    "votes": {
+      "up": 1,
+      "down": 0
+    },
+    "comments": [
+      {
+        "id": "c_1774713918388",
+        "text": "looks good!",
+        "sentiment": "support",
+        "author": "Citizen",
+        "createdAt": 1774713918388
+      }
+    ],
+    "summary": null,
+    "createdAt": 1774713879370,
+    "implementedAt": 1774713977881
+  }
+]
