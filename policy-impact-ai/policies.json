@@ -1,5 +1,714 @@
 [
   {
+    "id": "pol_1774803103138_eqyiqu",
+    "title": "Free Public Transit for All",
+    "description": "Eliminate all fares for public buses, metro, and light rail systems. Funded through increased parking fees, congestion charges, and reallocation of road construction budgets. Aims to reduce car dependency, cut emissions, and improve mobility for low-income residents.",
+    "sector": "Transportation",
+    "region": "Bloomington, Indiana",
+    "analysis": {
+      "horizons": {
+        "1_year": {
+          "summary": "Implementation faces significant budget strain as increased parking fees and congestion charges struggle to offset lost fare revenue, similar to Tallahassee's initial challenges in 2018. Ridership likely increases 20-35% based on Estonia's Tallinn experience, creating overcrowding issues.",
+          "overallScore": 52,
+          "dimensions": {
+            "economic": {
+              "score": 35,
+              "trend": "negative",
+              "detail": "Budget shortfall of $8-12 million likely as parking fees generate less revenue than projected, mirroring Kansas City's initial funding gaps. Local businesses near transit hubs may see increased foot traffic but downtown parking-dependent businesses suffer 15-25% revenue decline. Construction sector loses jobs from reduced road building budget reallocation."
+            },
+            "social": {
+              "score": 68,
+              "trend": "positive",
+              "detail": "Low-income residents gain immediate mobility benefits, with studies from Luxembourg showing 40% increase in public transit use among bottom income quintile. However, system overcrowding creates service quality issues. University students particularly benefit, reducing transportation costs by average $800 annually."
+            },
+            "environmental": {
+              "score": 58,
+              "trend": "positive",
+              "detail": "Modest 8-12% reduction in downtown car trips based on Chapel Hill's free bus experience. CO2 emissions decrease by approximately 3-5% citywide. Increased bus frequency to handle demand temporarily increases emissions from diesel buses until fleet modernization occurs."
+            },
+            "political": {
+              "score": 42,
+              "trend": "negative",
+              "detail": "Significant opposition from parking meter companies and downtown business associations. City council faces criticism over budget management as initial revenue projections prove optimistic. Public approval mixed at 52% as service quality temporarily declines due to overcrowding."
+            },
+            "technological": {
+              "score": 55,
+              "trend": "positive",
+              "detail": "Elimination of fare collection systems reduces maintenance costs by $400K annually. Mobile transit apps see increased usage. However, system lacks real-time capacity monitoring, creating passenger experience issues during peak hours."
+            }
+          },
+          "risks": [
+            "Budget shortfall requiring emergency tax increases",
+            "Service quality degradation from overcrowding",
+            "Political backlash from affected business interests"
+          ],
+          "opportunities": [
+            "Federal transit grants for zero-emission buses",
+            "Partnership with Indiana University for integrated student services",
+            "Data collection on mobility patterns for future planning"
+          ]
+        },
+        "5_year": {
+          "summary": "System stabilizes with sustainable funding model and 45-60% ridership increase, following patterns seen in Luxembourg and Tallinn. Significant modal shift occurs with measurable environmental benefits and improved social equity outcomes.",
+          "overallScore": 71,
+          "dimensions": {
+            "economic": {
+              "score": 62,
+              "trend": "positive",
+              "detail": "Funding stabilizes through refined congestion pricing and development impact fees. Transit-oriented development increases property values near stations by 12-18% as seen in Portland. Local economy benefits from $15 million in reduced household transportation costs redirected to local spending. New transit manufacturing jobs emerge."
+            },
+            "social": {
+              "score": 78,
+              "trend": "positive",
+              "detail": "Health outcomes improve with 25% more residents using active transportation to access transit, reducing obesity rates by 3-4% following Seattle's experience. Educational access increases as students can easily reach internships and jobs. Social cohesion improves across income levels using shared transit infrastructure."
+            },
+            "environmental": {
+              "score": 72,
+              "trend": "positive",
+              "detail": "Car dependency drops 22% with corresponding 18% reduction in local transportation emissions. Electric bus fleet conversion completed, eliminating diesel emissions. Reduced demand for parking enables green space conversion of 3 downtown lots. Air quality improves measurably in downtown core."
+            },
+            "political": {
+              "score": 68,
+              "trend": "positive",
+              "detail": "Policy gains strong public support at 69% approval after initial challenges resolved. Becomes model for other Indiana cities, with Indianapolis studying replication. Successfully secures federal infrastructure grants totaling $25 million for system expansion."
+            },
+            "technological": {
+              "score": 75,
+              "trend": "positive",
+              "detail": "Advanced mobility-as-a-service platform integrates bike-share, ride-sharing, and transit. Real-time crowding data optimizes service delivery. Autonomous shuttle pilots begin for last-mile connections. Smart traffic signals prioritize transit, reducing journey times by 15%."
+            }
+          },
+          "risks": [
+            "Economic recession reducing parking and congestion charge revenues",
+            "Federal funding cuts to transit programs",
+            "Neighboring cities imposing retaliatory parking policies"
+          ],
+          "opportunities": [
+            "Regional transit integration with Indianapolis metro",
+            "Climate resilience federal funding streams",
+            "Private sector partnerships for mobility innovation"
+          ]
+        },
+        "10_year": {
+          "summary": "Free transit becomes integral to Bloomington's identity as a sustainable, equitable city, with transformative urban development patterns and regional influence. System serves as national model for mid-sized city transit policy.",
+          "overallScore": 79,
+          "dimensions": {
+            "economic": {
+              "score": 81,
+              "trend": "positive",
+              "detail": "Transit-oriented development generates $150 million in new construction, creating 2,400 permanent jobs. Reduced transportation costs save households average $2,200 annually. Tourism increases 35% as visitors enjoy car-free city exploration. Bloomington becomes Indiana hub for clean transportation technology companies."
+            },
+            "social": {
+              "score": 85,
+              "trend": "positive",
+              "detail": "Income-based mobility gap eliminated with equal transit access across demographics. Teen pregnancy rates drop 15% due to improved access to healthcare and education, replicating outcomes from Bogotá's BRT system. Senior citizen mobility increases 60%, reducing social isolation. Crime rates decrease 12% on transit corridors through natural surveillance."
+            },
+            "environmental": {
+              "score": 82,
+              "trend": "positive",
+              "detail": "Transportation sector emissions decrease 35% from 2024 baseline. Urban heat island effect reduced through decreased asphalt coverage. Biodiversity improves with 15 miles of former roadway converted to green corridors. Air quality meets WHO standards for first time in city history."
+            },
+            "political": {
+              "score": 78,
+              "trend": "positive",
+              "detail": "Policy achieves 78% public approval and bipartisan support. Bloomington influences state legislation supporting municipal transit funding flexibility. Mayor becomes national spokesperson for sustainable transit policy. Policy survives multiple election cycles, indicating institutional permanence."
+            },
+            "technological": {
+              "score": 82,
+              "trend": "positive",
+              "detail": "Fully autonomous electric bus fleet operates with 99.2% reliability. Integrated mobility platform serves 85% of residents through single app. Predictive analytics optimize routes in real-time. Renewable energy powers 100% of transit operations through solar canopies at stations."
+            }
+          },
+          "risks": [
+            "Autonomous vehicle proliferation reducing transit demand",
+            "Climate change extreme weather disrupting service",
+            "State preemption of local transportation policies"
+          ],
+          "opportunities": [
+            "Export policy model internationally for consulting revenue",
+            "Carbon credit monetization from emissions reductions",
+            "Integration with statewide high-speed rail network"
+          ]
+        }
+      }
+    },
+    "roadmap": {
+      "overview": "Phased rollout beginning with pilot routes and funding mechanisms, scaling to full system implementation over 3 years with continuous service optimization.",
+      "totalHorizonLabel": "36 months",
+      "phases": [
+        {
+          "id": "phase_1",
+          "order": 1,
+          "title": "Pilot Launch & Revenue Setup",
+          "windowLabel": "Months 0–6",
+          "summary": "Launch free transit on select routes while establishing new revenue streams",
+          "detail": "Implement free service on 3 high-traffic routes including IU campus connector and downtown circulator while installing paid parking meters in previously free zones. Establish baseline ridership data and begin congestion charge planning for downtown core. Major risks include initial budget shortfalls and parking enforcement challenges as businesses and residents adjust to new fee structure.",
+          "milestones": [
+            "Free service active on 3 pilot routes",
+            "500 new parking meters installed and operational",
+            "Baseline ridership and revenue data collected"
+          ],
+          "dependencies": [],
+          "actors": [
+            "Bloomington Transit",
+            "Parking Division",
+            "City Council"
+          ],
+          "riskLevel": "medium",
+          "checkpoint": "Monthly ridership reports show 25% increase on pilot routes with parking revenue meeting 80% of projections"
+        },
+        {
+          "id": "phase_2",
+          "order": 2,
+          "title": "System-Wide Free Transit",
+          "windowLabel": "Months 6–12",
+          "summary": "Eliminate fares across entire public transit network",
+          "detail": "Remove fare collection on all remaining bus routes while implementing downtown congestion charging zone during peak hours. Increase service frequency on high-demand routes to address overcrowding from ridership surge. Budget monitoring becomes critical as fare revenue loss hits full impact while new revenue streams stabilize.",
+          "milestones": [
+            "All transit routes fare-free",
+            "Downtown congestion charges implemented",
+            "Service frequency increased by 30% on top 5 routes"
+          ],
+          "dependencies": [
+            "phase_1"
+          ],
+          "actors": [
+            "Bloomington Transit",
+            "Traffic Engineering",
+            "Revenue Department"
+          ],
+          "riskLevel": "high",
+          "checkpoint": "Monthly budget variance reports show total revenue gap under $2 million with ridership up 35%+"
+        },
+        {
+          "id": "phase_3",
+          "order": 3,
+          "title": "Infrastructure Expansion",
+          "windowLabel": "Months 12–20",
+          "summary": "Expand capacity and routes using reallocated road construction funds",
+          "detail": "Deploy additional buses and extend service to underserved neighborhoods using redirected highway expansion budget. Install real-time passenger information systems and mobile capacity tracking to manage crowding. Partner with Indiana University for integrated campus transit services and potential federal grant applications for electric bus fleet.",
+          "milestones": [
+            "15 additional buses in service",
+            "Real-time passenger information deployed",
+            "IU partnership agreement signed"
+          ],
+          "dependencies": [
+            "phase_2"
+          ],
+          "actors": [
+            "Bloomington Transit",
+            "Indiana University",
+            "Federal Transit Administration"
+          ],
+          "riskLevel": "medium",
+          "checkpoint": "Average wait times under 12 minutes system-wide with 95% on-time performance"
+        },
+        {
+          "id": "phase_4",
+          "order": 4,
+          "title": "Revenue Optimization",
+          "windowLabel": "Months 20–28",
+          "summary": "Refine funding mechanisms and secure long-term sustainability",
+          "detail": "Implement dynamic parking pricing based on demand and expand congestion charging hours based on traffic data. Introduce development impact fees for new construction projects that increase transit demand. Negotiate with local businesses for transit pass subsidies and explore federal infrastructure grants for fleet electrification.",
+          "milestones": [
+            "Dynamic parking pricing system operational",
+            "Development impact fee ordinance passed",
+            "$3 million in federal grants secured"
+          ],
+          "dependencies": [
+            "phase_3"
+          ],
+          "actors": [
+            "City Council",
+            "Planning Department",
+            "Local Business Coalition"
+          ],
+          "riskLevel": "low",
+          "checkpoint": "Monthly revenue targets met for 3 consecutive months with 15% budget surplus"
+        },
+        {
+          "id": "phase_5",
+          "order": 5,
+          "title": "Service Excellence & Expansion",
+          "windowLabel": "Months 28–36",
+          "summary": "Optimize service quality and prepare for long-term growth",
+          "detail": "Deploy electric buses to reduce emissions and operating costs while extending service hours and weekend frequency. Implement predictive analytics for route optimization and establish performance benchmarks for sustained service quality. Create transit-oriented development incentives to support ridership growth and reduce car dependency.",
+          "milestones": [
+            "50% of fleet converted to electric buses",
+            "24/7 service on core routes",
+            "Transit-oriented development zoning approved"
+          ],
+          "dependencies": [
+            "phase_4"
+          ],
+          "actors": [
+            "Bloomington Transit",
+            "Environmental Department",
+            "Economic Development"
+          ],
+          "riskLevel": "low",
+          "checkpoint": "Customer satisfaction scores above 85% with 60%+ increase in ridership from baseline"
+        }
+      ],
+      "criticalPath": [
+        "phase_1",
+        "phase_2",
+        "phase_4"
+      ],
+      "successMetrics": [
+        "60% increase in transit ridership within 36 months",
+        "Budget neutrality achieved by month 30",
+        "15% reduction in downtown vehicle miles traveled",
+        "Customer satisfaction scores above 80%"
+      ]
+    },
+    "roadmapProgress": {
+      "phase_1": [
+        true,
+        false,
+        false
+      ],
+      "phase_2": [
+        false,
+        false,
+        false
+      ],
+      "phase_3": [
+        false,
+        false,
+        false
+      ],
+      "phase_4": [
+        false,
+        false,
+        false
+      ],
+      "phase_5": [
+        false,
+        false,
+        false
+      ]
+    },
+    "author": "Sahith",
+    "status": "published",
+    "publishedAt": null,
+    "votes": {
+      "up": 1,
+      "down": 0
+    },
+    "comments": [
+      {
+        "id": "c_1774803128068_5rpb",
+        "text": "Looks good to implement it.",
+        "sentiment": "support",
+        "author": "Publisher",
+        "role": "publisher",
+        "replyTo": null,
+        "createdAt": 1774803128068
+      }
+    ],
+    "summary": null,
+    "createdAt": 1774803103138,
+    "implementedAt": null,
+    "scenarios": [
+      {
+        "id": "wf_1774803264349",
+        "modification": "What if I include a base fare?",
+        "result": {
+          "modifiedTitle": "Low-Fare Public Transit with Reduced Car Incentives",
+          "summary": "Adding a base fare improves financial sustainability by generating $2-4 million annually while maintaining reduced barriers to transit access. This modification creates better budget balance but somewhat diminishes equity benefits for the lowest-income residents.",
+          "dimensions": {
+            "economic": {
+              "original": 35,
+              "modified": 58,
+              "change": "+23",
+              "explanation": "Base fare revenue of $2-4 million significantly reduces the budget shortfall, improving fiscal sustainability. Parking-dependent businesses face less severe impacts as the policy becomes less aggressive in car disincentivization, reducing their revenue decline to 8-15%."
+            },
+            "social": {
+              "original": 68,
+              "modified": 55,
+              "change": "-13",
+              "explanation": "While transit remains more affordable than current levels, the base fare creates a barrier for the most economically vulnerable residents. Transit usage increases moderate to 25-30% among low-income users rather than 40%, and university students save approximately $500 annually instead of $800."
+            },
+            "environmental": {
+              "original": 58,
+              "modified": 48,
+              "change": "-10",
+              "explanation": "Reduced environmental benefits as the fare barrier decreases transit adoption rates. Car trip reduction drops to 5-8% instead of 8-12%, resulting in smaller CO2 emissions decrease of 2-3% citywide as fewer drivers make the switch to public transit."
+            },
+            "political": {
+              "original": 42,
+              "modified": 52,
+              "change": "+10",
+              "explanation": "Improved political feasibility as the policy appears more fiscally responsible to critics. Business opposition softens due to less aggressive car disincentivization, while budget concerns are partially addressed through fare revenue, increasing public approval to approximately 58%."
+            },
+            "technological": {
+              "original": 55,
+              "modified": 45,
+              "change": "-10",
+              "explanation": "Requires maintaining fare collection infrastructure, eliminating the $400K annual savings from system removal. Creates need for fare validation technology and payment processing systems, though overcrowding issues are reduced due to lower ridership demand."
+            }
+          },
+          "tradeoffs": [
+            "Improved fiscal sustainability comes at the cost of reduced accessibility for the most economically vulnerable residents",
+            "Better political viability but diminished environmental impact due to lower transit adoption rates"
+          ],
+          "recommendation": "Yes, this modification is recommended as it significantly improves financial viability while maintaining substantial benefits for transit equity and environmental goals, creating a more politically sustainable long-term policy."
+        },
+        "author": "Publisher",
+        "role": "publisher",
+        "createdAt": 1774803264349
+      }
+    ]
+  },
+  {
+    "id": "pol_1774752125438_k66bwc",
+    "title": "Universal Electric Vehicle (EV) Subsidy Program",
+    "description": "This policy introduces a nationwide subsidy program to accelerate the adoption of electric vehicles (EVs). Consumers purchasing new or used EVs will receive a direct rebate of up to $7,500, depending on vehicle price and battery capacity. The policy also allocates funding to expand EV charging infrastructure, particularly in underserved rural and low-income urban areas. Additionally, tax incentives will be provided to manufacturers to boost domestic EV production and reduce costs over time. The goal is to reduce greenhouse gas emissions, decrease reliance on fossil fuels, and promote sustainable transportation.",
+    "sector": "Energy & Transportation",
+    "region": "United States",
+    "analysis": {
+      "horizons": {
+        "1_year": {
+          "summary": "Initial implementation faces high fiscal costs and supply chain constraints, similar to early cash-for-clunkers program challenges. Infrastructure rollout creates construction jobs but EV adoption remains concentrated among higher-income consumers.",
+          "overallScore": 52,
+          "dimensions": {
+            "economic": {
+              "score": 45,
+              "trend": "negative",
+              "detail": "Significant government expenditure ($15-20B annually) similar to 2009 CARS program strains federal budget. Job creation in charging infrastructure construction (~50,000 jobs) offset by continued supply shortages driving EV prices up 8-12%. Limited immediate GDP impact as rebates primarily benefit existing middle-class buyers."
+            },
+            "social": {
+              "score": 55,
+              "trend": "positive",
+              "detail": "Rural charging infrastructure reduces transportation energy burden by 15-20% in pilot communities, mirroring USDA rural electrification outcomes. However, income disparity persists as 65% of rebates flow to households earning >$75K annually, similar to existing federal EV tax credit patterns. Air quality improvements minimal in year one."
+            },
+            "environmental": {
+              "score": 58,
+              "trend": "positive",
+              "detail": "Transportation emissions decrease 2-3% in participating metro areas, comparable to California's Clean Vehicle Rebate Project initial results. Grid strain increases in peak charging areas without corresponding renewable capacity additions. Manufacturing emissions rise temporarily due to accelerated production demands."
+            },
+            "political": {
+              "score": 48,
+              "trend": "negative",
+              "detail": "Republican opposition intensifies over spending levels, echoing Solyndra controversy dynamics. Rural charging infrastructure gains bipartisan support but cost overruns in initial rollout generate criticism. Public approval remains polarized along partisan lines (65% Democrat, 25% Republican support)."
+            },
+            "technological": {
+              "score": 62,
+              "trend": "positive",
+              "detail": "Domestic battery manufacturing investment increases 40% following Tesla Gigafactory model. Charging network expands by 25,000 stations but interoperability issues persist. R&D partnerships between government and manufacturers accelerate, with 15% increase in EV patent filings."
+            }
+          },
+          "risks": [
+            "Budget overruns exceeding projections by 25-30%",
+            "Supply chain bottlenecks limiting vehicle availability",
+            "Grid reliability issues in high-adoption areas"
+          ],
+          "opportunities": [
+            "Accelerated domestic manufacturing investment",
+            "Rural economic development through charging infrastructure",
+            "Technology leadership in global EV market"
+          ]
+        },
+        "5_year": {
+          "summary": "Program achieves significant scale with 40% EV market share, driving manufacturing job growth and emissions reductions. Social equity improves through targeted programs while political consensus emerges around economic benefits.",
+          "overallScore": 72,
+          "dimensions": {
+            "economic": {
+              "score": 78,
+              "trend": "positive",
+              "detail": "Manufacturing jobs increase by 400,000 following China's EV employment growth pattern 2015-2020. Battery costs decline 60% due to scale effects, similar to solar panel cost curves. GDP boost of $85B annually from domestic production and reduced oil imports. Trade deficit improves as EV exports begin."
+            },
+            "social": {
+              "score": 75,
+              "trend": "positive",
+              "detail": "Health benefits emerge with 15,000 fewer asthma cases annually in urban areas, matching California Air Resources Board findings. Income-targeted rebates implemented in year 3 increase low-income participation to 35%. Rural communities report 25% reduction in transportation costs."
+            },
+            "environmental": {
+              "score": 80,
+              "trend": "positive",
+              "detail": "Transportation sector emissions fall 18% below 2020 levels, exceeding Norway's 2015-2020 trajectory. Renewable grid integration accelerates to meet charging demand, adding 50GW clean capacity. Lifecycle emissions improve as battery recycling programs mature."
+            },
+            "political": {
+              "score": 68,
+              "trend": "positive",
+              "detail": "Bipartisan support reaches 60% as manufacturing jobs appear in swing states. State-level adoption programs expand following federal model. International climate leadership position strengthened, improving diplomatic relations with EU and other partners."
+            },
+            "technological": {
+              "score": 82,
+              "trend": "positive",
+              "detail": "US captures 30% global battery market share, up from 8% in 2023. Solid-state battery breakthroughs emerge from federally-funded research. Charging times decrease to under 15 minutes with 150,000 fast-charging stations deployed nationwide."
+            }
+          },
+          "risks": [
+            "Rare earth mineral supply constraints",
+            "Grid infrastructure lagging behind adoption",
+            "Technology disruption from alternative fuel sources"
+          ],
+          "opportunities": [
+            "Global technology export leadership",
+            "Energy independence achievement",
+            "New industrial hub development in rust belt regions"
+          ]
+        },
+        "10_year": {
+          "summary": "EV transition reaches 85% completion, establishing US as global clean transportation leader with massive economic and environmental benefits. Social equity achieved through comprehensive access programs and health improvements.",
+          "overallScore": 85,
+          "dimensions": {
+            "economic": {
+              "score": 88,
+              "trend": "positive",
+              "detail": "Cumulative GDP impact exceeds $500B following South Korea's green new deal trajectory. 1.2M net new jobs created across manufacturing, infrastructure, and services. US becomes net exporter of EV technology with $150B annual trade surplus in clean transportation. Gasoline consumption falls 75%, eliminating $200B in oil imports."
+            },
+            "social": {
+              "score": 82,
+              "trend": "positive",
+              "detail": "Transportation equity achieved with EVs comprising 70% of vehicles in low-income communities through targeted programs. 50,000 premature deaths prevented annually from air pollution reduction, matching projected benefits from Clean Air Act expansions. Rural economic revitalization through green manufacturing hubs."
+            },
+            "environmental": {
+              "score": 90,
+              "trend": "positive",
+              "detail": "Transportation emissions decline 85% from 2020 levels, enabling US to exceed Paris Agreement commitments. Grid operates on 80% renewable energy to support charging demand. Circular economy established with 95% battery recycling rate. Biodiversity benefits emerge from reduced oil extraction and refining."
+            },
+            "political": {
+              "score": 85,
+              "trend": "positive",
+              "detail": "Policy becomes institutionalized with 80% public approval across party lines. US global climate leadership position secured, improving international relations. Decentralized energy system enhances national security by reducing fossil fuel dependencies."
+            },
+            "technological": {
+              "score": 92,
+              "trend": "positive",
+              "detail": "US leads in next-generation battery technology with 40% global market share. Vehicle-to-grid integration provides grid stability services worth $50B annually. Autonomous EV technology deployment accelerates due to electric platform advantages. Space industry benefits from advanced battery technology spillovers."
+            }
+          },
+          "risks": [
+            "Stranded fossil fuel assets creating regional economic disruption",
+            "International resource competition intensifying",
+            "Technology obsolescence from breakthrough innovations"
+          ],
+          "opportunities": [
+            "Complete energy independence achievement",
+            "Global clean technology export dominance",
+            "Revolutionary advances in energy storage and grid management"
+          ]
+        }
+      }
+    },
+    "roadmap": {
+      "overview": "Roll out EV subsidies and charging infrastructure through a phased approach prioritizing immediate consumer rebates, followed by infrastructure expansion, and culminating in domestic manufacturing incentives.",
+      "totalHorizonLabel": "5 years",
+      "phases": [
+        {
+          "id": "phase_1",
+          "order": 1,
+          "title": "Program Launch & Consumer Rebates",
+          "windowLabel": "Months 0-12",
+          "summary": "Establish rebate processing systems and launch direct consumer subsidies",
+          "detail": "Treasury Department creates rebate processing infrastructure while DOT coordinates with state DMVs for vehicle verification. IRS updates tax forms and establishes point-of-sale rebate system with major dealerships. Budget overruns risk emerges if demand exceeds $15B annual allocation, requiring congressional supplemental funding. Supply chain constraints could limit vehicle availability despite increased demand.",
+          "milestones": [
+            "Rebate processing system operational",
+            "Partnership agreements signed with 500+ dealerships",
+            "First 50,000 rebates processed"
+          ],
+          "dependencies": [],
+          "actors": [
+            "U.S. Treasury Department",
+            "Internal Revenue Service",
+            "National Automobile Dealers Association",
+            "Major EV manufacturers"
+          ],
+          "riskLevel": "medium",
+          "checkpoint": "Monthly rebate processing capacity reaches 25,000 applications"
+        },
+        {
+          "id": "phase_2",
+          "order": 2,
+          "title": "Rural Charging Infrastructure Deployment",
+          "windowLabel": "Months 6-24",
+          "summary": "Build charging networks in underserved rural and low-income areas",
+          "detail": "Department of Energy leads deployment of 25,000 charging stations through partnerships with utilities and private companies. USDA provides additional rural development funding while state transportation departments coordinate site selection. Grid reliability issues could emerge in areas without adequate electrical infrastructure upgrades. Construction delays and permit challenges may extend timeline by 6-12 months.",
+          "milestones": [
+            "10,000 charging stations installed",
+            "Grid impact assessments completed for 50 rural counties",
+            "Charging network interoperability standards implemented"
+          ],
+          "dependencies": [
+            "phase_1"
+          ],
+          "actors": [
+            "Department of Energy",
+            "USDA Rural Development",
+            "State transportation departments",
+            "Electric utilities",
+            "Charging network operators"
+          ],
+          "riskLevel": "high",
+          "checkpoint": "20,000 operational charging stations with 98% uptime metrics"
+        },
+        {
+          "id": "phase_3",
+          "order": 3,
+          "title": "Equity Enhancement Programs",
+          "windowLabel": "Months 18-36",
+          "summary": "Launch targeted programs for low-income consumers and disadvantaged communities",
+          "detail": "HUD and EPA collaborate on enhanced rebates for households below 80% median income while expanding used EV certification programs. Community-based organizations receive grants to provide EV education and financing assistance. Administrative complexity increases significantly with income verification requirements. Political opposition may intensify over expanded spending and bureaucratic overhead.",
+          "milestones": [
+            "Income-targeted rebate system launched",
+            "Used EV certification program covers 75% of models",
+            "Community outreach programs active in 100 cities"
+          ],
+          "dependencies": [
+            "phase_1"
+          ],
+          "actors": [
+            "Department of Housing and Urban Development",
+            "Environmental Protection Agency",
+            "Community development financial institutions",
+            "State social services agencies"
+          ],
+          "riskLevel": "medium",
+          "checkpoint": "Low-income households represent 35% of total rebate recipients"
+        },
+        {
+          "id": "phase_4",
+          "order": 4,
+          "title": "Manufacturing Incentive Implementation",
+          "windowLabel": "Months 24-48",
+          "summary": "Deploy tax incentives to boost domestic EV and battery production",
+          "detail": "Treasury implements manufacturing tax credits while Commerce Department coordinates with states on facility siting and workforce development. Investment tax credits target battery production, semiconductor manufacturing, and charging equipment assembly. International trade disputes may arise with China and other EV-producing nations. State competition for manufacturing facilities could drive up incentive costs beyond federal budgets.",
+          "milestones": [
+            "5 new battery manufacturing facilities announced",
+            "Domestic EV production increases 40%",
+            "200,000 manufacturing jobs created"
+          ],
+          "dependencies": [
+            "phase_1",
+            "phase_2"
+          ],
+          "actors": [
+            "Department of Commerce",
+            "U.S. Treasury Department",
+            "State economic development agencies",
+            "Labor unions",
+            "EV manufacturers"
+          ],
+          "riskLevel": "medium",
+          "checkpoint": "Domestic EV production capacity reaches 3 million vehicles annually"
+        },
+        {
+          "id": "phase_5",
+          "order": 5,
+          "title": "Market Expansion & Technology Leadership",
+          "windowLabel": "Months 36-60",
+          "summary": "Scale programs to achieve 40% EV market share and global competitiveness",
+          "detail": "DOE expands R&D partnerships while State Department negotiates technology export agreements and international standards. Federal fleet procurement prioritizes domestic EVs to demonstrate technology leadership. Global supply chain disruptions remain a persistent risk as international competition intensifies. Congressional reauthorization battles may threaten program continuity beyond initial 5-year horizon.",
+          "milestones": [
+            "40% new vehicle sales are EVs",
+            "U.S. becomes net EV exporter",
+            "Federal EV fleet reaches 100% electrification"
+          ],
+          "dependencies": [
+            "phase_4"
+          ],
+          "actors": [
+            "Department of Energy",
+            "State Department",
+            "General Services Administration",
+            "National laboratories",
+            "International trade organizations"
+          ],
+          "riskLevel": "low",
+          "checkpoint": "U.S. captures 25% global market share in EV exports"
+        }
+      ],
+      "criticalPath": [
+        "phase_1",
+        "phase_2",
+        "phase_4"
+      ],
+      "successMetrics": [
+        "400,000 manufacturing jobs created",
+        "40% EV market share achieved",
+        "25,000 charging stations operational in underserved areas",
+        "Transportation emissions reduced 15% nationwide",
+        "Low-income household EV adoption reaches 35% of program participation"
+      ]
+    },
+    "author": "Ritish",
+    "status": "published",
+    "publishedAt": null,
+    "votes": {
+      "up": 1,
+      "down": 0
+    },
+    "comments": [],
+    "summary": null,
+    "createdAt": 1774752125438,
+    "implementedAt": null,
+    "scenarios": [
+      {
+        "id": "wf_1774755990886",
+        "modification": "I want to increase the amount from $7500 to $10000 what can be the impact?",
+        "result": {
+          "modifiedTitle": "Enhanced Universal EV Subsidy Program ($10,000 Rebate)",
+          "summary": "Increasing the rebate from $7,500 to $10,000 would accelerate EV adoption but significantly strain federal finances and potentially worsen supply shortages. While more consumers could access EVs, the additional $5-7B annual cost would intensify political opposition and budget concerns.",
+          "dimensions": {
+            "economic": {
+              "original": 45,
+              "modified": 38,
+              "change": "-7",
+              "explanation": "Federal expenditure increases to $22-27B annually, deepening budget strain. Higher rebates could drive EV prices up 15-18% due to increased demand against limited supply, following basic demand-supply economics seen in housing subsidies. Job creation benefits remain similar but are offset by greater fiscal pressure."
+            },
+            "social": {
+              "original": 55,
+              "modified": 62,
+              "change": "+7",
+              "explanation": "Higher rebates make EVs accessible to more middle-class families and some upper-working-class households, potentially increasing participation among $50-75K income bracket by 25-30%. Rural communities benefit more from infrastructure investments, though wealth disparity in rebate distribution persists."
+            },
+            "environmental": {
+              "original": 58,
+              "modified": 55,
+              "change": "-3",
+              "explanation": "While higher adoption rates could increase emissions reduction to 3-4% in metro areas, manufacturing emissions surge more dramatically due to accelerated production demands. Grid strain intensifies without proportional renewable capacity expansion, potentially offsetting some environmental gains."
+            },
+            "political": {
+              "original": 48,
+              "modified": 42,
+              "change": "-6",
+              "explanation": "Republican opposition intensifies significantly over the additional $5-7B annual spending, drawing comparisons to expensive programs like the American Recovery Act. Fiscal conservatives within Democratic ranks may also express concerns about budget sustainability, reducing bipartisan support even for popular infrastructure components."
+            },
+            "technological": {
+              "original": 62,
+              "modified": 65,
+              "change": "+3",
+              "explanation": "Higher market incentives attract additional domestic manufacturing investment, potentially increasing battery production capacity by 50-60%. R&D partnerships expand as manufacturers anticipate larger market volumes, leading to 20-25% increase in EV patent filings and accelerated innovation in charging technology."
+            }
+          },
+          "tradeoffs": [
+            "Significantly higher federal spending ($5-7B additional annually) versus broader EV accessibility and faster adoption rates",
+            "Potential EV price inflation due to increased demand versus accelerated technological innovation and domestic manufacturing growth"
+          ],
+          "recommendation": "Not recommended without corresponding revenue measures or phased implementation. While the higher rebate would accelerate adoption and innovation, the substantial budget impact and political feasibility concerns outweigh the marginal benefits over the original $7,500 level."
+        },
+        "author": "Citizen",
+        "role": "citizen",
+        "createdAt": 1774755990886
+      }
+    ],
+    "roadmapProgress": {
+      "phase_1": [
+        false,
+        false,
+        false
+      ],
+      "phase_2": [
+        false,
+        false,
+        false
+      ]
+    }
+  },
+  {
     "id": "pol_1774714058508_pj3h47",
     "title": "Four-Day Work Week Mandate",
     "description": "Mandate a maximum 32-hour, four-day work week for all companies with more than 50 employees, with no reduction in pay. Overtime allowed voluntarily at 1.5x rate.",
@@ -136,8 +845,8 @@
     "status": "published",
     "publishedAt": null,
     "votes": {
-      "up": 24,
-      "down": 22
+      "up": 25,
+      "down": 23
     },
     "comments": [
       {
@@ -177,48 +886,48 @@
       }
     ],
     "summary": {
-      "executiveSummary": "Public sentiment analysis of the Four-Day Work Week Mandate reveals strong majority support (75%) among respondents, with 3 out of 4 comments expressing favorable views. However, the limited sample size and lack of detailed feedback suggest need for broader public engagement before implementation.",
+      "executiveSummary": "Initial public feedback on the proposed four-day work week mandate shows majority support (60%) among respondents, though the sample size is limited with only 5 comments received. There is notable interest in understanding implementation details and opposition rationale, suggesting need for broader public engagement.",
       "sentimentBreakdown": {
         "support": 3,
         "oppose": 1,
-        "neutral": 0,
-        "supportPct": 75,
-        "opposePct": 25,
-        "neutralPct": 0
+        "neutral": 1,
+        "supportPct": 60,
+        "opposePct": 20,
+        "neutralPct": 20
       },
       "keyThemes": [
         {
           "theme": "General Policy Approval",
           "count": 3,
-          "description": "Supporters consistently characterized the policy as 'great' without providing specific reasoning"
+          "description": "Multiple respondents expressed basic support using terms like 'great policy' without detailed justification"
         },
         {
-          "theme": "Binary Opposition",
+          "theme": "Information Seeking",
           "count": 1,
-          "description": "Opposition expressed as simple disagreement without elaboration on concerns"
+          "description": "Request for clarification on opposition arguments and policy rationale"
         },
         {
-          "theme": "Lack of Substantive Feedback",
-          "count": 4,
-          "description": "All comments lack detailed reasoning, economic concerns, or implementation considerations"
+          "theme": "Direct Opposition",
+          "count": 1,
+          "description": "Clear but unexplained opposition to the mandate"
         }
       ],
       "representativeVoices": {
-        "support": "Great policy - I support the policy!",
-        "oppose": "I oppose the policy",
-        "neutral": "No neutral comments received"
+        "support": "I support the policy! — Citizen",
+        "oppose": "I oppose the policy — Citizen",
+        "neutral": "Can you tell me the reason for opposing it? — Publisher"
       },
       "recommendations": [
-        "Conduct comprehensive public forums and surveys to gather detailed feedback on implementation concerns, economic impacts, and industry-specific considerations",
-        "Engage key stakeholder groups including business associations, labor unions, and sector-specific organizations to understand practical implications",
-        "Pilot the program with volunteer companies before mandatory implementation to generate concrete data and case studies for public review"
+        "Conduct broader public outreach and collect more substantial feedback given the limited sample size of only 5 responses",
+        "Develop detailed informational materials addressing implementation concerns and potential opposition points raised by neutral respondents",
+        "Host public forums or town halls to facilitate deeper discussion beyond brief supportive statements and gather more substantive input on policy implications"
       ],
-      "overallAssessment": "While initial public sentiment appears favorable toward the Four-Day Work Week Mandate, the extremely limited feedback pool (4 comments) and lack of substantive commentary indicate insufficient public engagement for informed policymaking. The 75% support rate is encouraging but must be viewed cautiously given the small sample size and absence of detailed concerns or benefits articulated by respondents. Policymakers should prioritize expanded public consultation to capture the complexity of economic, social, and operational considerations this significant workplace reform would entail before proceeding with implementation."
+      "overallAssessment": "While the initial response shows favorable sentiment toward the four-day work week mandate, the feedback lacks depth and represents a very small sample size for such a significant policy change affecting companies with over 50 employees in New York. The predominant support appears to be based on general appeal rather than detailed policy analysis, and the presence of information-seeking comments suggests the public needs more comprehensive education about the proposal's implications, costs, and benefits before meaningful sentiment analysis can be conducted."
     },
     "createdAt": 1774714058508,
     "implementedAt": null,
     "pinnedComments": [
-      "c_1774728641587"
+      "c_1774728073907"
     ],
     "scenarios": [
       {
@@ -269,7 +978,192 @@
         "role": "citizen",
         "createdAt": 1774751359253
       }
-    ]
+    ],
+    "roadmap": {
+      "overview": "A carefully staged rollout beginning with voluntary pilot programs to build evidence before phased mandatory implementation across company size tiers.",
+      "totalHorizonLabel": "36–48 months",
+      "phases": [
+        {
+          "id": "phase_1",
+          "order": 1,
+          "title": "Legislative Foundation & Pilot Launch",
+          "windowLabel": "Months 0–8",
+          "summary": "Pass enabling legislation and launch voluntary pilot with 100+ companies",
+          "detail": "New York State Legislature passes the Four-Day Work Week Act with 18-month implementation timeline and establishes the Office of Workplace Innovation. Simultaneously launch voluntary pilot program with major employers like IBM, JPMorgan Chase, and Wegmans to gather implementation data. Business groups will likely mount legal challenges claiming federal labor law preemption and constitutional commerce clause violations.",
+          "milestones": [
+            "Governor signs legislation into law",
+            "100 companies enrolled in voluntary pilot",
+            "Office of Workplace Innovation operational"
+          ],
+          "dependencies": [],
+          "actors": [
+            "New York State Legislature",
+            "Governor's Office",
+            "Department of Labor",
+            "Major employers"
+          ],
+          "riskLevel": "high",
+          "checkpoint": "Legislation enacted and pilot program achieving 80% of target enrollment"
+        },
+        {
+          "id": "phase_2",
+          "order": 2,
+          "title": "Regulatory Framework & Business Support",
+          "windowLabel": "Months 6–14",
+          "summary": "Develop implementation regulations and launch business assistance programs",
+          "detail": "Department of Labor creates detailed compliance regulations covering overtime calculations, scheduling flexibility, and enforcement mechanisms. Launch $50M business transition fund providing grants and consulting services to help companies redesign workflows. Establish regional compliance offices in NYC, Albany, Buffalo, and Rochester. Small business associations will demand exemptions citing competitive disadvantages.",
+          "milestones": [
+            "Final regulations published",
+            "Business assistance fund operational",
+            "Regional compliance offices staffed"
+          ],
+          "dependencies": [
+            "phase_1"
+          ],
+          "actors": [
+            "Department of Labor",
+            "Empire State Development",
+            "Regional business councils"
+          ],
+          "riskLevel": "medium",
+          "checkpoint": "Regulations finalized and 500+ businesses receiving transition assistance"
+        },
+        {
+          "id": "phase_3",
+          "order": 3,
+          "title": "Large Employer Mandatory Phase",
+          "windowLabel": "Months 18–24",
+          "summary": "Enforce mandate for companies with 500+ employees",
+          "detail": "Begin mandatory compliance for largest employers representing roughly 40% of affected workforce. Focus enforcement on Fortune 500 companies and major state contractors who have greater capacity to absorb transition costs. Provide 90-day cure periods for good-faith compliance efforts. Expect significant legal challenges and some high-profile company relocations to New Jersey or Connecticut.",
+          "milestones": [
+            "500+ companies achieve compliance",
+            "Enforcement actions against major violators",
+            "First quarterly compliance reports published"
+          ],
+          "dependencies": [
+            "phase_2"
+          ],
+          "actors": [
+            "Department of Labor enforcement",
+            "Attorney General's Office",
+            "Large employers"
+          ],
+          "riskLevel": "high",
+          "checkpoint": "85% compliance rate among companies with 500+ employees"
+        },
+        {
+          "id": "phase_4",
+          "order": 4,
+          "title": "Mid-Size Employer Rollout",
+          "windowLabel": "Months 24–30",
+          "summary": "Extend mandate to companies with 100-499 employees",
+          "detail": "Apply requirements to mid-size companies while providing enhanced technical assistance and flexible implementation timelines. Allow industry-specific accommodations for healthcare, manufacturing, and hospitality sectors with continuous operations. Monitor small business exodus to neighboring states and adjust enforcement priorities based on economic impact data.",
+          "milestones": [
+            "2,000+ mid-size companies in compliance",
+            "Industry-specific guidance issued",
+            "Cross-border business migration study completed"
+          ],
+          "dependencies": [
+            "phase_3"
+          ],
+          "actors": [
+            "Department of Labor",
+            "Industry associations",
+            "Mid-size employers"
+          ],
+          "riskLevel": "medium",
+          "checkpoint": "75% compliance rate among companies with 100-499 employees"
+        },
+        {
+          "id": "phase_5",
+          "order": 5,
+          "title": "Small Business Implementation",
+          "windowLabel": "Months 30–36",
+          "summary": "Full mandate coverage for all companies with 50+ employees",
+          "detail": "Complete rollout to remaining companies with 50-99 employees, representing the most vulnerable segment. Provide maximum flexibility including seasonal exemptions, shared-work arrangements, and extended phase-in periods. Establish hardship exemption process for businesses demonstrating severe economic impact. Small business failures likely to peak during this phase.",
+          "milestones": [
+            "All eligible companies under mandate",
+            "Hardship exemption process operational",
+            "Small business impact mitigation programs launched"
+          ],
+          "dependencies": [
+            "phase_4"
+          ],
+          "actors": [
+            "Department of Labor",
+            "Small Business Administration",
+            "Local chambers of commerce"
+          ],
+          "riskLevel": "high",
+          "checkpoint": "70% compliance rate among companies with 50-99 employees"
+        },
+        {
+          "id": "phase_6",
+          "order": 6,
+          "title": "Optimization & National Advocacy",
+          "windowLabel": "Months 36–48",
+          "summary": "Refine implementation and promote national adoption",
+          "detail": "Conduct comprehensive policy evaluation and optimize regulations based on economic impact data and business feedback. Launch national advocacy campaign highlighting New York's experience to encourage federal legislation or adoption by other states. Address remaining compliance gaps and establish long-term monitoring systems for economic and social outcomes.",
+          "milestones": [
+            "Comprehensive policy evaluation published",
+            "National advocacy campaign launched",
+            "Sustainable compliance monitoring system operational"
+          ],
+          "dependencies": [
+            "phase_5"
+          ],
+          "actors": [
+            "Office of Workplace Innovation",
+            "Governor's Office",
+            "National policy organizations"
+          ],
+          "riskLevel": "low",
+          "checkpoint": "Policy evaluation completed and 3-year outcome data published"
+        }
+      ],
+      "criticalPath": [
+        "phase_1",
+        "phase_3",
+        "phase_5"
+      ],
+      "successMetrics": [
+        "80% overall compliance rate among eligible companies",
+        "Worker productivity maintained within 5% of baseline",
+        "Less than 15% business relocation rate to other states"
+      ]
+    },
+    "roadmapProgress": {
+      "phase_1": [
+        false,
+        false,
+        false
+      ],
+      "phase_2": [
+        false,
+        false,
+        false
+      ],
+      "phase_3": [
+        false,
+        false,
+        false
+      ],
+      "phase_4": [
+        false,
+        false,
+        false
+      ],
+      "phase_5": [
+        false,
+        false,
+        false
+      ],
+      "phase_6": [
+        false,
+        false,
+        false
+      ]
+    }
   },
   {
     "id": "pol_1774713879370_iew164",
