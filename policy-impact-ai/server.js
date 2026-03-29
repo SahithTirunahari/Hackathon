@@ -27,8 +27,21 @@ function writePolicies(data) {
   fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
 }
 
+function parseClaudeJson(text) {
+  const cleaned = text.replace(/```json\s*/gi, '').replace(/```\s*/gi, '').trim();
+  const match = cleaned.match(/\{[\s\S]*\}/);
+  if (!match) throw new Error('Could not parse JSON from model response');
+  return JSON.parse(match[0]);
+}
+
 // ── Helper: call Claude API ──
-async function callClaude(prompt, maxTokens = 4000) {
+async function callClaude(prompt, maxTokens = 4000, system = null) {
+  const body = {
+    model: 'claude-sonnet-4-20250514',
+    max_tokens: maxTokens,
+    messages: [{ role: 'user', content: prompt }]
+  };
+  if (system) body.system = system;
   const response = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
     headers: {
@@ -36,11 +49,7 @@ async function callClaude(prompt, maxTokens = 4000) {
       'x-api-key': CLAUDE_API_KEY,
       'anthropic-version': '2023-06-01'
     },
-    body: JSON.stringify({
-      model: 'claude-sonnet-4-20250514',
-      max_tokens: maxTokens,
-      messages: [{ role: 'user', content: prompt }]
-    })
+    body: JSON.stringify(body)
   });
   if (!response.ok) {
     const errText = await response.text();
@@ -101,10 +110,12 @@ Rules: Scores 0-100 (50=neutral). trend: "positive"/"negative"/"neutral". Be spe
 
     console.log(`[ANALYZE] "${policy.title}"`);
     const text = await callClaude(prompt);
-    const cleaned = text.replace(/```json\s*/gi, '').replace(/```\s*/gi, '').trim();
-    const match = cleaned.match(/\{[\s\S]*\}/);
-    if (!match) return res.status(500).json({ error: 'Could not parse analysis', raw: text });
-    const analysis = JSON.parse(match[0]);
+    let analysis;
+    try {
+      analysis = parseClaudeJson(text);
+    } catch (e) {
+      return res.status(500).json({ error: 'Could not parse analysis', raw: text });
+    }
     console.log(`[ANALYZE] Done: "${policy.title}"`);
     res.json({ analysis, source: 'claude-api' });
   } catch (err) {
@@ -155,14 +166,78 @@ Return ONLY valid JSON:
 
     console.log(`[SUMMARIZE] ${comments.length} comments for "${policy.title}"`);
     const text = await callClaude(prompt, 2000);
-    const cleaned = text.replace(/```json\s*/gi, '').replace(/```\s*/gi, '').trim();
-    const match = cleaned.match(/\{[\s\S]*\}/);
-    if (!match) return res.status(500).json({ error: 'Could not parse summary', raw: text });
-    const summary = JSON.parse(match[0]);
+    let summary;
+    try {
+      summary = parseClaudeJson(text);
+    } catch (e) {
+      return res.status(500).json({ error: 'Could not parse summary', raw: text });
+    }
     console.log(`[SUMMARIZE] Done`);
     res.json({ summary, source: 'claude-api' });
   } catch (err) {
     console.error('Summarize error:', err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// ══════════════════════════════════════════════
+// ROUTE: Implementation roadmap (structured + UI-ready)
+// ══════════════════════════════════════════════
+app.post('/api/roadmap', async (req, res) => {
+  if (CLAUDE_API_KEY === 'YOUR_API_KEY_HERE') {
+    return res.status(400).json({ error: 'API key not configured.' });
+  }
+  try {
+    const { policy, analysis } = req.body;
+    const ctx = analysis
+      ? `\nExisting AI impact summary (align phases with these risks/opportunities):\n${JSON.stringify(analysis.horizons || {}, null, 0).slice(0, 3500)}`
+      : '';
+
+    const system = `You output only valid JSON for a policy implementation roadmap. No markdown fences. Phases must have stable unique "id" strings (e.g. phase_1, phase_2). "dependencies" lists ids of prior phases that must complete first — use [] for the first phase(s).`;
+
+    const prompt = `Design a realistic, phased implementation roadmap for this policy.
+
+Policy title: "${policy.title}"
+Description: ${policy.description}
+Sector: ${policy.sector || 'General'}
+Region: ${policy.region || 'Global'}
+${ctx}
+
+Return ONLY valid JSON with this exact shape:
+{
+  "overview": "One compelling sentence on rollout strategy.",
+  "totalHorizonLabel": "e.g. 18–36 months",
+  "phases": [
+    {
+      "id": "phase_1",
+      "order": 1,
+      "title": "Short title",
+      "windowLabel": "e.g. Months 0–6",
+      "summary": "One-line purpose",
+      "detail": "2–4 sentences: concrete actions, governance, and what could go wrong.",
+      "milestones": ["Verifiable milestone 1", "Milestone 2", "Milestone 3"],
+      "dependencies": [],
+      "actors": ["Agency or group 1", "Stakeholder 2"],
+      "riskLevel": "low",
+      "checkpoint": "Objective signal that this phase is complete"
+    }
+  ],
+  "criticalPath": ["phase_1", "phase_2"],
+  "successMetrics": ["Measurable outcome 1", "Outcome 2"]
+}
+
+Rules: 4–7 phases in logical order. riskLevel must be "low", "medium", or "high". criticalPath must name phase ids that are rate-limiting. Be specific to this policy and region. ONLY output JSON.`;
+
+    console.log(`[ROADMAP] "${policy.title}"`);
+    const text = await callClaude(prompt, 5000, system);
+    const roadmap = parseClaudeJson(text);
+    if (!roadmap.phases || !Array.isArray(roadmap.phases)) {
+      return res.status(500).json({ error: 'Invalid roadmap structure', raw: text });
+    }
+    console.log(`[ROADMAP] Done (${roadmap.phases.length} phases)`);
+    res.json({ roadmap, source: 'claude-api' });
+  } catch (err) {
+    console.error('Roadmap error:', err.message);
     res.status(500).json({ error: err.message });
   }
 });

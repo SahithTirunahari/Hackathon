@@ -1,5 +1,290 @@
 [
   {
+    "id": "pol_1774752125438_k66bwc",
+    "title": "Universal Electric Vehicle (EV) Subsidy Program",
+    "description": "This policy introduces a nationwide subsidy program to accelerate the adoption of electric vehicles (EVs). Consumers purchasing new or used EVs will receive a direct rebate of up to $7,500, depending on vehicle price and battery capacity. The policy also allocates funding to expand EV charging infrastructure, particularly in underserved rural and low-income urban areas. Additionally, tax incentives will be provided to manufacturers to boost domestic EV production and reduce costs over time. The goal is to reduce greenhouse gas emissions, decrease reliance on fossil fuels, and promote sustainable transportation.",
+    "sector": "Energy & Transportation",
+    "region": "United States",
+    "analysis": {
+      "horizons": {
+        "1_year": {
+          "summary": "Initial implementation faces high fiscal costs and supply chain constraints, similar to early cash-for-clunkers program challenges. Infrastructure rollout creates construction jobs but EV adoption remains concentrated among higher-income consumers.",
+          "overallScore": 52,
+          "dimensions": {
+            "economic": {
+              "score": 45,
+              "trend": "negative",
+              "detail": "Significant government expenditure ($15-20B annually) similar to 2009 CARS program strains federal budget. Job creation in charging infrastructure construction (~50,000 jobs) offset by continued supply shortages driving EV prices up 8-12%. Limited immediate GDP impact as rebates primarily benefit existing middle-class buyers."
+            },
+            "social": {
+              "score": 55,
+              "trend": "positive",
+              "detail": "Rural charging infrastructure reduces transportation energy burden by 15-20% in pilot communities, mirroring USDA rural electrification outcomes. However, income disparity persists as 65% of rebates flow to households earning >$75K annually, similar to existing federal EV tax credit patterns. Air quality improvements minimal in year one."
+            },
+            "environmental": {
+              "score": 58,
+              "trend": "positive",
+              "detail": "Transportation emissions decrease 2-3% in participating metro areas, comparable to California's Clean Vehicle Rebate Project initial results. Grid strain increases in peak charging areas without corresponding renewable capacity additions. Manufacturing emissions rise temporarily due to accelerated production demands."
+            },
+            "political": {
+              "score": 48,
+              "trend": "negative",
+              "detail": "Republican opposition intensifies over spending levels, echoing Solyndra controversy dynamics. Rural charging infrastructure gains bipartisan support but cost overruns in initial rollout generate criticism. Public approval remains polarized along partisan lines (65% Democrat, 25% Republican support)."
+            },
+            "technological": {
+              "score": 62,
+              "trend": "positive",
+              "detail": "Domestic battery manufacturing investment increases 40% following Tesla Gigafactory model. Charging network expands by 25,000 stations but interoperability issues persist. R&D partnerships between government and manufacturers accelerate, with 15% increase in EV patent filings."
+            }
+          },
+          "risks": [
+            "Budget overruns exceeding projections by 25-30%",
+            "Supply chain bottlenecks limiting vehicle availability",
+            "Grid reliability issues in high-adoption areas"
+          ],
+          "opportunities": [
+            "Accelerated domestic manufacturing investment",
+            "Rural economic development through charging infrastructure",
+            "Technology leadership in global EV market"
+          ]
+        },
+        "5_year": {
+          "summary": "Program achieves significant scale with 40% EV market share, driving manufacturing job growth and emissions reductions. Social equity improves through targeted programs while political consensus emerges around economic benefits.",
+          "overallScore": 72,
+          "dimensions": {
+            "economic": {
+              "score": 78,
+              "trend": "positive",
+              "detail": "Manufacturing jobs increase by 400,000 following China's EV employment growth pattern 2015-2020. Battery costs decline 60% due to scale effects, similar to solar panel cost curves. GDP boost of $85B annually from domestic production and reduced oil imports. Trade deficit improves as EV exports begin."
+            },
+            "social": {
+              "score": 75,
+              "trend": "positive",
+              "detail": "Health benefits emerge with 15,000 fewer asthma cases annually in urban areas, matching California Air Resources Board findings. Income-targeted rebates implemented in year 3 increase low-income participation to 35%. Rural communities report 25% reduction in transportation costs."
+            },
+            "environmental": {
+              "score": 80,
+              "trend": "positive",
+              "detail": "Transportation sector emissions fall 18% below 2020 levels, exceeding Norway's 2015-2020 trajectory. Renewable grid integration accelerates to meet charging demand, adding 50GW clean capacity. Lifecycle emissions improve as battery recycling programs mature."
+            },
+            "political": {
+              "score": 68,
+              "trend": "positive",
+              "detail": "Bipartisan support reaches 60% as manufacturing jobs appear in swing states. State-level adoption programs expand following federal model. International climate leadership position strengthened, improving diplomatic relations with EU and other partners."
+            },
+            "technological": {
+              "score": 82,
+              "trend": "positive",
+              "detail": "US captures 30% global battery market share, up from 8% in 2023. Solid-state battery breakthroughs emerge from federally-funded research. Charging times decrease to under 15 minutes with 150,000 fast-charging stations deployed nationwide."
+            }
+          },
+          "risks": [
+            "Rare earth mineral supply constraints",
+            "Grid infrastructure lagging behind adoption",
+            "Technology disruption from alternative fuel sources"
+          ],
+          "opportunities": [
+            "Global technology export leadership",
+            "Energy independence achievement",
+            "New industrial hub development in rust belt regions"
+          ]
+        },
+        "10_year": {
+          "summary": "EV transition reaches 85% completion, establishing US as global clean transportation leader with massive economic and environmental benefits. Social equity achieved through comprehensive access programs and health improvements.",
+          "overallScore": 85,
+          "dimensions": {
+            "economic": {
+              "score": 88,
+              "trend": "positive",
+              "detail": "Cumulative GDP impact exceeds $500B following South Korea's green new deal trajectory. 1.2M net new jobs created across manufacturing, infrastructure, and services. US becomes net exporter of EV technology with $150B annual trade surplus in clean transportation. Gasoline consumption falls 75%, eliminating $200B in oil imports."
+            },
+            "social": {
+              "score": 82,
+              "trend": "positive",
+              "detail": "Transportation equity achieved with EVs comprising 70% of vehicles in low-income communities through targeted programs. 50,000 premature deaths prevented annually from air pollution reduction, matching projected benefits from Clean Air Act expansions. Rural economic revitalization through green manufacturing hubs."
+            },
+            "environmental": {
+              "score": 90,
+              "trend": "positive",
+              "detail": "Transportation emissions decline 85% from 2020 levels, enabling US to exceed Paris Agreement commitments. Grid operates on 80% renewable energy to support charging demand. Circular economy established with 95% battery recycling rate. Biodiversity benefits emerge from reduced oil extraction and refining."
+            },
+            "political": {
+              "score": 85,
+              "trend": "positive",
+              "detail": "Policy becomes institutionalized with 80% public approval across party lines. US global climate leadership position secured, improving international relations. Decentralized energy system enhances national security by reducing fossil fuel dependencies."
+            },
+            "technological": {
+              "score": 92,
+              "trend": "positive",
+              "detail": "US leads in next-generation battery technology with 40% global market share. Vehicle-to-grid integration provides grid stability services worth $50B annually. Autonomous EV technology deployment accelerates due to electric platform advantages. Space industry benefits from advanced battery technology spillovers."
+            }
+          },
+          "risks": [
+            "Stranded fossil fuel assets creating regional economic disruption",
+            "International resource competition intensifying",
+            "Technology obsolescence from breakthrough innovations"
+          ],
+          "opportunities": [
+            "Complete energy independence achievement",
+            "Global clean technology export dominance",
+            "Revolutionary advances in energy storage and grid management"
+          ]
+        }
+      }
+    },
+    "roadmap": {
+      "overview": "Roll out EV subsidies and charging infrastructure through a phased approach prioritizing immediate consumer rebates, followed by infrastructure expansion, and culminating in domestic manufacturing incentives.",
+      "totalHorizonLabel": "5 years",
+      "phases": [
+        {
+          "id": "phase_1",
+          "order": 1,
+          "title": "Program Launch & Consumer Rebates",
+          "windowLabel": "Months 0-12",
+          "summary": "Establish rebate processing systems and launch direct consumer subsidies",
+          "detail": "Treasury Department creates rebate processing infrastructure while DOT coordinates with state DMVs for vehicle verification. IRS updates tax forms and establishes point-of-sale rebate system with major dealerships. Budget overruns risk emerges if demand exceeds $15B annual allocation, requiring congressional supplemental funding. Supply chain constraints could limit vehicle availability despite increased demand.",
+          "milestones": [
+            "Rebate processing system operational",
+            "Partnership agreements signed with 500+ dealerships",
+            "First 50,000 rebates processed"
+          ],
+          "dependencies": [],
+          "actors": [
+            "U.S. Treasury Department",
+            "Internal Revenue Service",
+            "National Automobile Dealers Association",
+            "Major EV manufacturers"
+          ],
+          "riskLevel": "medium",
+          "checkpoint": "Monthly rebate processing capacity reaches 25,000 applications"
+        },
+        {
+          "id": "phase_2",
+          "order": 2,
+          "title": "Rural Charging Infrastructure Deployment",
+          "windowLabel": "Months 6-24",
+          "summary": "Build charging networks in underserved rural and low-income areas",
+          "detail": "Department of Energy leads deployment of 25,000 charging stations through partnerships with utilities and private companies. USDA provides additional rural development funding while state transportation departments coordinate site selection. Grid reliability issues could emerge in areas without adequate electrical infrastructure upgrades. Construction delays and permit challenges may extend timeline by 6-12 months.",
+          "milestones": [
+            "10,000 charging stations installed",
+            "Grid impact assessments completed for 50 rural counties",
+            "Charging network interoperability standards implemented"
+          ],
+          "dependencies": [
+            "phase_1"
+          ],
+          "actors": [
+            "Department of Energy",
+            "USDA Rural Development",
+            "State transportation departments",
+            "Electric utilities",
+            "Charging network operators"
+          ],
+          "riskLevel": "high",
+          "checkpoint": "20,000 operational charging stations with 98% uptime metrics"
+        },
+        {
+          "id": "phase_3",
+          "order": 3,
+          "title": "Equity Enhancement Programs",
+          "windowLabel": "Months 18-36",
+          "summary": "Launch targeted programs for low-income consumers and disadvantaged communities",
+          "detail": "HUD and EPA collaborate on enhanced rebates for households below 80% median income while expanding used EV certification programs. Community-based organizations receive grants to provide EV education and financing assistance. Administrative complexity increases significantly with income verification requirements. Political opposition may intensify over expanded spending and bureaucratic overhead.",
+          "milestones": [
+            "Income-targeted rebate system launched",
+            "Used EV certification program covers 75% of models",
+            "Community outreach programs active in 100 cities"
+          ],
+          "dependencies": [
+            "phase_1"
+          ],
+          "actors": [
+            "Department of Housing and Urban Development",
+            "Environmental Protection Agency",
+            "Community development financial institutions",
+            "State social services agencies"
+          ],
+          "riskLevel": "medium",
+          "checkpoint": "Low-income households represent 35% of total rebate recipients"
+        },
+        {
+          "id": "phase_4",
+          "order": 4,
+          "title": "Manufacturing Incentive Implementation",
+          "windowLabel": "Months 24-48",
+          "summary": "Deploy tax incentives to boost domestic EV and battery production",
+          "detail": "Treasury implements manufacturing tax credits while Commerce Department coordinates with states on facility siting and workforce development. Investment tax credits target battery production, semiconductor manufacturing, and charging equipment assembly. International trade disputes may arise with China and other EV-producing nations. State competition for manufacturing facilities could drive up incentive costs beyond federal budgets.",
+          "milestones": [
+            "5 new battery manufacturing facilities announced",
+            "Domestic EV production increases 40%",
+            "200,000 manufacturing jobs created"
+          ],
+          "dependencies": [
+            "phase_1",
+            "phase_2"
+          ],
+          "actors": [
+            "Department of Commerce",
+            "U.S. Treasury Department",
+            "State economic development agencies",
+            "Labor unions",
+            "EV manufacturers"
+          ],
+          "riskLevel": "medium",
+          "checkpoint": "Domestic EV production capacity reaches 3 million vehicles annually"
+        },
+        {
+          "id": "phase_5",
+          "order": 5,
+          "title": "Market Expansion & Technology Leadership",
+          "windowLabel": "Months 36-60",
+          "summary": "Scale programs to achieve 40% EV market share and global competitiveness",
+          "detail": "DOE expands R&D partnerships while State Department negotiates technology export agreements and international standards. Federal fleet procurement prioritizes domestic EVs to demonstrate technology leadership. Global supply chain disruptions remain a persistent risk as international competition intensifies. Congressional reauthorization battles may threaten program continuity beyond initial 5-year horizon.",
+          "milestones": [
+            "40% new vehicle sales are EVs",
+            "U.S. becomes net EV exporter",
+            "Federal EV fleet reaches 100% electrification"
+          ],
+          "dependencies": [
+            "phase_4"
+          ],
+          "actors": [
+            "Department of Energy",
+            "State Department",
+            "General Services Administration",
+            "National laboratories",
+            "International trade organizations"
+          ],
+          "riskLevel": "low",
+          "checkpoint": "U.S. captures 25% global market share in EV exports"
+        }
+      ],
+      "criticalPath": [
+        "phase_1",
+        "phase_2",
+        "phase_4"
+      ],
+      "successMetrics": [
+        "400,000 manufacturing jobs created",
+        "40% EV market share achieved",
+        "25,000 charging stations operational in underserved areas",
+        "Transportation emissions reduced 15% nationwide",
+        "Low-income household EV adoption reaches 35% of program participation"
+      ]
+    },
+    "author": "Ritish",
+    "status": "published",
+    "publishedAt": null,
+    "votes": {
+      "up": 0,
+      "down": 0
+    },
+    "comments": [],
+    "summary": null,
+    "createdAt": 1774752125438,
+    "implementedAt": null
+  },
+  {
     "id": "pol_1774714058508_pj3h47",
     "title": "Four-Day Work Week Mandate",
     "description": "Mandate a maximum 32-hour, four-day work week for all companies with more than 50 employees, with no reduction in pay. Overtime allowed voluntarily at 1.5x rate.",

@@ -135,6 +135,61 @@ textarea.inp{resize:vertical;line-height:1.55}
 .spinner{width:16px;height:16px;border:2px solid transparent;border-top-color:var(--pr);border-radius:50%;animation:spin .7s linear infinite;display:inline-block}
 .pulsing{animation:pulse 1.5s infinite}
 footer{text-align:center;padding:28px 0 16px;font-size:10px;color:#161b2e;font-family:var(--mono)}
+
+/* Create flow steps */
+.create-step-impact{padding-bottom:4px;margin-bottom:4px;border-bottom:1px solid rgba(255,255,255,.06)}
+.create-step-label{font-size:10px;font-family:var(--mono);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--pr2);margin-bottom:12px}
+
+/* Interactive implementation roadmap */
+.rm-block{margin-top:0;padding-top:18px}
+.rm-section-roadmap{border-top:1px solid rgba(124,110,240,.12);margin-top:18px;padding-top:22px}
+.rm-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.rm-title{font-size:17px;font-weight:700;display:flex;align-items:center;gap:8px;letter-spacing:-.02em}
+.rm-badge{font-size:9px;padding:3px 8px;border-radius:8px;background:rgba(6,182,212,.12);color:#22d3ee;font-family:var(--mono);font-weight:600;letter-spacing:.04em}
+.rm-overview{font-size:13px;color:var(--tx2);line-height:1.6;padding:16px 18px;border-radius:12px;background:linear-gradient(145deg,rgba(6,182,212,.07),rgba(124,110,240,.04));border:1px solid rgba(6,182,212,.14);margin-bottom:16px}
+.rm-tools{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.rm-toggle{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--tx3);cursor:pointer;user-select:none;font-family:var(--mono)}
+.rm-toggle input{accent-color:var(--cy)}
+.rm-layout{display:grid;grid-template-columns:minmax(240px,300px) 1fr;gap:18px;align-items:start}
+@media(max-width:900px){.rm-layout{grid-template-columns:1fr}}
+.rm-phase-list{display:flex;flex-direction:column;gap:10px}
+.rm-phase-card{text-align:left;width:100%;padding:14px 14px 14px 16px;border-radius:12px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-left:4px solid rgba(100,116,139,.5);cursor:pointer;transition:all .18s;position:relative;font:inherit;color:inherit;font-family:var(--sans)}
+.rm-phase-card:hover{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.1);transform:translateY(-1px)}
+.rm-phase-card.on{background:rgba(124,110,240,.08);border-color:rgba(124,110,240,.28);border-left-width:4px;box-shadow:0 8px 32px rgba(0,0,0,.25)}
+.rm-phase-card.rm-node-dim{opacity:.38;filter:grayscale(.35)}
+.rm-phase-card.risk-low{border-left-color:#34d399}
+.rm-phase-card.risk-medium{border-left-color:#fbbf24}
+.rm-phase-card.risk-high{border-left-color:#f87171}
+.rm-pc-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:6px}
+.rm-pc-num{font-family:var(--mono);font-size:11px;font-weight:700;width:28px;height:28px;border-radius:10px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;color:var(--pr2);flex-shrink:0}
+.rm-phase-card.on .rm-pc-num{background:rgba(124,110,240,.25);color:#fff}
+.rm-pc-win{font-size:10px;font-family:var(--mono);color:#67e8f9;padding:3px 8px;border-radius:6px;background:rgba(6,182,212,.1);white-space:nowrap}
+.rm-pc-title{font-size:14px;font-weight:700;color:var(--tx);line-height:1.35;margin-bottom:4px}
+.rm-pc-sum{font-size:12px;color:var(--tx3);line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.rm-detail-stack{display:flex;flex-direction:column;gap:14px}
+.rm-card{border-radius:12px;padding:18px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07)}
+.rm-card-hero{border-color:rgba(124,110,240,.15);background:linear-gradient(180deg,rgba(124,110,240,.06),rgba(255,255,255,.02))}
+.rm-card h5{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--pr2);font-family:var(--mono);margin-bottom:10px}
+.rm-detail{font-size:13px;color:var(--tx2);line-height:1.75}
+.rm-hero-title{font-size:18px;font-weight:700;color:var(--tx);line-height:1.3;margin-bottom:6px;letter-spacing:-.02em}
+.rm-hero-meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
+.rm-hero-sum{font-size:13px;color:var(--tx3);line-height:1.5}
+.rm-mile{margin:0;padding:0;list-style:none}
+.rm-mile li{font-size:13px;color:var(--tx2);padding:10px 12px 10px 36px;margin-bottom:8px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);cursor:pointer;position:relative;transition:all .15s;line-height:1.5}
+.rm-mile li::before{content:'○';position:absolute;left:10px;top:8px;color:var(--cy);font-size:14px}
+.rm-mile li.rm-mile-done{text-decoration:line-through;opacity:.45;color:var(--tx3)}
+.rm-mile li.rm-mile-done::before{content:'✓';color:var(--gn)}
+.rm-mile li.rm-mile-readonly{cursor:default!important;opacity:1}
+.rm-mile li.rm-mile-readonly.rm-mile-done{opacity:.55}
+.rm-mile-note{font-size:10px;color:var(--tx3);margin:-4px 0 8px;line-height:1.4}
+.rm-tags{display:flex;flex-wrap:wrap;gap:5px}
+.rm-tag{font-size:10px;padding:4px 9px;border-radius:7px;background:rgba(124,110,240,.1);color:var(--pr2);font-family:var(--mono)}
+.rm-dep-btn{font-size:10px;padding:3px 8px;border-radius:6px;border:1px solid rgba(245,158,11,.25);background:rgba(245,158,11,.06);color:var(--am);cursor:pointer;font-family:var(--mono);transition:all .12s}
+.rm-dep-btn:hover{background:rgba(245,158,11,.12)}
+.rm-metrics{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.rm-met{font-size:10px;padding:5px 10px;border-radius:8px;background:rgba(16,185,129,.06);border:1px solid rgba(16,185,129,.12);color:#6ee7b7;font-family:var(--mono)}
+.rm-cp-note{font-size:10px;color:var(--tx3);font-family:var(--mono);margin-top:12px;line-height:1.5;padding:10px 12px;border-radius:8px;background:rgba(255,255,255,.02)}
+.rm-check-h{font-size:11px;font-weight:600;color:var(--tx);margin-bottom:4px}
 </style>
 </head>
 <body>
@@ -187,8 +242,21 @@ footer{text-align:center;padding:28px 0 16px;font-size:10px;color:#161b2e;font-f
     <div id="aload" class="hidden" style="text-align:center;margin-top:12px"><span class="spinner"></span><span class="pulsing" style="font-size:11px;color:var(--pr);font-family:var(--mono);margin-left:8px" id="astatus">Analyzing...</span></div>
   </div>
   <div id="aresults" class="hidden glass fu" style="padding:22px;margin-top:16px">
+    <div class="create-step create-step-impact">
+    <p class="create-step-label">Step 1 — Impact prediction</p>
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:10px"><h3 style="font-size:17px;font-weight:700">🧠 AI Impact Prediction</h3><div id="c-gauge"></div></div>
     <div class="timeline" id="c-tl"></div><div id="c-radar" class="radar-wrap"></div><div id="c-hz"></div>
+    </div>
+    <div id="roadmap-create-wrap" class="rm-block rm-section-roadmap hidden">
+      <p class="create-step-label">Step 2 — Implementation roadmap</p>
+      <div class="rm-head"><div><div class="rm-title">🗺️ Rollout plan <span class="rm-badge">Interactive</span></div><p style="font-size:12px;color:var(--tx2);margin-top:6px;max-width:560px;line-height:1.5">How this policy could roll out over time — phases, who’s involved, and checkpoints. Click a phase on the left to read the full picture.</p></div></div>
+      <div id="roadmap-create-gen">
+        <button type="button" class="btn btn-gh btn-full" style="border-color:rgba(6,182,212,.25);color:#67e8f9" onclick="generateRoadmap('c')" id="rm-gen-btn-c">⬡ Generate interactive roadmap</button>
+        <p style="font-size:10px;color:var(--tx3);margin-top:8px;text-align:center;font-family:var(--mono)">Uses your impact analysis for alignment • one AI call</p>
+      </div>
+      <div id="roadmap-create-load" class="hidden" style="text-align:center;padding:16px"><span class="spinner"></span><span class="pulsing" style="font-size:11px;color:#22d3ee;font-family:var(--mono);margin-left:8px">Building roadmap…</span></div>
+      <div id="roadmap-create-inner"></div>
+    </div>
     <button class="btn btn-pr btn-full" style="margin-top:18px" onclick="doPublish()">📢 Publish for Public Deliberation</button>
   </div>
 </div>
@@ -204,7 +272,10 @@ footer{text-align:center;padding:28px 0 16px;font-size:10px;color:#161b2e;font-f
   <button class="btn btn-gh btn-sm" onclick="go('feed')" style="margin-bottom:14px">← Back to Feed</button>
   <div class="glass" style="padding:20px;margin-bottom:14px" id="d-hdr"></div>
   <div class="dgrid">
-    <div class="dleft"><div class="glass scroll-panel" style="padding:20px;margin-bottom:14px" id="d-analysis"></div></div>
+    <div class="dleft">
+      <div class="glass scroll-panel" style="padding:20px;margin-bottom:14px" id="d-analysis"></div>
+      <div id="d-roadmap" class="glass scroll-panel hidden" style="padding:20px;margin-bottom:14px"></div>
+    </div>
     <div class="dright"><div class="glass scroll-panel" style="padding:18px;margin-bottom:14px" id="d-comments"></div></div>
   </div>
   <div class="ethics" style="margin-bottom:20px"><p style="font-size:9px;color:var(--pr);font-family:var(--mono);font-weight:500;margin-bottom:2px;text-transform:uppercase;letter-spacing:.08em">Ethical Notice</p><p style="font-size:11px;color:#556;line-height:1.5">This platform empowers democratic deliberation. AI predictions support — never replace — human judgment.</p></div>
@@ -215,6 +286,156 @@ footer{text-align:center;padding:28px 0 16px;font-size:10px;color:#161b2e;font-f
 
 <script>
 let P=[],selId=null,curA=null,cTab=0,dTab=0,curSent='support',isPublisher=false;
+let curRoadmap=null;
+let curRoadmapProgress={};
+const rmSel={c:0,d:0}, rmCritOnly={c:false,d:false};
+function initProgressFromRoadmap(roadmap){const o={};(roadmap?.phases||[]).forEach(ph=>{o[ph.id]=(ph.milestones||[]).map(()=>false);});return o;}
+function getRoadmapForPrefix(prefix){return prefix==='c'?curRoadmap:(P.find(x=>x.id===selId)||{}).roadmap;}
+function getRoadmapProgress(prefix){if(prefix==='c')return curRoadmapProgress;const p=P.find(x=>x.id===selId);return(p&&p.roadmapProgress)?p.roadmapProgress:{};}
+function canEditRoadmapMilestones(prefix){return prefix==='c'||isPublisher;}
+async function rmToggleMilestone(mountId,prefix,phaseId,mi){
+  if(!canEditRoadmapMilestones(prefix))return;
+  if(prefix==='c'){
+    const ph=(curRoadmap||{}).phases?.find(p=>p.id===phaseId);const n=ph?.milestones?.length||0;
+    if(!curRoadmapProgress[phaseId])curRoadmapProgress[phaseId]=[];
+    while(curRoadmapProgress[phaseId].length<n)curRoadmapProgress[phaseId].push(false);
+    curRoadmapProgress[phaseId][mi]=!curRoadmapProgress[phaseId][mi];
+    renderRoadmapMount(mountId,'c');return;
+  }
+  const pol=P.find(x=>x.id===selId);if(!pol)return;
+  const ph=(pol.roadmap||{}).phases?.find(p=>p.id===phaseId);const n=ph?.milestones?.length||0;
+  const rp={...(pol.roadmapProgress||{})};
+  if(!rp[phaseId])rp[phaseId]=[];
+  while(rp[phaseId].length<n)rp[phaseId].push(false);
+  rp[phaseId][mi]=!rp[phaseId][mi];
+  pol.roadmapProgress=rp;
+  await api('PUT',`/api/policies/${pol.id}`,{roadmapProgress:rp});
+  await syncP();
+  renderRoadmapMount(mountId,'d');
+}
+function rmPickPhase(mountId,prefix,idx){rmSel[prefix]=idx;renderRoadmapMount(mountId,prefix);}
+function rmToggleCrit(mountId,prefix){rmCritOnly[prefix]=!rmCritOnly[prefix];renderRoadmapMount(mountId,prefix);}
+function rmJumpDep(mountId,prefix,depId){const r=getRoadmapForPrefix(prefix);if(!r||!r.phases)return;const i=r.phases.findIndex(p=>p.id===depId);if(i<0)return;rmSel[prefix]=i;renderRoadmapMount(mountId,prefix);const el=document.getElementById(mountId);if(el)el.scrollIntoView({behavior:'smooth',block:'nearest'});}
+function renderRoadmapMount(mountId,prefix){
+  const roadmap=getRoadmapForPrefix(prefix);const el=document.getElementById(mountId);if(!el||!roadmap||!roadmap.phases?.length)return;
+  const phases=roadmap.phases;const si=Math.min(rmSel[prefix]||0,phases.length-1);rmSel[prefix]=si;const ph=phases[si];
+  const cp=new Set(roadmap.criticalPath||[]);const critOnly=rmCritOnly[prefix];const idToIdx={};phases.forEach((p,i)=>{idToIdx[p.id]=i;});
+  const riskB=x=>({low:'risk-low',medium:'risk-medium',high:'risk-high'}[x]||'risk-medium');
+  let phaseList='';phases.forEach((p,i)=>{
+    const dim=critOnly&&!cp.has(p.id);const on=i===si;
+    const prev=(p.summary||p.detail||'').replace(/\s+/g,' ').trim();
+    const sum=prev.length>150?prev.slice(0,147)+'…':prev;
+    phaseList+=`<button type="button" class="rm-phase-card ${riskB(p.riskLevel)} ${dim?'rm-node-dim':''} ${on?'on':''}" onclick="rmPickPhase('${mountId}','${prefix}',${i})"><div class="rm-pc-top"><span class="rm-pc-num">${p.order!=null?p.order:i+1}</span><span class="rm-pc-win">${esc(p.windowLabel||'Timeline')}</span></div><div class="rm-pc-title">${esc(p.title)}</div>${sum?`<div class="rm-pc-sum">${esc(sum)}</div>`:''}</button>`;
+  });
+  const prog=getRoadmapProgress(prefix);
+  const deps=(ph.dependencies||[]).filter(d=>idToIdx[d]!==undefined);
+  const depHtml=deps.length?`<div style="margin-top:14px"><span style="font-size:10px;color:var(--tx3);font-family:var(--mono);display:block;margin-bottom:6px">Must complete first</span><div style="display:flex;flex-wrap:wrap;gap:6px">${deps.map(d=>`<button type="button" class="rm-dep-btn" onclick="rmJumpDep('${mountId}','${prefix}',${JSON.stringify(d)})">→ ${esc(phases[idToIdx[d]].title)}</button>`).join('')}</div></div>`:'';
+  const editMs=canEditRoadmapMilestones(prefix);
+  const msNote=prefix==='c'?'<p class="rm-mile-note">Tap to track rollout progress. Saved when you publish.</p>':(editMs?'<p class="rm-mile-note">Only you can update milestones. Everyone sees the same progress on this page.</p>':'<p class="rm-mile-note">Progress is set by the publisher. Refresh the page to see the latest.</p>');
+  const miles=(ph.milestones||[]).map((m,i)=>{
+    const arr=prog[ph.id]||[];
+    const done=!!arr[i];
+    const cls=(done?'rm-mile-done':'')+(editMs?'':' rm-mile-readonly');
+    const oc=editMs?`onclick="rmToggleMilestone('${mountId}','${prefix}',${JSON.stringify(ph.id)},${i})"`:'';return`<li class="${cls}" ${oc}>${esc(m)}</li>`;
+  }).join('');
+  const mh=editMs?'Milestones (publisher — tap to check off)':'Key milestones';
+  const actors=(ph.actors||[]).map(a=>`<span class="rm-tag">${esc(a)}</span>`).join('');
+  const metrics=(roadmap.successMetrics||[]).map(m=>`<span class="rm-met">${esc(m)}</span>`).join('');
+  const rk=({low:'Low',medium:'Medium',high:'High'}[ph.riskLevel]||'Medium');
+  el.innerHTML=`<div class="rm-overview"><span style="display:block;font-size:10px;font-family:var(--mono);letter-spacing:.1em;color:#67e8f9;margin-bottom:6px">BIG PICTURE</span>${esc(roadmap.overview||'')}${roadmap.totalHorizonLabel?`<span style="display:block;margin-top:10px;font-size:12px;font-family:var(--mono);color:#67e8f9">Estimated horizon: ${esc(roadmap.totalHorizonLabel)}</span>`:''}</div>
+  <div class="rm-tools"><label class="rm-toggle"><input type="checkbox" ${critOnly?'checked':''} onchange="rmToggleCrit('${mountId}','${prefix}')"> Show critical path only</label></div>
+  <div class="rm-layout">
+    <div>
+      <p class="lb" style="margin-bottom:10px">All phases</p>
+      <div class="rm-phase-list">${phaseList}</div>
+    </div>
+    <div class="rm-detail-stack">
+      <div class="rm-card rm-card-hero">
+        <div class="rm-hero-title">${esc(ph.title)}</div>
+        <div class="rm-hero-meta"><span class="rm-pc-win">${esc(ph.windowLabel||'')}</span><span class="rm-tag" style="background:rgba(255,255,255,.06);color:var(--tx2)">Implementation risk: ${rk}</span></div>
+        <p class="rm-hero-sum">${esc(ph.summary||'')}</p>
+      </div>
+      <div class="rm-card">
+        <h5>What happens in this phase</h5>
+        <p class="rm-detail">${esc(ph.detail||ph.summary||'')}</p>
+        ${depHtml}
+        <div style="margin-top:16px"><h5 style="margin-bottom:8px">Who is involved</h5><div class="rm-tags">${actors||'<span style="font-size:12px;color:var(--tx3)">—</span>'}</div></div>
+        <div style="margin-top:16px;padding:14px;border-radius:10px;background:rgba(124,110,240,.06);border:1px solid rgba(124,110,240,.12)">
+          <span class="rm-check-h">✓ Success looks like</span>
+          <p class="rm-detail" style="margin:0">${esc(ph.checkpoint||'')}</p>
+        </div>
+      </div>
+      <div class="rm-card">
+        <h5>${mh}</h5>
+        ${msNote}
+        <ul class="rm-mile">${miles||'<li style="cursor:default;opacity:.6">No milestones listed.</li>'}</ul>
+      </div>
+    </div>
+  </div>
+  <p class="rm-cp-note"><strong style="color:var(--tx2)">Critical path</strong> — phases that limit overall timing: ${(roadmap.criticalPath||[]).map(id=>esc(id)).join(' → ')||'—'}</p>
+  ${metrics?`<div class="rm-metrics" style="margin-top:4px"><span style="font-size:10px;font-family:var(--mono);color:var(--tx3);width:100%;margin-bottom:4px">Success metrics</span>${metrics}</div>`:''}`;
+}
+async function generateRoadmap(prefix){
+  const mountId=prefix==='c'?'roadmap-create-inner':'d-roadmap-inner';
+  const t=document.getElementById('f-title')?.value?.trim(),d=document.getElementById('f-desc')?.value?.trim();
+  const policy=prefix==='c'?{title:t,description:d,sector:document.getElementById('f-sector').value.trim(),region:document.getElementById('f-region').value.trim()}:(()=>{const p=P.find(x=>x.id===selId);return p?{title:p.title,description:p.description,sector:p.sector,region:p.region}:null;})();
+  if(!policy||!policy.title||!policy.description){alert('Missing policy fields.');return;}
+  const analysis=prefix==='c'?curA:(P.find(x=>x.id===selId)||{}).analysis;
+  const loadEl=document.getElementById(prefix==='c'?'roadmap-create-load':'d-roadmap-load');
+  const genEl=document.getElementById(prefix==='c'?'roadmap-create-gen':'d-roadmap-gen');
+  const btn=document.getElementById(prefix==='c'?'rm-gen-btn-c':'rm-gen-btn-d');
+  if(loadEl)loadEl.classList.remove('hidden');if(genEl)genEl.classList.add('hidden');if(btn)btn.disabled=true;
+  try{
+    const data=await api('POST','/api/roadmap',{policy,analysis:analysis||null});
+    if(data.error)throw new Error(data.error);
+    if(prefix==='c'){
+      curRoadmap=data.roadmap;curRoadmapProgress=initProgressFromRoadmap(data.roadmap);rmSel.c=0;
+      document.getElementById('roadmap-create-gen')?.classList.add('hidden');
+      renderRoadmapMount('roadmap-create-inner','c');
+    }else{
+      const pol=P.find(x=>x.id===selId);
+      const rpNew=initProgressFromRoadmap(data.roadmap);
+      if(pol){pol.roadmap=data.roadmap;pol.roadmapProgress=rpNew;await api('PUT',`/api/policies/${pol.id}`,{roadmap:data.roadmap,roadmapProgress:rpNew});await syncP();}
+      rmSel.d=0;
+      const box=document.getElementById('d-roadmap');
+      if(box){
+        box.innerHTML=`<p class="create-step-label" style="margin-bottom:10px">Implementation roadmap</p><div class="rm-head" style="margin-bottom:0"><div class="rm-title">🗺️ Rollout plan <span class="rm-badge">Interactive</span></div></div><p style="font-size:12px;color:var(--tx2);line-height:1.5;margin:10px 0 14px">Read phases in order on the left, then details on the right.</p><div id="d-roadmap-inner"></div>`;
+        renderRoadmapMount('d-roadmap-inner','d');
+      }
+    }
+  }catch(e){alert('Roadmap failed: '+e.message);}
+  finally{
+    if(loadEl)loadEl.classList.add('hidden');
+    if(prefix==='c'&&!curRoadmap){if(genEl)genEl.classList.remove('hidden');}
+    if(prefix==='d'&&!(P.find(x=>x.id===selId)||{}).roadmap){renderDetailRoadmap();}
+    if(btn)btn.disabled=false;
+  }
+}
+function showRoadmapCreateSection(){
+  const wrap=document.getElementById('roadmap-create-wrap');if(!wrap)return;
+  wrap.classList.remove('hidden');
+  const gen=document.getElementById('roadmap-create-gen');const inner=document.getElementById('roadmap-create-inner');
+  if(curRoadmap){if(gen)gen.classList.add('hidden');renderRoadmapMount('roadmap-create-inner','c');}
+  else{if(gen)gen.classList.remove('hidden');if(inner)inner.innerHTML='';}
+}
+function renderDetailRoadmap(){
+  const box=document.getElementById('d-roadmap');if(!box)return;
+  const p=P.find(x=>x.id===selId);
+  if(!p||!p.analysis){box.classList.add('hidden');box.innerHTML='';return;}
+  box.classList.remove('hidden');
+  if(p.roadmap){
+    box.innerHTML=`<p class="create-step-label" style="margin-bottom:10px">Implementation roadmap</p><div class="rm-head" style="margin-bottom:0"><div class="rm-title">🗺️ Rollout plan <span class="rm-badge">Interactive</span></div></div><p style="font-size:12px;color:var(--tx2);line-height:1.5;margin:10px 0 14px">Read phases in order on the left, then the full story for the selected phase on the right.</p><div id="d-roadmap-inner"></div>`;
+    renderRoadmapMount('d-roadmap-inner','d');return;
+  }
+  if(isPublisher){
+    box.innerHTML=`<p class="create-step-label" style="margin-bottom:10px">Implementation roadmap</p><div class="rm-head"><div><div class="rm-title">🗺️ Rollout plan <span class="rm-badge">Interactive</span></div><p style="font-size:12px;color:var(--tx2);margin-top:6px;line-height:1.5">Generate a phased plan with dependencies, actors, and checkpoints — shown below impact analysis.</p></div></div>
+    <div id="d-roadmap-gen"><button type="button" class="btn btn-gh btn-full" style="border-color:rgba(6,182,212,.25);color:#67e8f9" onclick="generateRoadmap('d')" id="rm-gen-btn-d">⬡ Generate interactive roadmap</button></div>
+    <div id="d-roadmap-load" class="hidden" style="text-align:center;padding:14px"><span class="spinner"></span><span class="pulsing" style="font-size:11px;color:#22d3ee;font-family:var(--mono);margin-left:8px">Building roadmap…</span></div>
+    <div id="d-roadmap-inner"></div>`;
+  }else{
+    box.innerHTML=`<div style="font-size:11px;color:var(--tx3);padding:8px">No implementation roadmap was published for this policy.</div>`;
+  }
+}
 const EX=[
   {title:"Universal Basic Income ($1000/month)",description:"Implement a universal basic income of $1000/month for all adult citizens, funded through value-added tax and wealth tax.",sector:"Economic Policy",region:"United States"},
   {title:"Ban on Single-Use Plastics",description:"Complete ban on manufacturing, importing, and selling single-use plastic products including bags, straws, cutlery, and food packaging. Companies must switch to biodegradable alternatives within 2 years.",sector:"Environmental",region:"European Union"},
@@ -342,17 +563,17 @@ function hzHTML(hd,hl){
 
 /* ═══ CREATE ═══ */
 document.getElementById('exbtns').innerHTML=EX.map((e,i)=>`<button class="btn btn-gh btn-sm" onclick="loadEx(${i})">${e.title}</button>`).join('');
-function loadEx(i){const e=EX[i];document.getElementById('f-title').value=e.title;document.getElementById('f-desc').value=e.description;document.getElementById('f-sector').value=e.sector;document.getElementById('f-region').value=e.region;document.getElementById('aresults').classList.add('hidden');curA=null;}
+function loadEx(i){const e=EX[i];document.getElementById('f-title').value=e.title;document.getElementById('f-desc').value=e.description;document.getElementById('f-sector').value=e.sector;document.getElementById('f-region').value=e.region;document.getElementById('aresults').classList.add('hidden');curA=null;curRoadmap=null;curRoadmapProgress={};const ri=document.getElementById('roadmap-create-inner');if(ri)ri.innerHTML='';const rg=document.getElementById('roadmap-create-gen');if(rg)rg.classList.remove('hidden');}
 async function doAnalyze(){
   const t=document.getElementById('f-title').value.trim(),d=document.getElementById('f-desc').value.trim();
   if(!t||!d){const el=document.getElementById('c-err');el.textContent='Title and description required.';el.classList.remove('hidden');return;}
   document.getElementById('c-err').classList.add('hidden');document.getElementById('aload').classList.remove('hidden');document.getElementById('abtn').disabled=true;document.getElementById('astatus').textContent='Claude is analyzing...';
-  try{const data=await api('POST','/api/analyze',{policy:{title:t,description:d,sector:document.getElementById('f-sector').value.trim(),region:document.getElementById('f-region').value.trim()}});if(data.error)throw new Error(data.error);curA=data.analysis;cTab=0;rCreateA();document.getElementById('aresults').classList.remove('hidden');document.getElementById('aresults').scrollIntoView({behavior:'smooth'});}
+  try{curRoadmap=null;curRoadmapProgress={};const data=await api('POST','/api/analyze',{policy:{title:t,description:d,sector:document.getElementById('f-sector').value.trim(),region:document.getElementById('f-region').value.trim()}});if(data.error)throw new Error(data.error);curA=data.analysis;cTab=0;rCreateA();showRoadmapCreateSection();document.getElementById('aresults').classList.remove('hidden');document.getElementById('aresults').scrollIntoView({behavior:'smooth'});}
   catch(e){const el=document.getElementById('c-err');el.textContent='Analysis failed: '+e.message;el.classList.remove('hidden');}
   finally{document.getElementById('aload').classList.add('hidden');document.getElementById('abtn').disabled=false;}
 }
 function rCreateA(){if(!curA)return;const hk=`${HZ[cTab].y}_year`,hd=curA.horizons?.[hk];if(!hd)return;document.getElementById('c-gauge').innerHTML=gauge(hd.overallScore,95);document.getElementById('c-tl').innerHTML=tlHTML(cTab,'c');document.getElementById('c-radar').innerHTML=radar(DIM,hd.dimensions||{});document.getElementById('c-hz').innerHTML=hzHTML(hd,HZ[cTab].l);}
-async function doPublish(){if(!curA)return;const pol={title:document.getElementById('f-title').value.trim(),description:document.getElementById('f-desc').value.trim(),sector:document.getElementById('f-sector').value.trim(),region:document.getElementById('f-region').value.trim(),analysis:curA,author:document.getElementById('f-author').value.trim()||'Publisher',status:'published',publishedAt:Date.now()};const created=await api('POST','/api/policies',pol);P.unshift(created);selId=created.id;document.getElementById('n-detail').style.opacity='1';curA=null;document.getElementById('aresults').classList.add('hidden');['f-title','f-desc','f-sector','f-region','f-author'].forEach(x=>document.getElementById(x).value='');go('detail');}
+async function doPublish(){if(!curA)return;const pol={title:document.getElementById('f-title').value.trim(),description:document.getElementById('f-desc').value.trim(),sector:document.getElementById('f-sector').value.trim(),region:document.getElementById('f-region').value.trim(),analysis:curA,roadmap:curRoadmap||null,roadmapProgress:curRoadmap?curRoadmapProgress||{}:null,author:document.getElementById('f-author').value.trim()||'Publisher',status:'published',publishedAt:Date.now()};const created=await api('POST','/api/policies',pol);P.unshift(created);selId=created.id;document.getElementById('n-detail').style.opacity='1';curA=null;curRoadmap=null;curRoadmapProgress={};document.getElementById('aresults').classList.add('hidden');['f-title','f-desc','f-sector','f-region','f-author'].forEach(x=>document.getElementById(x).value='');go('detail');}
 
 /* ═══ FEED ═══ */
 function rFeed(){
@@ -375,7 +596,7 @@ async function voteFd(id,dir,btn){
 function openP(id){selId=id;document.getElementById('n-detail').style.opacity='1';go('detail');}
 
 /* ═══ DETAIL ═══ */
-function rDetail(){const p=P.find(x=>x.id===selId);if(!p)return;rDHeader(p);rDAnalysis(p);rDComments(p);}
+function rDetail(){const p=P.find(x=>x.id===selId);if(!p)return;rDHeader(p);renderDetailRoadmap();rDAnalysis(p);rDComments(p);}
 
 function rDHeader(p){
   const net=p.votes.up-p.votes.down,stcl=p.status==='implemented'?'st-imp':p.status==='published'?'st-pub':'st-dft';
@@ -388,7 +609,7 @@ function rDHeader(p){
   document.getElementById('d-hdr').innerHTML=`<div style="display:flex;align-items:flex-start;gap:16px"><div style="flex:1"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap"><span class="st ${stcl}">${p.status}</span>${p.sector?`<span style="font-size:10px;color:var(--tx3);font-family:var(--mono)">${p.sector}</span>`:''} ${p.region?`<span style="font-size:10px;color:var(--dm);font-family:var(--mono)">• ${p.region}</span>`:''}</div><h2 style="font-size:21px;font-weight:700;margin-bottom:5px;line-height:1.2">${p.title}</h2><p style="font-size:12px;color:var(--tx2);line-height:1.55">${p.description}</p><div style="display:flex;align-items:center;gap:8px;margin-top:10px;flex-wrap:wrap"><span style="font-size:10px;color:var(--tx3);font-family:var(--mono)">by ${p.author||'Anonymous'}</span>${sb}</div></div><div style="display:flex;flex-direction:column;align-items:center;gap:3px"><button class="vb vb-up ${voteDisabled}" ${isImpl?'':`onclick="voteD('up',this)"`} style="min-width:62px">▲ ${p.votes.up}</button><span class="vnet" style="color:${net>0?'var(--gn)':net<0?'var(--rd)':'var(--tx3)'}">${net>0?'+':''}${net}</span><button class="vb vb-dn ${voteDisabled}" ${isImpl?'':`onclick="voteD('down',this)"`} style="min-width:62px">▼ ${p.votes.down}</button>${isImpl?'<span style="font-size:8px;color:var(--tx3);font-family:var(--mono);margin-top:2px">Voting closed</span>':''}</div></div>`;
 }
 
-function rDAnalysis(p){if(!p||!p.analysis){document.getElementById('d-analysis').innerHTML='<p style="color:var(--tx3)">No analysis.</p>';return;}const hk=`${HZ[dTab].y}_year`,hd=p.analysis.horizons?.[hk];if(!hd)return;document.getElementById('d-analysis').innerHTML=`<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:8px"><h3 style="font-size:16px;font-weight:700">🧠 AI Impact Prediction</h3>${gauge(hd.overallScore,85)}</div><div class="timeline">${tlHTML(dTab,'d')}</div><div class="radar-wrap">${radar(DIM,hd.dimensions||{})}</div>${hzHTML(hd,HZ[dTab].l)}`;}
+function rDAnalysis(p){if(!p||!p.analysis){document.getElementById('d-analysis').innerHTML='<p style="color:var(--tx3)">No analysis.</p>';return;}const hk=`${HZ[dTab].y}_year`,hd=p.analysis.horizons?.[hk];if(!hd)return;document.getElementById('d-analysis').innerHTML=`<p class="create-step-label" style="margin-bottom:10px">Impact prediction</p><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:8px"><h3 style="font-size:16px;font-weight:700">🧠 AI Impact Prediction</h3>${gauge(hd.overallScore,85)}</div><div class="timeline">${tlHTML(dTab,'d')}</div><div class="radar-wrap">${radar(DIM,hd.dimensions||{})}</div>${hzHTML(hd,HZ[dTab].l)}`;}
 
 function rDComments(p){
   const pinnedIds = p.pinnedComments || [];
