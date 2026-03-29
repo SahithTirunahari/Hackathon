@@ -69,18 +69,9 @@ policy-impact-ai/
 - **5 Years** — Institutional adaptation, second-order effects
 - **10 Years** — Structural transformation, compounding impacts
 
----
 
-## 🏆 Hackathon Alignment
 
-| Criteria | How We Address It |
-|----------|-------------------|
-| **Impact (25pts)** | Solves real governance problem — helps policymakers & citizens preview consequences |
-| **Technical (30pts)** | Claude API integration with structured multi-dimensional analysis |
-| **Ethics (25pts)** | Built-in ethical notice, empowers humans, transparent about AI limitations |
-| **Presentation (20pts)** | Polished UI, animated visualizations, clear data presentation |
 
----
 
 
 
