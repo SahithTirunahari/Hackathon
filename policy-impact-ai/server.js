@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
@@ -400,6 +401,78 @@ Return ONLY valid JSON:
     res.json({ result });
   } catch (err) {
     console.error('What-if error:', err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// ══════════════════════════════════════════════
+// ROUTE: Compare Two Policies (AI Priority Analysis)
+// ══════════════════════════════════════════════
+app.post('/api/compare', async (req, res) => {
+  if (CLAUDE_API_KEY === 'YOUR_API_KEY_HERE') {
+    return res.status(400).json({ error: 'API key not configured.' });
+  }
+  try {
+    const { policyA, policyB, weights } = req.body;
+    if (!policyA || !policyB) {
+      return res.status(400).json({ error: 'Two policies are required for comparison.' });
+    }
+
+    const dimSummary = (p) => {
+      const h = p.analysis?.horizons || {};
+      return ['1_year', '5_year', '10_year'].map(hk => {
+        const hd = h[hk];
+        if (!hd) return `${hk}: No data`;
+        const dims = hd.dimensions || {};
+        const scores = Object.entries(dims).map(([k, v]) =>
+          `${k}: ${v.score}/100 (${v.trend})`
+        ).join(', ');
+        return `${hk}: overall=${hd.overallScore}, ${scores}`;
+      }).join('\n');
+    };
+
+    const weightInfo = weights
+      ? `\n\nThe user has set the following priority weights (importance out of 100):\n${Object.entries(weights).map(([k, v]) => `- ${k}: ${v}%`).join('\n')}\nWeight these dimensions accordingly in your analysis.`
+      : '';
+
+    const prompt = `You are PolicyImpact AI — an expert policy strategist. A policymaker wants to compare two published policies and determine which one should be implemented FIRST for maximum benefit.
+
+POLICY A: "${policyA.title}"
+Description: ${policyA.description}
+Sector: ${policyA.sector || 'General'}
+Region: ${policyA.region || 'Global'}
+Impact Scores:
+${dimSummary(policyA)}
+
+POLICY B: "${policyB.title}"
+Description: ${policyB.description}
+Sector: ${policyB.sector || 'General'}
+Region: ${policyB.region || 'Global'}
+Impact Scores:
+${dimSummary(policyB)}
+${weightInfo}
+
+Provide a clear, concise comparison. Focus on:
+- Which policy should be implemented first and WHY
+- How each policy specifically benefits its domain/sector
+- Key advantages and risks of each
+- Any sequencing benefits (does implementing one first help the other?)
+
+Return ONLY valid JSON (no markdown, no backticks):
+{
+  "winner": "A" or "B",
+  "winnerTitle": "Title of the recommended first-priority policy",
+  "confidenceScore": 78,
+  "summary": "Write 2-3 concise paragraphs (total ~150-200 words) that a policymaker can quickly read and understand. First paragraph: clearly state which policy should come first and the primary reason why — reference specific scores and domain impact. Second paragraph: explain the key trade-offs, what the losing policy still offers, and how implementing them in this order creates synergy. Use plain language, be direct, and make every sentence count. Do NOT use bullet points or headers — write flowing prose."
+}`;
+
+    console.log(`[COMPARE] "${policyA.title}" vs "${policyB.title}"`);
+    const text = await callClaude(prompt, 1500);
+    const comparison = parseClaudeJson(text);
+    console.log(`[COMPARE] Done — Winner: Policy ${comparison.winner}`);
+    res.json({ comparison, source: 'claude-api' });
+  } catch (err) {
+    console.error('Compare error:', err.message);
     res.status(500).json({ error: err.message });
   }
 });

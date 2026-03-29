@@ -276,13 +276,63 @@
     "status": "published",
     "publishedAt": null,
     "votes": {
-      "up": 0,
+      "up": 1,
       "down": 0
     },
     "comments": [],
     "summary": null,
     "createdAt": 1774752125438,
-    "implementedAt": null
+    "implementedAt": null,
+    "scenarios": [
+      {
+        "id": "wf_1774755990886",
+        "modification": "I want to increase the amount from $7500 to $10000 what can be the impact?",
+        "result": {
+          "modifiedTitle": "Enhanced Universal EV Subsidy Program ($10,000 Rebate)",
+          "summary": "Increasing the rebate from $7,500 to $10,000 would accelerate EV adoption but significantly strain federal finances and potentially worsen supply shortages. While more consumers could access EVs, the additional $5-7B annual cost would intensify political opposition and budget concerns.",
+          "dimensions": {
+            "economic": {
+              "original": 45,
+              "modified": 38,
+              "change": "-7",
+              "explanation": "Federal expenditure increases to $22-27B annually, deepening budget strain. Higher rebates could drive EV prices up 15-18% due to increased demand against limited supply, following basic demand-supply economics seen in housing subsidies. Job creation benefits remain similar but are offset by greater fiscal pressure."
+            },
+            "social": {
+              "original": 55,
+              "modified": 62,
+              "change": "+7",
+              "explanation": "Higher rebates make EVs accessible to more middle-class families and some upper-working-class households, potentially increasing participation among $50-75K income bracket by 25-30%. Rural communities benefit more from infrastructure investments, though wealth disparity in rebate distribution persists."
+            },
+            "environmental": {
+              "original": 58,
+              "modified": 55,
+              "change": "-3",
+              "explanation": "While higher adoption rates could increase emissions reduction to 3-4% in metro areas, manufacturing emissions surge more dramatically due to accelerated production demands. Grid strain intensifies without proportional renewable capacity expansion, potentially offsetting some environmental gains."
+            },
+            "political": {
+              "original": 48,
+              "modified": 42,
+              "change": "-6",
+              "explanation": "Republican opposition intensifies significantly over the additional $5-7B annual spending, drawing comparisons to expensive programs like the American Recovery Act. Fiscal conservatives within Democratic ranks may also express concerns about budget sustainability, reducing bipartisan support even for popular infrastructure components."
+            },
+            "technological": {
+              "original": 62,
+              "modified": 65,
+              "change": "+3",
+              "explanation": "Higher market incentives attract additional domestic manufacturing investment, potentially increasing battery production capacity by 50-60%. R&D partnerships expand as manufacturers anticipate larger market volumes, leading to 20-25% increase in EV patent filings and accelerated innovation in charging technology."
+            }
+          },
+          "tradeoffs": [
+            "Significantly higher federal spending ($5-7B additional annually) versus broader EV accessibility and faster adoption rates",
+            "Potential EV price inflation due to increased demand versus accelerated technological innovation and domestic manufacturing growth"
+          ],
+          "recommendation": "Not recommended without corresponding revenue measures or phased implementation. While the higher rebate would accelerate adoption and innovation, the substantial budget impact and political feasibility concerns outweigh the marginal benefits over the original $7,500 level."
+        },
+        "author": "Citizen",
+        "role": "citizen",
+        "createdAt": 1774755990886
+      }
+    ]
   },
   {
     "id": "pol_1774714058508_pj3h47",
