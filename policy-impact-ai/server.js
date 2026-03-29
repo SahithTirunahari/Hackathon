@@ -244,11 +244,88 @@ app.post('/api/auth/verify', (req, res) => {
   const { code } = req.body;
   console.log(`[AUTH] Attempt with code: "${code}" (expected: "${PUBLISHER_CODE}")`);
   if (code && code.trim() === PUBLISHER_CODE.trim()) {
-    console.log('[AUTH]  Verified as publisher');
+    console.log('[AUTH] ✅ Verified as publisher');
     res.json({ valid: true, role: 'publisher' });
   } else {
-    console.log('[AUTH]  Invalid code');
+    console.log('[AUTH] ❌ Invalid code');
     res.json({ valid: false, error: 'Invalid publisher code' });
+  }
+});
+
+// ══════════════════════════════════════════════
+// ROUTE: What-If Scenario Simulator
+// ══════════════════════════════════════════════
+app.post('/api/policies/:id/whatif', async (req, res) => {
+  if (CLAUDE_API_KEY === 'YOUR_API_KEY_HERE') {
+    return res.status(400).json({ error: 'API key not configured.' });
+  }
+  const policies = readPolicies();
+  const idx = policies.findIndex(p => p.id === req.params.id);
+  if (idx === -1) return res.status(404).json({ error: 'Policy not found' });
+  const p = policies[idx];
+  const { modification } = req.body;
+
+  const origPred = p.analysis?.horizons?.['1_year'];
+  const origDims = origPred?.dimensions || {};
+  const origSummary = Object.entries(origDims).map(([k,v]) =>
+    `${k}: ${v.score}/100 (${v.trend}) — "${v.detail}"`
+  ).join('\n');
+
+  const prompt = `You are PolicyImpact AI. A citizen has proposed a modification to an existing policy. Compare the ORIGINAL policy impact vs the MODIFIED version.
+
+ORIGINAL POLICY: "${p.title}"
+Description: ${p.description}
+Sector: ${p.sector || "General"}
+Region: ${p.region || "Global"}
+
+ORIGINAL 1-YEAR PREDICTIONS:
+${origSummary}
+
+PROPOSED MODIFICATION:
+"${modification}"
+
+Analyze how this modification would change the 1-year impact across all 5 dimensions. For each dimension, show the original score, the new predicted score, and explain what changed and why.
+
+Return ONLY valid JSON:
+{
+  "modifiedTitle": "Brief title for the modified version",
+  "summary": "2-3 sentence overview of how this modification changes outcomes",
+  "dimensions": {
+    "economic": {"original": ${origDims.economic?.score||50}, "modified": 55, "change": "+5", "explanation": "The modification would..."},
+    "social": {"original": ${origDims.social?.score||50}, "modified": 60, "change": "+10", "explanation": "..."},
+    "environmental": {"original": ${origDims.environmental?.score||50}, "modified": 45, "change": "-5", "explanation": "..."},
+    "political": {"original": ${origDims.political?.score||50}, "modified": 50, "change": "0", "explanation": "..."},
+    "technological": {"original": ${origDims.technological?.score||50}, "modified": 58, "change": "+8", "explanation": "..."}
+  },
+  "tradeoffs": ["Key tradeoff 1 introduced by this modification", "Tradeoff 2"],
+  "recommendation": "Would you recommend this modification? Why or why not — 1-2 sentences"
+}`;
+
+  try {
+    console.log(`[WHAT-IF] "${modification.substring(0,60)}..." for "${p.title}"`);
+    const text = await callClaude(prompt, 2000);
+    const cleaned = text.replace(/```json\s*/gi, '').replace(/```\s*/gi, '').trim();
+    const match = cleaned.match(/\{[\s\S]*\}/);
+    if (!match) return res.status(500).json({ error: 'Parse failed' });
+    const result = JSON.parse(match[0]);
+
+    // Save scenario to policy
+    if (!policies[idx].scenarios) policies[idx].scenarios = [];
+    policies[idx].scenarios.push({
+      id: `wf_${Date.now()}`,
+      modification,
+      result,
+      author: req.body.author || 'Citizen',
+      role: req.body.role || 'citizen',
+      createdAt: Date.now()
+    });
+    writePolicies(policies);
+
+    console.log(`[WHAT-IF] Done`);
+    res.json({ result });
+  } catch (err) {
+    console.error('What-if error:', err.message);
+    res.status(500).json({ error: err.message });
   }
 });
 
