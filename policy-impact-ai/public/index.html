@@ -120,6 +120,25 @@ textarea.inp{resize:vertical;line-height:1.55}
 .rpt-pill{display:inline-flex;align-items:center;gap:3px;padding:4px 11px;border-radius:7px;font-size:11px;font-family:var(--mono);font-weight:600;margin-right:5px;margin-bottom:3px}
 .ethics{padding:12px 14px;border-radius:8px;background:rgba(124,110,240,.02);border:1px solid rgba(124,110,240,.06)}
 
+/* What-If Simulator */
+.wf-box{padding:28px;border-radius:14px;background:linear-gradient(135deg,rgba(6,182,212,.025),rgba(124,110,240,.025));border:1px solid rgba(6,182,212,.1)}
+.wf-title{font-size:22px;font-weight:700;background:linear-gradient(135deg,var(--cy),var(--pr));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.wf-cmp{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
+.wf-cmp-card{padding:14px;border-radius:9px;background:rgba(255,255,255,.015);border:1px solid rgba(255,255,255,.04);transition:all .25s;cursor:default}
+.wf-cmp-card:hover{background:rgba(255,255,255,.04);border-color:rgba(6,182,212,.15);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.25)}
+.wf-bar-row{display:flex;align-items:center;gap:8px;margin-bottom:5px}
+.wf-bar{flex:1;height:10px;border-radius:5px;overflow:hidden}.wf-bar-fill{height:100%;border-radius:5px;transition:width .8s ease}
+.wf-bar-label{font-size:13px;font-weight:700;font-family:var(--mono);min-width:30px;text-align:right}
+.wf-bar-tag{font-size:10px;font-family:var(--mono);min-width:28px}
+.wf-change{font-size:13px;font-weight:700;font-family:var(--mono);padding:3px 8px;border-radius:6px}
+.wf-change-pos{color:var(--gn);background:rgba(16,185,129,.1)}.wf-change-neg{color:var(--rd);background:rgba(239,68,68,.1)}.wf-change-neu{color:var(--tx3);background:rgba(255,255,255,.05)}
+.wf-scenario{padding:16px;border-radius:11px;background:rgba(255,255,255,.012);border:1px solid rgba(255,255,255,.035);margin-bottom:8px;transition:all .25s}
+.wf-scenario:hover{background:rgba(255,255,255,.03);border-color:rgba(6,182,212,.12);transform:translateY(-1px);box-shadow:0 4px 16px rgba(0,0,0,.2)}
+.wf-scenario-hdr{display:flex;align-items:center;gap:8px;margin-bottom:6px;cursor:pointer}
+.wf-scenario-body{display:none}.wf-scenario.open .wf-scenario-body{display:block}
+.wf-scenario .wf-scenario-hdr span:last-child{transition:transform .2s}
+.wf-scenario.open .wf-scenario-hdr span:last-child{transform:rotate(180deg)}
+
 /* Publisher login overlay */
 .auth-overlay{position:fixed;inset:0;z-index:200;background:rgba(6,6,16,.7);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;animation:fadeIn .2s}
 .auth-box{width:90%;max-width:400px;padding:32px;border-radius:16px;background:rgba(12,12,26,.95);border:1px solid rgba(255,255,255,.08);text-align:center;animation:slideUp .3s cubic-bezier(.22,1,.36,1)}
@@ -278,6 +297,8 @@ footer{text-align:center;padding:28px 0 16px;font-size:10px;color:#161b2e;font-f
     </div>
     <div class="dright"><div class="glass scroll-panel" style="padding:18px;margin-bottom:14px" id="d-comments"></div></div>
   </div>
+  <!-- What-If Simulator — for published policies -->
+  <div id="d-whatif" class="hidden" style="margin-bottom:14px"></div>
   <div class="ethics" style="margin-bottom:20px"><p style="font-size:9px;color:var(--pr);font-family:var(--mono);font-weight:500;margin-bottom:2px;text-transform:uppercase;letter-spacing:.08em">Ethical Notice</p><p style="font-size:11px;color:#556;line-height:1.5">This platform empowers democratic deliberation. AI predictions support — never replace — human judgment.</p></div>
 </div>
 
@@ -596,7 +617,7 @@ async function voteFd(id,dir,btn){
 function openP(id){selId=id;document.getElementById('n-detail').style.opacity='1';go('detail');}
 
 /* ═══ DETAIL ═══ */
-function rDetail(){const p=P.find(x=>x.id===selId);if(!p)return;rDHeader(p);renderDetailRoadmap();rDAnalysis(p);rDComments(p);}
+function rDetail(){const p=P.find(x=>x.id===selId);if(!p)return;rDHeader(p);renderDetailRoadmap();rDAnalysis(p);rDComments(p);rDWhatIf(p);}
 
 function rDHeader(p){
   const net=p.votes.up-p.votes.down,stcl=p.status==='implemented'?'st-imp':p.status==='published'?'st-pub':'st-dft';
@@ -772,6 +793,184 @@ function renderRpt(s){const el=document.getElementById('sum-rpt');if(!el||!s)ret
   ${s.representativeVoices?`<div class="rpt-sec"><div class="rpt-lb">Voices</div>${s.representativeVoices.support?`<p style="font-size:11px;color:var(--gn);margin-bottom:3px;padding-left:9px;border-left:2px solid rgba(16,185,129,.15)">"${s.representativeVoices.support}"</p>`:''}${s.representativeVoices.oppose?`<p style="font-size:11px;color:var(--rd);margin-bottom:3px;padding-left:9px;border-left:2px solid rgba(239,68,68,.15)">"${s.representativeVoices.oppose}"</p>`:''}</div>`:''}
   ${s.recommendations?.length?`<div class="rpt-sec"><div class="rpt-lb">Recommendations</div>${s.recommendations.map((r,i)=>`<p style="font-size:11px;color:var(--tx2);margin-bottom:3px;padding-left:9px;border-left:2px solid rgba(124,110,240,.15)">${i+1}. ${r}</p>`).join('')}</div>`:''}
   <div class="rpt-sec"><div class="rpt-lb">Overall</div><p class="rpt-tx">${s.overallAssessment||''}</p></div></div>`;}
+
+/* ═══ WHAT-IF SCENARIO SIMULATOR ═══ */
+function rDWhatIf(p) {
+  const el = document.getElementById('d-whatif');
+  // Show for published policies (active deliberation phase)
+  if (p.status !== 'published') { el.classList.add('hidden'); return; }
+  el.classList.remove('hidden');
+
+  const scenarios = p.scenarios || [];
+
+  let h = `<div class="wf-box fu">`;
+  h += `<div style="display:flex;align-items:center;gap:12px;margin-bottom:18px"><span style="font-size:32px"></span><div><div class="wf-title">What-If Scenario Simulator</div><p style="font-size:13px;color:var(--tx3);margin-top:2px">Propose modifications and instantly see how they change the predicted impact</p></div></div>`;
+
+  // Input form
+  h += `<div style="padding:18px;border-radius:12px;background:rgba(6,182,212,.025);border:1px solid rgba(6,182,212,.06);margin-bottom:18px">
+    <label class="lb" style="color:var(--cy);font-size:10px">Propose a modification to this policy</label>
+    <textarea class="inp" rows="2" id="wf-input" placeholder='e.g., "What if we reduce UBI to $500/month?" or "What if only households under $50k income qualify?"' style="font-size:14px;margin-bottom:12px"></textarea>
+    <div style="display:flex;align-items:center;gap:8px">
+      <button class="btn btn-pr" onclick="runWhatIf()" id="wf-btn" style="background:linear-gradient(135deg,var(--cy),#0891b2);font-size:14px;padding:10px 20px"> Simulate Impact</button>
+      <div id="wf-load" class="hidden" style="display:flex;align-items:center;gap:6px"><span class="spinner" style="border-top-color:var(--cy)"></span><span class="pulsing" style="font-size:12px;color:var(--cy);font-family:var(--mono)">Claude is simulating...</span></div>
+    </div>
+  </div>`;
+
+  // Latest result
+  h += `<div id="wf-result"></div>`;
+
+  // Past scenarios (collapsible)
+  if (scenarios.length) {
+    h += `<div style="margin-top:16px"><div style="font-size:12px;color:var(--cy);font-family:var(--mono);font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px">📋 Previous Scenarios (${scenarios.length})</div>`;
+    [...scenarios].reverse().forEach((s, i) => {
+      h += renderScenarioCard(s, i);
+    });
+    h += `</div>`;
+  }
+
+  h += `</div>`;
+  el.innerHTML = h;
+}
+
+function renderScenarioCard(s, idx) {
+  const r = s.result;
+  if (!r) return '';
+  const dims = r.dimensions || {};
+  const authorBadge = s.role === 'publisher' ? '<span class="pub-badge">Publisher</span>' : '<span class="cit-badge">Citizen</span>';
+
+  let h = `<div class="wf-scenario" id="wf-sc-${idx}" onclick="this.classList.toggle('open')">
+    <div class="wf-scenario-hdr">
+      <span style="font-size:16px;color:var(--cy)">🔮</span>
+      <span style="font-size:13px;font-weight:600;color:var(--tx);flex:1">${esc(s.modification.length > 80 ? s.modification.substring(0, 80) + '...' : s.modification)}</span>
+      ${authorBadge}
+      <span style="font-size:10px;color:var(--tx3);font-family:var(--mono)">${tAgo(s.createdAt)}</span>
+      <span style="font-size:12px;color:var(--tx3);transition:transform .2s">▼</span>
+    </div>
+    <div class="wf-scenario-body">
+      <p style="font-size:13px;color:var(--tx2);line-height:1.6;margin-bottom:12px;padding:12px;border-radius:8px;background:rgba(255,255,255,.01);border-left:2px solid rgba(6,182,212,.2)">${r.summary || ''}</p>
+      <div class="wf-cmp">`;
+
+  DIM.forEach(d => {
+    const dv = dims[d.k];
+    if (!dv) return;
+    const changeNum = parseInt(dv.change) || 0;
+    const changeCls = changeNum > 0 ? 'wf-change-pos' : changeNum < 0 ? 'wf-change-neg' : 'wf-change-neu';
+    h += `<div class="wf-cmp-card">
+      <div style="display:flex;align-items:center;gap:5px;margin-bottom:8px">
+        <span style="font-size:16px">${d.i}</span>
+        <span style="font-size:11px;font-weight:700;color:${d.c};font-family:var(--mono)">${d.l}</span>
+        <span class="wf-change ${changeCls}" style="margin-left:auto">${changeNum > 0 ? '+' : ''}${dv.change}</span>
+      </div>
+      <div class="wf-bar-row">
+        <span class="wf-bar-tag" style="color:var(--pr2)">Old</span>
+        <div class="wf-bar" style="background:rgba(124,110,240,.08)"><div class="wf-bar-fill" style="width:${dv.original}%;background:var(--pr)"></div></div>
+        <span class="wf-bar-label" style="color:var(--pr2)">${dv.original}</span>
+      </div>
+      <div class="wf-bar-row">
+        <span class="wf-bar-tag" style="color:var(--cy)">New</span>
+        <div class="wf-bar" style="background:rgba(6,182,212,.08)"><div class="wf-bar-fill" style="width:${dv.modified}%;background:var(--cy)"></div></div>
+        <span class="wf-bar-label" style="color:var(--cy)">${dv.modified}</span>
+      </div>
+      <p style="font-size:11px;color:var(--tx3);margin-top:6px;line-height:1.4">${dv.explanation || ''}</p>
+    </div>`;
+  });
+
+  h += `</div>`;
+
+  if (r.tradeoffs?.length) {
+    h += `<div style="margin-top:10px"><div style="font-size:10px;color:var(--am);font-family:var(--mono);font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px">⚖️ Tradeoffs</div>`;
+    r.tradeoffs.forEach(t => { h += `<p style="font-size:12px;color:var(--tx2);margin-bottom:4px;padding-left:10px;border-left:2px solid rgba(245,158,11,.15)">${t}</p>`; });
+    h += `</div>`;
+  }
+  if (r.recommendation) {
+    h += `<div style="margin-top:10px;padding:10px 12px;border-radius:8px;background:rgba(6,182,212,.03);border:1px solid rgba(6,182,212,.08)"><span style="font-size:10px;color:var(--cy);font-family:var(--mono);font-weight:600">💡 RECOMMENDATION: </span><span style="font-size:13px;color:var(--tx2)">${r.recommendation}</span></div>`;
+  }
+
+  h += `</div></div>`;
+  return h;
+}
+
+async function runWhatIf() {
+  const input = document.getElementById('wf-input');
+  if (!input) return;
+  const mod = input.value.trim();
+  if (!mod) { alert('Please describe a modification to simulate.'); return; }
+
+  document.getElementById('wf-load').classList.remove('hidden');
+  document.getElementById('wf-load').style.display = 'flex';
+  const btn = document.getElementById('wf-btn');
+  if (btn) btn.disabled = true;
+
+  try {
+    const data = await api('POST', `/api/policies/${selId}/whatif`, {
+      modification: mod,
+      author: isPublisher ? 'Publisher' : 'Citizen',
+      role: isPublisher ? 'publisher' : 'citizen'
+    });
+    if (data.error) throw new Error(data.error);
+
+    // Show result inline
+    const r = data.result;
+    const el = document.getElementById('wf-result');
+    el.innerHTML = renderWhatIfResult(r, mod);
+
+    input.value = '';
+    // Refresh to show in past scenarios
+    await syncP();
+  } catch (e) {
+    document.getElementById('wf-result').innerHTML = `<div style="padding:10px;color:var(--rd);font-size:12px;border-radius:7px;background:rgba(239,68,68,.05)">Simulation failed: ${e.message}</div>`;
+  } finally {
+    document.getElementById('wf-load').classList.add('hidden');
+    if (btn) btn.disabled = false;
+  }
+}
+
+function renderWhatIfResult(r, mod) {
+  const dims = r.dimensions || {};
+  let h = `<div style="padding:22px;border-radius:12px;background:rgba(6,182,212,.03);border:1px solid rgba(6,182,212,.1);margin-bottom:14px;animation:fadeIn .3s ease-out">`;
+  h += `<div style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><span style="font-size:20px">🔮</span><span style="font-size:18px;font-weight:700;color:var(--cy)">${r.modifiedTitle || 'Modified Scenario'}</span></div>`;
+  h += `<p style="font-size:14px;color:var(--tx2);line-height:1.65;margin-bottom:16px;padding:12px 16px;border-radius:8px;background:rgba(255,255,255,.01);border-left:3px solid rgba(6,182,212,.25)">${r.summary || ''}</p>`;
+
+  h += `<div style="font-size:11px;color:var(--cy);font-family:var(--mono);font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px">Original vs Modified — Side by Side</div>`;
+  h += `<div class="wf-cmp">`;
+  DIM.forEach(d => {
+    const dv = dims[d.k];
+    if (!dv) return;
+    const changeNum = parseInt(dv.change) || 0;
+    const changeCls = changeNum > 0 ? 'wf-change-pos' : changeNum < 0 ? 'wf-change-neg' : 'wf-change-neu';
+    h += `<div class="wf-cmp-card">
+      <div style="display:flex;align-items:center;gap:5px;margin-bottom:10px">
+        <span style="font-size:18px">${d.i}</span>
+        <span style="font-size:12px;font-weight:700;color:${d.c};font-family:var(--mono)">${d.l}</span>
+        <span class="wf-change ${changeCls}" style="margin-left:auto">${changeNum > 0 ? '+' : ''}${dv.change}</span>
+      </div>
+      <div class="wf-bar-row">
+        <span class="wf-bar-tag" style="color:var(--pr2)">Original</span>
+        <div class="wf-bar" style="background:rgba(124,110,240,.08)"><div class="wf-bar-fill" style="width:${dv.original}%;background:var(--pr)"></div></div>
+        <span class="wf-bar-label" style="color:var(--pr2)">${dv.original}</span>
+      </div>
+      <div class="wf-bar-row">
+        <span class="wf-bar-tag" style="color:var(--cy)">Modified</span>
+        <div class="wf-bar" style="background:rgba(6,182,212,.08)"><div class="wf-bar-fill" style="width:${dv.modified}%;background:var(--cy)"></div></div>
+        <span class="wf-bar-label" style="color:var(--cy)">${dv.modified}</span>
+      </div>
+      <p style="font-size:12px;color:var(--tx3);margin-top:6px;line-height:1.45">${dv.explanation || ''}</p>
+    </div>`;
+  });
+  h += `</div>`;
+
+  if (r.tradeoffs?.length) {
+    h += `<div style="margin-top:12px"><div style="font-size:11px;color:var(--am);font-family:var(--mono);font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px">⚖️ Tradeoffs Introduced</div>`;
+    r.tradeoffs.forEach(t => { h += `<p style="font-size:13px;color:var(--tx2);margin-bottom:4px;padding-left:10px;border-left:2px solid rgba(245,158,11,.15)">${t}</p>`; });
+    h += `</div>`;
+  }
+  if (r.recommendation) {
+    h += `<div style="margin-top:12px;padding:12px 14px;border-radius:8px;background:rgba(6,182,212,.03);border:1px solid rgba(6,182,212,.08)"><span style="font-size:11px;color:var(--cy);font-family:var(--mono);font-weight:600">💡 AI RECOMMENDATION: </span><span style="font-size:14px;color:var(--tx2)">${r.recommendation}</span></div>`;
+  }
+
+  h += `</div>`;
+  return h;
+}
 
 /* ═══ INIT ═══ */
 syncP().then(()=>rFeed());

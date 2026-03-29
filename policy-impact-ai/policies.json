@@ -421,8 +421,8 @@
     "status": "published",
     "publishedAt": null,
     "votes": {
-      "up": 22,
-      "down": 20
+      "up": 24,
+      "down": 22
     },
     "comments": [
       {
@@ -504,6 +504,56 @@
     "implementedAt": null,
     "pinnedComments": [
       "c_1774728641587"
+    ],
+    "scenarios": [
+      {
+        "id": "wf_1774751359253",
+        "modification": "What will be the change to a 3-day work week?",
+        "result": {
+          "modifiedTitle": "Three-Day Work Week Mandate",
+          "summary": "Moving from a 4-day to 3-day work week amplifies both benefits and risks dramatically. While worker wellbeing and environmental gains increase substantially, economic disruption becomes severe with widespread business failures and job losses likely.",
+          "dimensions": {
+            "economic": {
+              "original": 35,
+              "modified": 15,
+              "change": "-20",
+              "explanation": "The modification to 3 days creates catastrophic economic disruption. With only 24 working hours while maintaining full pay, labor costs effectively triple per hour. Mass business closures and relocations become inevitable, similar to extreme minimum wage shock effects but far worse. GDP could contract 2-3% as entire industries become unviable in New York."
+            },
+            "social": {
+              "original": 75,
+              "modified": 85,
+              "change": "+10",
+              "explanation": "Worker wellbeing reaches exceptional levels for those who retain jobs, with unprecedented work-life balance and stress reduction. However, massive unemployment among lower-skilled workers creates a two-tier society where some enjoy extreme leisure while others face joblessness, significantly worsening inequality despite the benefits for remaining employed workers."
+            },
+            "environmental": {
+              "original": 60,
+              "modified": 80,
+              "change": "+20",
+              "explanation": "Environmental benefits become substantial with 40% reduction in commuting and office energy use. The dramatic decrease in economic activity, while harmful economically, reduces industrial emissions significantly. However, increased leisure time may lead to higher consumption in entertainment and travel sectors."
+            },
+            "political": {
+              "original": 30,
+              "modified": 10,
+              "change": "-20",
+              "explanation": "Political feasibility becomes nearly impossible with overwhelming business opposition and likely legal injunctions before implementation. Even progressive supporters would struggle to defend such extreme policy. Federal intervention becomes certain as interstate commerce is severely disrupted. Public support collapses as economic consequences become apparent."
+            },
+            "technological": {
+              "original": 65,
+              "modified": 90,
+              "change": "+25",
+              "explanation": "Desperate need for productivity gains drives revolutionary technological adoption. Companies must achieve 40% efficiency improvements to survive, accelerating AI, automation, and radical workflow redesign far beyond normal market forces. Those businesses that survive become highly advanced, technology-driven operations."
+            }
+          },
+          "tradeoffs": [
+            "Exceptional worker wellbeing and environmental benefits come at the cost of massive job losses and economic disruption",
+            "Rapid technological advancement occurs only among surviving businesses while many others fail completely"
+          ],
+          "recommendation": "This modification is not recommended. While the 4-day week pushes boundaries constructively, a 3-day week crosses into economically destructive territory that would harm the very workers it aims to help through widespread unemployment."
+        },
+        "author": "Citizen",
+        "role": "citizen",
+        "createdAt": 1774751359253
+      }
     ]
   },
   {
