@@ -2385,17 +2385,21 @@
     function getRoadmapForPrefix(prefix) { return prefix === 'c' ? curRoadmap : (P.find(x => x.id === selId) || {}).roadmap; }
     function getRoadmapProgress(prefix) { if (prefix === 'c') return curRoadmapProgress; const p = P.find(x => x.id === selId); return (p && p.roadmapProgress) ? p.roadmapProgress : {}; }
     function canEditRoadmapMilestones(prefix) { return prefix === 'c' || isPublisher; }
-    async function rmToggleMilestone(mountId, prefix, phaseId, mi) {
+    async function rmToggleMilestone(mountId, prefix, phaseIndex, mi) {
       if (!canEditRoadmapMilestones(prefix)) return;
+      const roadmap = getRoadmapForPrefix(prefix);
+      const ph = roadmap?.phases?.[phaseIndex];
+      if (!ph) return;
+      const phaseId = ph.id;
       if (prefix === 'c') {
-        const ph = (curRoadmap || {}).phases?.find(p => p.id === phaseId); const n = ph?.milestones?.length || 0;
+        const n = ph.milestones?.length || 0;
         if (!curRoadmapProgress[phaseId]) curRoadmapProgress[phaseId] = [];
         while (curRoadmapProgress[phaseId].length < n) curRoadmapProgress[phaseId].push(false);
         curRoadmapProgress[phaseId][mi] = !curRoadmapProgress[phaseId][mi];
         renderRoadmapMount(mountId, 'c'); return;
       }
       const pol = P.find(x => x.id === selId); if (!pol) return;
-      const ph = (pol.roadmap || {}).phases?.find(p => p.id === phaseId); const n = ph?.milestones?.length || 0;
+      const n = ph.milestones?.length || 0;
       const rp = { ...(pol.roadmapProgress || {}) };
       if (!rp[phaseId]) rp[phaseId] = [];
       while (rp[phaseId].length < n) rp[phaseId].push(false);
@@ -2431,7 +2435,7 @@
         const arr = prog[ph.id] || [];
         const done = !!arr[i];
         const cls = (done ? 'rm-mile-done' : '') + (editMs ? '' : ' rm-mile-readonly');
-        const oc = editMs ? `onclick="rmToggleMilestone('${mountId}','${prefix}',${JSON.stringify(ph.id)},${i})"` : ''; return `<li class="${cls}" ${oc}>${esc(m)}</li>`;
+        const oc = editMs ? `onclick="rmToggleMilestone('${mountId}','${prefix}',${si},${i})"` : ''; return `<li class="${cls}" ${oc}>${esc(m)}</li>`;
       }).join('');
       const mh = editMs ? 'Milestones (publisher — tap to check off)' : 'Key milestones';
       const actors = (ph.actors || []).map(a => `<span class="rm-tag">${esc(a)}</span>`).join('');
