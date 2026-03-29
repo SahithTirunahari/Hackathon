@@ -2,7 +2,7 @@
 
 **Governance Track — Claude Social Impact Hackathon 2025**
 
-Predict the multi-dimensional impact of policy decisions across economic, social, environmental, political & technological dimensions over 1, 5, and 10 year horizons — powered by Claude AI.
+Predict the multi-dimensional impact of policy decisions across economic, social, environmental, political & technological dimensions over 1, 5, and 10 year horizons 
 
 ---
 
@@ -82,8 +82,5 @@ policy-impact-ai/
 
 ---
 
-## 🔮 Future Improvements
 
-- [ ] Side-by-side policy comparison mode
-- [ ] Web search integration for real-time policy context and make it like a actual impact of that policy at present and the impact given by our application
 
