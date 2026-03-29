@@ -1,5 +1,367 @@
 [
   {
+    "id": "pol_1774803103138_eqyiqu",
+    "title": "Free Public Transit for All",
+    "description": "Eliminate all fares for public buses, metro, and light rail systems. Funded through increased parking fees, congestion charges, and reallocation of road construction budgets. Aims to reduce car dependency, cut emissions, and improve mobility for low-income residents.",
+    "sector": "Transportation",
+    "region": "Bloomington, Indiana",
+    "analysis": {
+      "horizons": {
+        "1_year": {
+          "summary": "Implementation faces significant budget strain as increased parking fees and congestion charges struggle to offset lost fare revenue, similar to Tallahassee's initial challenges in 2018. Ridership likely increases 20-35% based on Estonia's Tallinn experience, creating overcrowding issues.",
+          "overallScore": 52,
+          "dimensions": {
+            "economic": {
+              "score": 35,
+              "trend": "negative",
+              "detail": "Budget shortfall of $8-12 million likely as parking fees generate less revenue than projected, mirroring Kansas City's initial funding gaps. Local businesses near transit hubs may see increased foot traffic but downtown parking-dependent businesses suffer 15-25% revenue decline. Construction sector loses jobs from reduced road building budget reallocation."
+            },
+            "social": {
+              "score": 68,
+              "trend": "positive",
+              "detail": "Low-income residents gain immediate mobility benefits, with studies from Luxembourg showing 40% increase in public transit use among bottom income quintile. However, system overcrowding creates service quality issues. University students particularly benefit, reducing transportation costs by average $800 annually."
+            },
+            "environmental": {
+              "score": 58,
+              "trend": "positive",
+              "detail": "Modest 8-12% reduction in downtown car trips based on Chapel Hill's free bus experience. CO2 emissions decrease by approximately 3-5% citywide. Increased bus frequency to handle demand temporarily increases emissions from diesel buses until fleet modernization occurs."
+            },
+            "political": {
+              "score": 42,
+              "trend": "negative",
+              "detail": "Significant opposition from parking meter companies and downtown business associations. City council faces criticism over budget management as initial revenue projections prove optimistic. Public approval mixed at 52% as service quality temporarily declines due to overcrowding."
+            },
+            "technological": {
+              "score": 55,
+              "trend": "positive",
+              "detail": "Elimination of fare collection systems reduces maintenance costs by $400K annually. Mobile transit apps see increased usage. However, system lacks real-time capacity monitoring, creating passenger experience issues during peak hours."
+            }
+          },
+          "risks": [
+            "Budget shortfall requiring emergency tax increases",
+            "Service quality degradation from overcrowding",
+            "Political backlash from affected business interests"
+          ],
+          "opportunities": [
+            "Federal transit grants for zero-emission buses",
+            "Partnership with Indiana University for integrated student services",
+            "Data collection on mobility patterns for future planning"
+          ]
+        },
+        "5_year": {
+          "summary": "System stabilizes with sustainable funding model and 45-60% ridership increase, following patterns seen in Luxembourg and Tallinn. Significant modal shift occurs with measurable environmental benefits and improved social equity outcomes.",
+          "overallScore": 71,
+          "dimensions": {
+            "economic": {
+              "score": 62,
+              "trend": "positive",
+              "detail": "Funding stabilizes through refined congestion pricing and development impact fees. Transit-oriented development increases property values near stations by 12-18% as seen in Portland. Local economy benefits from $15 million in reduced household transportation costs redirected to local spending. New transit manufacturing jobs emerge."
+            },
+            "social": {
+              "score": 78,
+              "trend": "positive",
+              "detail": "Health outcomes improve with 25% more residents using active transportation to access transit, reducing obesity rates by 3-4% following Seattle's experience. Educational access increases as students can easily reach internships and jobs. Social cohesion improves across income levels using shared transit infrastructure."
+            },
+            "environmental": {
+              "score": 72,
+              "trend": "positive",
+              "detail": "Car dependency drops 22% with corresponding 18% reduction in local transportation emissions. Electric bus fleet conversion completed, eliminating diesel emissions. Reduced demand for parking enables green space conversion of 3 downtown lots. Air quality improves measurably in downtown core."
+            },
+            "political": {
+              "score": 68,
+              "trend": "positive",
+              "detail": "Policy gains strong public support at 69% approval after initial challenges resolved. Becomes model for other Indiana cities, with Indianapolis studying replication. Successfully secures federal infrastructure grants totaling $25 million for system expansion."
+            },
+            "technological": {
+              "score": 75,
+              "trend": "positive",
+              "detail": "Advanced mobility-as-a-service platform integrates bike-share, ride-sharing, and transit. Real-time crowding data optimizes service delivery. Autonomous shuttle pilots begin for last-mile connections. Smart traffic signals prioritize transit, reducing journey times by 15%."
+            }
+          },
+          "risks": [
+            "Economic recession reducing parking and congestion charge revenues",
+            "Federal funding cuts to transit programs",
+            "Neighboring cities imposing retaliatory parking policies"
+          ],
+          "opportunities": [
+            "Regional transit integration with Indianapolis metro",
+            "Climate resilience federal funding streams",
+            "Private sector partnerships for mobility innovation"
+          ]
+        },
+        "10_year": {
+          "summary": "Free transit becomes integral to Bloomington's identity as a sustainable, equitable city, with transformative urban development patterns and regional influence. System serves as national model for mid-sized city transit policy.",
+          "overallScore": 79,
+          "dimensions": {
+            "economic": {
+              "score": 81,
+              "trend": "positive",
+              "detail": "Transit-oriented development generates $150 million in new construction, creating 2,400 permanent jobs. Reduced transportation costs save households average $2,200 annually. Tourism increases 35% as visitors enjoy car-free city exploration. Bloomington becomes Indiana hub for clean transportation technology companies."
+            },
+            "social": {
+              "score": 85,
+              "trend": "positive",
+              "detail": "Income-based mobility gap eliminated with equal transit access across demographics. Teen pregnancy rates drop 15% due to improved access to healthcare and education, replicating outcomes from Bogotá's BRT system. Senior citizen mobility increases 60%, reducing social isolation. Crime rates decrease 12% on transit corridors through natural surveillance."
+            },
+            "environmental": {
+              "score": 82,
+              "trend": "positive",
+              "detail": "Transportation sector emissions decrease 35% from 2024 baseline. Urban heat island effect reduced through decreased asphalt coverage. Biodiversity improves with 15 miles of former roadway converted to green corridors. Air quality meets WHO standards for first time in city history."
+            },
+            "political": {
+              "score": 78,
+              "trend": "positive",
+              "detail": "Policy achieves 78% public approval and bipartisan support. Bloomington influences state legislation supporting municipal transit funding flexibility. Mayor becomes national spokesperson for sustainable transit policy. Policy survives multiple election cycles, indicating institutional permanence."
+            },
+            "technological": {
+              "score": 82,
+              "trend": "positive",
+              "detail": "Fully autonomous electric bus fleet operates with 99.2% reliability. Integrated mobility platform serves 85% of residents through single app. Predictive analytics optimize routes in real-time. Renewable energy powers 100% of transit operations through solar canopies at stations."
+            }
+          },
+          "risks": [
+            "Autonomous vehicle proliferation reducing transit demand",
+            "Climate change extreme weather disrupting service",
+            "State preemption of local transportation policies"
+          ],
+          "opportunities": [
+            "Export policy model internationally for consulting revenue",
+            "Carbon credit monetization from emissions reductions",
+            "Integration with statewide high-speed rail network"
+          ]
+        }
+      }
+    },
+    "roadmap": {
+      "overview": "Phased rollout beginning with pilot routes and funding mechanisms, scaling to full system implementation over 3 years with continuous service optimization.",
+      "totalHorizonLabel": "36 months",
+      "phases": [
+        {
+          "id": "phase_1",
+          "order": 1,
+          "title": "Pilot Launch & Revenue Setup",
+          "windowLabel": "Months 0–6",
+          "summary": "Launch free transit on select routes while establishing new revenue streams",
+          "detail": "Implement free service on 3 high-traffic routes including IU campus connector and downtown circulator while installing paid parking meters in previously free zones. Establish baseline ridership data and begin congestion charge planning for downtown core. Major risks include initial budget shortfalls and parking enforcement challenges as businesses and residents adjust to new fee structure.",
+          "milestones": [
+            "Free service active on 3 pilot routes",
+            "500 new parking meters installed and operational",
+            "Baseline ridership and revenue data collected"
+          ],
+          "dependencies": [],
+          "actors": [
+            "Bloomington Transit",
+            "Parking Division",
+            "City Council"
+          ],
+          "riskLevel": "medium",
+          "checkpoint": "Monthly ridership reports show 25% increase on pilot routes with parking revenue meeting 80% of projections"
+        },
+        {
+          "id": "phase_2",
+          "order": 2,
+          "title": "System-Wide Free Transit",
+          "windowLabel": "Months 6–12",
+          "summary": "Eliminate fares across entire public transit network",
+          "detail": "Remove fare collection on all remaining bus routes while implementing downtown congestion charging zone during peak hours. Increase service frequency on high-demand routes to address overcrowding from ridership surge. Budget monitoring becomes critical as fare revenue loss hits full impact while new revenue streams stabilize.",
+          "milestones": [
+            "All transit routes fare-free",
+            "Downtown congestion charges implemented",
+            "Service frequency increased by 30% on top 5 routes"
+          ],
+          "dependencies": [
+            "phase_1"
+          ],
+          "actors": [
+            "Bloomington Transit",
+            "Traffic Engineering",
+            "Revenue Department"
+          ],
+          "riskLevel": "high",
+          "checkpoint": "Monthly budget variance reports show total revenue gap under $2 million with ridership up 35%+"
+        },
+        {
+          "id": "phase_3",
+          "order": 3,
+          "title": "Infrastructure Expansion",
+          "windowLabel": "Months 12–20",
+          "summary": "Expand capacity and routes using reallocated road construction funds",
+          "detail": "Deploy additional buses and extend service to underserved neighborhoods using redirected highway expansion budget. Install real-time passenger information systems and mobile capacity tracking to manage crowding. Partner with Indiana University for integrated campus transit services and potential federal grant applications for electric bus fleet.",
+          "milestones": [
+            "15 additional buses in service",
+            "Real-time passenger information deployed",
+            "IU partnership agreement signed"
+          ],
+          "dependencies": [
+            "phase_2"
+          ],
+          "actors": [
+            "Bloomington Transit",
+            "Indiana University",
+            "Federal Transit Administration"
+          ],
+          "riskLevel": "medium",
+          "checkpoint": "Average wait times under 12 minutes system-wide with 95% on-time performance"
+        },
+        {
+          "id": "phase_4",
+          "order": 4,
+          "title": "Revenue Optimization",
+          "windowLabel": "Months 20–28",
+          "summary": "Refine funding mechanisms and secure long-term sustainability",
+          "detail": "Implement dynamic parking pricing based on demand and expand congestion charging hours based on traffic data. Introduce development impact fees for new construction projects that increase transit demand. Negotiate with local businesses for transit pass subsidies and explore federal infrastructure grants for fleet electrification.",
+          "milestones": [
+            "Dynamic parking pricing system operational",
+            "Development impact fee ordinance passed",
+            "$3 million in federal grants secured"
+          ],
+          "dependencies": [
+            "phase_3"
+          ],
+          "actors": [
+            "City Council",
+            "Planning Department",
+            "Local Business Coalition"
+          ],
+          "riskLevel": "low",
+          "checkpoint": "Monthly revenue targets met for 3 consecutive months with 15% budget surplus"
+        },
+        {
+          "id": "phase_5",
+          "order": 5,
+          "title": "Service Excellence & Expansion",
+          "windowLabel": "Months 28–36",
+          "summary": "Optimize service quality and prepare for long-term growth",
+          "detail": "Deploy electric buses to reduce emissions and operating costs while extending service hours and weekend frequency. Implement predictive analytics for route optimization and establish performance benchmarks for sustained service quality. Create transit-oriented development incentives to support ridership growth and reduce car dependency.",
+          "milestones": [
+            "50% of fleet converted to electric buses",
+            "24/7 service on core routes",
+            "Transit-oriented development zoning approved"
+          ],
+          "dependencies": [
+            "phase_4"
+          ],
+          "actors": [
+            "Bloomington Transit",
+            "Environmental Department",
+            "Economic Development"
+          ],
+          "riskLevel": "low",
+          "checkpoint": "Customer satisfaction scores above 85% with 60%+ increase in ridership from baseline"
+        }
+      ],
+      "criticalPath": [
+        "phase_1",
+        "phase_2",
+        "phase_4"
+      ],
+      "successMetrics": [
+        "60% increase in transit ridership within 36 months",
+        "Budget neutrality achieved by month 30",
+        "15% reduction in downtown vehicle miles traveled",
+        "Customer satisfaction scores above 80%"
+      ]
+    },
+    "roadmapProgress": {
+      "phase_1": [
+        true,
+        false,
+        false
+      ],
+      "phase_2": [
+        false,
+        false,
+        false
+      ],
+      "phase_3": [
+        false,
+        false,
+        false
+      ],
+      "phase_4": [
+        false,
+        false,
+        false
+      ],
+      "phase_5": [
+        false,
+        false,
+        false
+      ]
+    },
+    "author": "Sahith",
+    "status": "published",
+    "publishedAt": null,
+    "votes": {
+      "up": 1,
+      "down": 0
+    },
+    "comments": [
+      {
+        "id": "c_1774803128068_5rpb",
+        "text": "Looks good to implement it.",
+        "sentiment": "support",
+        "author": "Publisher",
+        "role": "publisher",
+        "replyTo": null,
+        "createdAt": 1774803128068
+      }
+    ],
+    "summary": null,
+    "createdAt": 1774803103138,
+    "implementedAt": null,
+    "scenarios": [
+      {
+        "id": "wf_1774803264349",
+        "modification": "What if I include a base fare?",
+        "result": {
+          "modifiedTitle": "Low-Fare Public Transit with Reduced Car Incentives",
+          "summary": "Adding a base fare improves financial sustainability by generating $2-4 million annually while maintaining reduced barriers to transit access. This modification creates better budget balance but somewhat diminishes equity benefits for the lowest-income residents.",
+          "dimensions": {
+            "economic": {
+              "original": 35,
+              "modified": 58,
+              "change": "+23",
+              "explanation": "Base fare revenue of $2-4 million significantly reduces the budget shortfall, improving fiscal sustainability. Parking-dependent businesses face less severe impacts as the policy becomes less aggressive in car disincentivization, reducing their revenue decline to 8-15%."
+            },
+            "social": {
+              "original": 68,
+              "modified": 55,
+              "change": "-13",
+              "explanation": "While transit remains more affordable than current levels, the base fare creates a barrier for the most economically vulnerable residents. Transit usage increases moderate to 25-30% among low-income users rather than 40%, and university students save approximately $500 annually instead of $800."
+            },
+            "environmental": {
+              "original": 58,
+              "modified": 48,
+              "change": "-10",
+              "explanation": "Reduced environmental benefits as the fare barrier decreases transit adoption rates. Car trip reduction drops to 5-8% instead of 8-12%, resulting in smaller CO2 emissions decrease of 2-3% citywide as fewer drivers make the switch to public transit."
+            },
+            "political": {
+              "original": 42,
+              "modified": 52,
+              "change": "+10",
+              "explanation": "Improved political feasibility as the policy appears more fiscally responsible to critics. Business opposition softens due to less aggressive car disincentivization, while budget concerns are partially addressed through fare revenue, increasing public approval to approximately 58%."
+            },
+            "technological": {
+              "original": 55,
+              "modified": 45,
+              "change": "-10",
+              "explanation": "Requires maintaining fare collection infrastructure, eliminating the $400K annual savings from system removal. Creates need for fare validation technology and payment processing systems, though overcrowding issues are reduced due to lower ridership demand."
+            }
+          },
+          "tradeoffs": [
+            "Improved fiscal sustainability comes at the cost of reduced accessibility for the most economically vulnerable residents",
+            "Better political viability but diminished environmental impact due to lower transit adoption rates"
+          ],
+          "recommendation": "Yes, this modification is recommended as it significantly improves financial viability while maintaining substantial benefits for transit equity and environmental goals, creating a more politically sustainable long-term policy."
+        },
+        "author": "Publisher",
+        "role": "publisher",
+        "createdAt": 1774803264349
+      }
+    ]
+  },
+  {
     "id": "pol_1774752125438_k66bwc",
     "title": "Universal Electric Vehicle (EV) Subsidy Program",
     "description": "This policy introduces a nationwide subsidy program to accelerate the adoption of electric vehicles (EVs). Consumers purchasing new or used EVs will receive a direct rebate of up to $7,500, depending on vehicle price and battery capacity. The policy also allocates funding to expand EV charging infrastructure, particularly in underserved rural and low-income urban areas. Additionally, tax incentives will be provided to manufacturers to boost domestic EV production and reduce costs over time. The goal is to reduce greenhouse gas emissions, decrease reliance on fossil fuels, and promote sustainable transportation.",
@@ -338,6 +700,11 @@
         false,
         false,
         false
+      ],
+      "phase_2": [
+        false,
+        false,
+        false
       ]
     }
   },
@@ -478,8 +845,8 @@
     "status": "published",
     "publishedAt": null,
     "votes": {
-      "up": 24,
-      "down": 22
+      "up": 25,
+      "down": 23
     },
     "comments": [
       {
@@ -519,48 +886,48 @@
       }
     ],
     "summary": {
-      "executiveSummary": "Public sentiment analysis of the Four-Day Work Week Mandate reveals strong majority support (75%) among respondents, with 3 out of 4 comments expressing favorable views. However, the limited sample size and lack of detailed feedback suggest need for broader public engagement before implementation.",
+      "executiveSummary": "Initial public feedback on the proposed four-day work week mandate shows majority support (60%) among respondents, though the sample size is limited with only 5 comments received. There is notable interest in understanding implementation details and opposition rationale, suggesting need for broader public engagement.",
       "sentimentBreakdown": {
         "support": 3,
         "oppose": 1,
-        "neutral": 0,
-        "supportPct": 75,
-        "opposePct": 25,
-        "neutralPct": 0
+        "neutral": 1,
+        "supportPct": 60,
+        "opposePct": 20,
+        "neutralPct": 20
       },
       "keyThemes": [
         {
           "theme": "General Policy Approval",
           "count": 3,
-          "description": "Supporters consistently characterized the policy as 'great' without providing specific reasoning"
+          "description": "Multiple respondents expressed basic support using terms like 'great policy' without detailed justification"
         },
         {
-          "theme": "Binary Opposition",
+          "theme": "Information Seeking",
           "count": 1,
-          "description": "Opposition expressed as simple disagreement without elaboration on concerns"
+          "description": "Request for clarification on opposition arguments and policy rationale"
         },
         {
-          "theme": "Lack of Substantive Feedback",
-          "count": 4,
-          "description": "All comments lack detailed reasoning, economic concerns, or implementation considerations"
+          "theme": "Direct Opposition",
+          "count": 1,
+          "description": "Clear but unexplained opposition to the mandate"
         }
       ],
       "representativeVoices": {
-        "support": "Great policy - I support the policy!",
-        "oppose": "I oppose the policy",
-        "neutral": "No neutral comments received"
+        "support": "I support the policy! — Citizen",
+        "oppose": "I oppose the policy — Citizen",
+        "neutral": "Can you tell me the reason for opposing it? — Publisher"
       },
       "recommendations": [
-        "Conduct comprehensive public forums and surveys to gather detailed feedback on implementation concerns, economic impacts, and industry-specific considerations",
-        "Engage key stakeholder groups including business associations, labor unions, and sector-specific organizations to understand practical implications",
-        "Pilot the program with volunteer companies before mandatory implementation to generate concrete data and case studies for public review"
+        "Conduct broader public outreach and collect more substantial feedback given the limited sample size of only 5 responses",
+        "Develop detailed informational materials addressing implementation concerns and potential opposition points raised by neutral respondents",
+        "Host public forums or town halls to facilitate deeper discussion beyond brief supportive statements and gather more substantive input on policy implications"
       ],
-      "overallAssessment": "While initial public sentiment appears favorable toward the Four-Day Work Week Mandate, the extremely limited feedback pool (4 comments) and lack of substantive commentary indicate insufficient public engagement for informed policymaking. The 75% support rate is encouraging but must be viewed cautiously given the small sample size and absence of detailed concerns or benefits articulated by respondents. Policymakers should prioritize expanded public consultation to capture the complexity of economic, social, and operational considerations this significant workplace reform would entail before proceeding with implementation."
+      "overallAssessment": "While the initial response shows favorable sentiment toward the four-day work week mandate, the feedback lacks depth and represents a very small sample size for such a significant policy change affecting companies with over 50 employees in New York. The predominant support appears to be based on general appeal rather than detailed policy analysis, and the presence of information-seeking comments suggests the public needs more comprehensive education about the proposal's implications, costs, and benefits before meaningful sentiment analysis can be conducted."
     },
     "createdAt": 1774714058508,
     "implementedAt": null,
     "pinnedComments": [
-      "c_1774728641587"
+      "c_1774728073907"
     ],
     "scenarios": [
       {
