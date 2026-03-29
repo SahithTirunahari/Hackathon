@@ -30,10 +30,13 @@ CLAUDE_API_KEY=API_KEY node server.js
 **Option B** — Edit `server.js` directly:
 Open `server.js` and replace `YOUR_API_KEY_HERE` with your key.
 
+
 ### Step 3: Open in browser
 
 ```
 http://localhost:3001
+
+The password to login for publisher is policy2025
 ```
 
 That's it! Click an example policy or enter your own, then hit "Analyze Policy Impact".
