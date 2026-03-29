@@ -604,7 +604,192 @@
         "role": "citizen",
         "createdAt": 1774751359253
       }
-    ]
+    ],
+    "roadmap": {
+      "overview": "A carefully staged rollout beginning with voluntary pilot programs to build evidence before phased mandatory implementation across company size tiers.",
+      "totalHorizonLabel": "36–48 months",
+      "phases": [
+        {
+          "id": "phase_1",
+          "order": 1,
+          "title": "Legislative Foundation & Pilot Launch",
+          "windowLabel": "Months 0–8",
+          "summary": "Pass enabling legislation and launch voluntary pilot with 100+ companies",
+          "detail": "New York State Legislature passes the Four-Day Work Week Act with 18-month implementation timeline and establishes the Office of Workplace Innovation. Simultaneously launch voluntary pilot program with major employers like IBM, JPMorgan Chase, and Wegmans to gather implementation data. Business groups will likely mount legal challenges claiming federal labor law preemption and constitutional commerce clause violations.",
+          "milestones": [
+            "Governor signs legislation into law",
+            "100 companies enrolled in voluntary pilot",
+            "Office of Workplace Innovation operational"
+          ],
+          "dependencies": [],
+          "actors": [
+            "New York State Legislature",
+            "Governor's Office",
+            "Department of Labor",
+            "Major employers"
+          ],
+          "riskLevel": "high",
+          "checkpoint": "Legislation enacted and pilot program achieving 80% of target enrollment"
+        },
+        {
+          "id": "phase_2",
+          "order": 2,
+          "title": "Regulatory Framework & Business Support",
+          "windowLabel": "Months 6–14",
+          "summary": "Develop implementation regulations and launch business assistance programs",
+          "detail": "Department of Labor creates detailed compliance regulations covering overtime calculations, scheduling flexibility, and enforcement mechanisms. Launch $50M business transition fund providing grants and consulting services to help companies redesign workflows. Establish regional compliance offices in NYC, Albany, Buffalo, and Rochester. Small business associations will demand exemptions citing competitive disadvantages.",
+          "milestones": [
+            "Final regulations published",
+            "Business assistance fund operational",
+            "Regional compliance offices staffed"
+          ],
+          "dependencies": [
+            "phase_1"
+          ],
+          "actors": [
+            "Department of Labor",
+            "Empire State Development",
+            "Regional business councils"
+          ],
+          "riskLevel": "medium",
+          "checkpoint": "Regulations finalized and 500+ businesses receiving transition assistance"
+        },
+        {
+          "id": "phase_3",
+          "order": 3,
+          "title": "Large Employer Mandatory Phase",
+          "windowLabel": "Months 18–24",
+          "summary": "Enforce mandate for companies with 500+ employees",
+          "detail": "Begin mandatory compliance for largest employers representing roughly 40% of affected workforce. Focus enforcement on Fortune 500 companies and major state contractors who have greater capacity to absorb transition costs. Provide 90-day cure periods for good-faith compliance efforts. Expect significant legal challenges and some high-profile company relocations to New Jersey or Connecticut.",
+          "milestones": [
+            "500+ companies achieve compliance",
+            "Enforcement actions against major violators",
+            "First quarterly compliance reports published"
+          ],
+          "dependencies": [
+            "phase_2"
+          ],
+          "actors": [
+            "Department of Labor enforcement",
+            "Attorney General's Office",
+            "Large employers"
+          ],
+          "riskLevel": "high",
+          "checkpoint": "85% compliance rate among companies with 500+ employees"
+        },
+        {
+          "id": "phase_4",
+          "order": 4,
+          "title": "Mid-Size Employer Rollout",
+          "windowLabel": "Months 24–30",
+          "summary": "Extend mandate to companies with 100-499 employees",
+          "detail": "Apply requirements to mid-size companies while providing enhanced technical assistance and flexible implementation timelines. Allow industry-specific accommodations for healthcare, manufacturing, and hospitality sectors with continuous operations. Monitor small business exodus to neighboring states and adjust enforcement priorities based on economic impact data.",
+          "milestones": [
+            "2,000+ mid-size companies in compliance",
+            "Industry-specific guidance issued",
+            "Cross-border business migration study completed"
+          ],
+          "dependencies": [
+            "phase_3"
+          ],
+          "actors": [
+            "Department of Labor",
+            "Industry associations",
+            "Mid-size employers"
+          ],
+          "riskLevel": "medium",
+          "checkpoint": "75% compliance rate among companies with 100-499 employees"
+        },
+        {
+          "id": "phase_5",
+          "order": 5,
+          "title": "Small Business Implementation",
+          "windowLabel": "Months 30–36",
+          "summary": "Full mandate coverage for all companies with 50+ employees",
+          "detail": "Complete rollout to remaining companies with 50-99 employees, representing the most vulnerable segment. Provide maximum flexibility including seasonal exemptions, shared-work arrangements, and extended phase-in periods. Establish hardship exemption process for businesses demonstrating severe economic impact. Small business failures likely to peak during this phase.",
+          "milestones": [
+            "All eligible companies under mandate",
+            "Hardship exemption process operational",
+            "Small business impact mitigation programs launched"
+          ],
+          "dependencies": [
+            "phase_4"
+          ],
+          "actors": [
+            "Department of Labor",
+            "Small Business Administration",
+            "Local chambers of commerce"
+          ],
+          "riskLevel": "high",
+          "checkpoint": "70% compliance rate among companies with 50-99 employees"
+        },
+        {
+          "id": "phase_6",
+          "order": 6,
+          "title": "Optimization & National Advocacy",
+          "windowLabel": "Months 36–48",
+          "summary": "Refine implementation and promote national adoption",
+          "detail": "Conduct comprehensive policy evaluation and optimize regulations based on economic impact data and business feedback. Launch national advocacy campaign highlighting New York's experience to encourage federal legislation or adoption by other states. Address remaining compliance gaps and establish long-term monitoring systems for economic and social outcomes.",
+          "milestones": [
+            "Comprehensive policy evaluation published",
+            "National advocacy campaign launched",
+            "Sustainable compliance monitoring system operational"
+          ],
+          "dependencies": [
+            "phase_5"
+          ],
+          "actors": [
+            "Office of Workplace Innovation",
+            "Governor's Office",
+            "National policy organizations"
+          ],
+          "riskLevel": "low",
+          "checkpoint": "Policy evaluation completed and 3-year outcome data published"
+        }
+      ],
+      "criticalPath": [
+        "phase_1",
+        "phase_3",
+        "phase_5"
+      ],
+      "successMetrics": [
+        "80% overall compliance rate among eligible companies",
+        "Worker productivity maintained within 5% of baseline",
+        "Less than 15% business relocation rate to other states"
+      ]
+    },
+    "roadmapProgress": {
+      "phase_1": [
+        false,
+        false,
+        false
+      ],
+      "phase_2": [
+        false,
+        false,
+        false
+      ],
+      "phase_3": [
+        false,
+        false,
+        false
+      ],
+      "phase_4": [
+        false,
+        false,
+        false
+      ],
+      "phase_5": [
+        false,
+        false,
+        false
+      ],
+      "phase_6": [
+        false,
+        false,
+        false
+      ]
+    }
   },
   {
     "id": "pol_1774713879370_iew164",

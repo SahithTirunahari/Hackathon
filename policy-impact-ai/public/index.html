@@ -1294,15 +1294,182 @@
     }
 
     .rm-layout {
-      display: grid;
-      grid-template-columns: minmax(240px, 300px) 1fr;
-      gap: 18px;
-      align-items: start
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: stretch
     }
 
-    @media(max-width:900px) {
-      .rm-layout {
-        grid-template-columns: 1fr
+    .rm-roadmap-label {
+      font-size: 10px;
+      font-family: var(--mono);
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--pr2);
+      margin-bottom: 12px
+    }
+
+    .rm-rm-track {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      justify-content: flex-start;
+      gap: 0;
+      padding: 16px 14px 18px;
+      border-radius: 14px;
+      background: rgba(0, 0, 0, .2);
+      border: 1px solid rgba(255, 255, 255, .06);
+      position: relative
+    }
+
+    .rm-rm-seg {
+      flex: 1 1 120px;
+      min-width: 100px;
+      max-width: 200px;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center
+    }
+
+    .rm-rm-seg-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      padding: 4px 6px 8px;
+      border: none;
+      border-radius: 12px;
+      background: transparent;
+      cursor: pointer;
+      font: inherit;
+      color: inherit;
+      transition: background .15s
+    }
+
+    .rm-rm-seg-btn:hover {
+      background: rgba(255, 255, 255, .04)
+    }
+
+    .rm-rm-seg-btn.on {
+      background: rgba(124, 110, 240, .1)
+    }
+
+    .rm-rm-node {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      border: 2px solid rgba(255, 255, 255, .12);
+      background: rgba(255, 255, 255, .05);
+      font-family: var(--mono);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--tx2);
+      transition: transform .15s, box-shadow .15s, border-color .15s, background .15s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-bottom: 10px
+    }
+
+    .rm-rm-seg-btn:hover .rm-rm-node {
+      transform: scale(1.05);
+      border-color: rgba(124, 110, 240, .4);
+      color: var(--tx)
+    }
+
+    .rm-rm-seg-btn.on .rm-rm-node {
+      background: linear-gradient(145deg, rgba(124, 110, 240, .35), rgba(6, 182, 212, .2));
+      border-color: rgba(124, 110, 240, .55);
+      color: #fff;
+      box-shadow: 0 6px 24px rgba(124, 110, 240, .25)
+    }
+
+    .rm-rm-seg-btn.rm-node-dim {
+      opacity: .35;
+      filter: grayscale(.4)
+    }
+
+    .rm-rm-seg-btn.rm-node-dim:hover,
+    .rm-rm-seg-btn.rm-node-dim .rm-rm-node {
+      transform: none
+    }
+
+    .rm-rm-seg-btn.risk-low .rm-rm-node {
+      border-color: rgba(52, 211, 153, .45)
+    }
+
+    .rm-rm-seg-btn.risk-medium .rm-rm-node {
+      border-color: rgba(251, 191, 36, .45)
+    }
+
+    .rm-rm-seg-btn.risk-high .rm-rm-node {
+      border-color: rgba(248, 113, 113, .5)
+    }
+
+    .rm-rm-seg-btn.on.risk-low .rm-rm-node {
+      border-color: #34d399
+    }
+
+    .rm-rm-seg-btn.on.risk-medium .rm-rm-node {
+      border-color: #fbbf24
+    }
+
+    .rm-rm-seg-btn.on.risk-high .rm-rm-node {
+      border-color: #f87171
+    }
+
+    .rm-rm-node-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--tx);
+      line-height: 1.35;
+      margin-bottom: 4px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      width: 100%;
+      padding: 0 2px
+    }
+
+    .rm-rm-node-win {
+      font-size: 9px;
+      font-family: var(--mono);
+      color: #67e8f9;
+      padding: 2px 6px;
+      border-radius: 5px;
+      background: rgba(6, 182, 212, .1);
+      white-space: nowrap;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis
+    }
+
+    .rm-rm-bridge {
+      flex: 0 0 24px;
+      min-width: 16px;
+      align-self: flex-start;
+      padding-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, .15);
+      font-size: 18px;
+      font-family: var(--mono);
+      user-select: none
+    }
+
+    @media(max-width:600px) {
+      .rm-rm-bridge {
+        display: none
+      }
+
+      .rm-rm-seg {
+        max-width: none;
+        flex-basis: 45%
       }
     }
 
@@ -1590,6 +1757,32 @@
       font-weight: 600;
       color: var(--tx);
       margin-bottom: 4px
+    }
+
+    .rm-phase-detail-card {
+      border-radius: 14px;
+      padding: 20px;
+      border: 1px solid rgba(124, 110, 240, .14);
+      background: linear-gradient(165deg, rgba(124, 110, 240, .07), rgba(255, 255, 255, .02))
+    }
+
+    .rm-pd-head {
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, .06)
+    }
+
+    .rm-pd-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      align-items: start
+    }
+
+    @media(max-width:800px) {
+      .rm-pd-grid {
+        grid-template-columns: 1fr
+      }
     }
 
     /* ═══ COMPARE VIEW ═══ */
@@ -2114,9 +2307,8 @@
           <div class="rm-head">
             <div>
               <div class="rm-title"> Rollout plan <span class="rm-badge">Interactive</span></div>
-              <p style="font-size:12px;color:var(--tx2);margin-top:6px;max-width:560px;line-height:1.5">How this policy
-                could roll out over time — phases, who’s involved, and checkpoints. Click a phase on the left to read
-                the full picture.</p>
+              <p style="font-size:12px;color:var(--tx2);margin-top:6px;max-width:560px;line-height:1.5">Phased
+                implementation as a roadmap: every phase is visible in order; tap a step to open its details.</p>
             </div>
           </div>
           <div id="roadmap-create-gen">
@@ -2152,7 +2344,7 @@
       <div class="dgrid">
         <div class="dleft">
           <div class="glass scroll-panel" style="padding:20px;margin-bottom:14px" id="d-analysis"></div>
-          <div id="d-roadmap" class="glass scroll-panel hidden" style="padding:20px;margin-bottom:14px"></div>
+          <div id="d-roadmap" class="glass hidden" style="padding:20px;margin-bottom:14px"></div>
         </div>
         <div class="dright">
           <div class="glass scroll-panel" style="padding:18px;margin-bottom:14px" id="d-comments"></div>
@@ -2221,12 +2413,15 @@
       const phases = roadmap.phases; const si = Math.min(rmSel[prefix] || 0, phases.length - 1); rmSel[prefix] = si; const ph = phases[si];
       const cp = new Set(roadmap.criticalPath || []); const critOnly = rmCritOnly[prefix]; const idToIdx = {}; phases.forEach((p, i) => { idToIdx[p.id] = i; });
       const riskB = x => ({ low: 'risk-low', medium: 'risk-medium', high: 'risk-high' }[x] || 'risk-medium');
-      let phaseList = ''; phases.forEach((p, i) => {
+      const trackParts = [];
+      phases.forEach((p, i) => {
         const dim = critOnly && !cp.has(p.id); const on = i === si;
-        const prev = (p.summary || p.detail || '').replace(/\s+/g, ' ').trim();
-        const sum = prev.length > 150 ? prev.slice(0, 147) + '…' : prev;
-        phaseList += `<button type="button" class="rm-phase-card ${riskB(p.riskLevel)} ${dim ? 'rm-node-dim' : ''} ${on ? 'on' : ''}" onclick="rmPickPhase('${mountId}','${prefix}',${i})"><div class="rm-pc-top"><span class="rm-pc-num">${p.order != null ? p.order : i + 1}</span><span class="rm-pc-win">${esc(p.windowLabel || 'Timeline')}</span></div><div class="rm-pc-title">${esc(p.title)}</div>${sum ? `<div class="rm-pc-sum">${esc(sum)}</div>` : ''}</button>`;
+        const num = p.order != null ? p.order : i + 1;
+        const segCls = `rm-rm-seg-btn ${riskB(p.riskLevel)} ${dim ? 'rm-node-dim' : ''} ${on ? 'on' : ''}`;
+        trackParts.push(`<div class="rm-rm-seg"><button type="button" class="${segCls}" onclick="rmPickPhase('${mountId}','${prefix}',${i})"><span class="rm-rm-node">${num}</span><span class="rm-rm-node-title">${esc(p.title)}</span><span class="rm-rm-node-win">${esc(p.windowLabel || 'Timeline')}</span></button></div>`);
+        if (i < phases.length - 1) trackParts.push('<div class="rm-rm-bridge" aria-hidden="true">→</div>');
       });
+      const trackHtml = `<div class="rm-roadmap-label">Phases — read left to right</div><div class="rm-rm-track">${trackParts.join('')}</div>`;
       const prog = getRoadmapProgress(prefix);
       const deps = (ph.dependencies || []).filter(d => idToIdx[d] !== undefined);
       const depHtml = deps.length ? `<div style="margin-top:14px"><span style="font-size:10px;color:var(--tx3);font-family:var(--mono);display:block;margin-bottom:6px">Must complete first</span><div style="display:flex;flex-wrap:wrap;gap:6px">${deps.map(d => `<button type="button" class="rm-dep-btn" onclick="rmJumpDep('${mountId}','${prefix}',${JSON.stringify(d)})">→ ${esc(phases[idToIdx[d]].title)}</button>`).join('')}</div></div>` : '';
@@ -2245,30 +2440,32 @@
       el.innerHTML = `<div class="rm-overview"><span style="display:block;font-size:10px;font-family:var(--mono);letter-spacing:.1em;color:#67e8f9;margin-bottom:6px">BIG PICTURE</span>${esc(roadmap.overview || '')}${roadmap.totalHorizonLabel ? `<span style="display:block;margin-top:10px;font-size:12px;font-family:var(--mono);color:#67e8f9">Estimated horizon: ${esc(roadmap.totalHorizonLabel)}</span>` : ''}</div>
   <div class="rm-tools"><label class="rm-toggle"><input type="checkbox" ${critOnly ? 'checked' : ''} onchange="rmToggleCrit('${mountId}','${prefix}')"> Show critical path only</label></div>
   <div class="rm-layout">
-    <div>
-      <p class="lb" style="margin-bottom:10px">All phases</p>
-      <div class="rm-phase-list">${phaseList}</div>
-    </div>
+    ${trackHtml}
     <div class="rm-detail-stack">
-      <div class="rm-card rm-card-hero">
-        <div class="rm-hero-title">${esc(ph.title)}</div>
-        <div class="rm-hero-meta"><span class="rm-pc-win">${esc(ph.windowLabel || '')}</span><span class="rm-tag" style="background:rgba(255,255,255,.06);color:var(--tx2)">Implementation risk: ${rk}</span></div>
-        <p class="rm-hero-sum">${esc(ph.summary || '')}</p>
-      </div>
-      <div class="rm-card">
-        <h5>What happens in this phase</h5>
-        <p class="rm-detail">${esc(ph.detail || ph.summary || '')}</p>
-        ${depHtml}
-        <div style="margin-top:16px"><h5 style="margin-bottom:8px">Who is involved</h5><div class="rm-tags">${actors || '<span style="font-size:12px;color:var(--tx3)">—</span>'}</div></div>
-        <div style="margin-top:16px;padding:14px;border-radius:10px;background:rgba(124,110,240,.06);border:1px solid rgba(124,110,240,.12)">
-          <span class="rm-check-h"> Success looks like</span>
-          <p class="rm-detail" style="margin:0">${esc(ph.checkpoint || '')}</p>
+      <div class="rm-phase-detail-card">
+        <div class="rm-pd-head">
+          <div class="rm-hero-title">${esc(ph.title)}</div>
+          <div class="rm-hero-meta"><span class="rm-pc-win">${esc(ph.windowLabel || '')}</span><span class="rm-tag" style="background:rgba(255,255,255,.06);color:var(--tx2)">Implementation risk: ${rk}</span></div>
+          <p class="rm-hero-sum" style="margin:0">${esc(ph.summary || '')}</p>
         </div>
-      </div>
-      <div class="rm-card">
-        <h5>${mh}</h5>
-        ${msNote}
-        <ul class="rm-mile">${miles || '<li style="cursor:default;opacity:.6">No milestones listed.</li>'}</ul>
+        <div class="rm-pd-grid">
+          <div>
+            <h5>What happens in this phase</h5>
+            <p class="rm-detail">${esc(ph.detail || ph.summary || '')}</p>
+            ${depHtml}
+            <div style="margin-top:16px;padding:14px;border-radius:10px;background:rgba(124,110,240,.08);border:1px solid rgba(124,110,240,.14)">
+              <span class="rm-check-h">Success looks like</span>
+              <p class="rm-detail" style="margin:0">${esc(ph.checkpoint || '')}</p>
+            </div>
+          </div>
+          <div>
+            <h5>Who is involved</h5>
+            <div class="rm-tags" style="margin-bottom:18px">${actors || '<span style="font-size:12px;color:var(--tx3)">—</span>'}</div>
+            <h5>${mh}</h5>
+            ${msNote}
+            <ul class="rm-mile">${miles || '<li style="cursor:default;opacity:.6">No milestones listed.</li>'}</ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -2299,7 +2496,7 @@
           rmSel.d = 0;
           const box = document.getElementById('d-roadmap');
           if (box) {
-            box.innerHTML = `<p class="create-step-label" style="margin-bottom:10px">Implementation roadmap</p><div class="rm-head" style="margin-bottom:0"><div class="rm-title"> Rollout plan <span class="rm-badge">Interactive</span></div></div><p style="font-size:12px;color:var(--tx2);line-height:1.5;margin:10px 0 14px">Read phases in order on the left, then details on the right.</p><div id="d-roadmap-inner"></div>`;
+            box.innerHTML = `<p class="create-step-label" style="margin-bottom:10px">Implementation roadmap</p><div class="rm-head" style="margin-bottom:0"><div class="rm-title"> Rollout plan <span class="rm-badge">Interactive</span></div></div><p style="font-size:12px;color:var(--tx2);line-height:1.5;margin:10px 0 14px">Phases run as a roadmap across the top; open any step for full implementation detail.</p><div id="d-roadmap-inner"></div>`;
             renderRoadmapMount('d-roadmap-inner', 'd');
           }
         }
@@ -2324,7 +2521,7 @@
       if (!p || !p.analysis) { box.classList.add('hidden'); box.innerHTML = ''; return; }
       box.classList.remove('hidden');
       if (p.roadmap) {
-        box.innerHTML = `<p class="create-step-label" style="margin-bottom:10px">Implementation roadmap</p><div class="rm-head" style="margin-bottom:0"><div class="rm-title"> Rollout plan <span class="rm-badge">Interactive</span></div></div><p style="font-size:12px;color:var(--tx2);line-height:1.5;margin:10px 0 14px">Read phases in order on the left, then the full story for the selected phase on the right.</p><div id="d-roadmap-inner"></div>`;
+        box.innerHTML = `<p class="create-step-label" style="margin-bottom:10px">Implementation roadmap</p><div class="rm-head" style="margin-bottom:0"><div class="rm-title"> Rollout plan <span class="rm-badge">Interactive</span></div></div><p style="font-size:12px;color:var(--tx2);line-height:1.5;margin:10px 0 14px">Phases run as a roadmap across the top; open any step for the full story.</p><div id="d-roadmap-inner"></div>`;
         renderRoadmapMount('d-roadmap-inner', 'd'); return;
       }
       if (isPublisher) {
@@ -2421,10 +2618,17 @@
       const createTab = document.getElementById('n-create');
       const cmpTab = document.getElementById('n-compare');
       if (isPublisher) {
-        if (loginTab) loginTab.textContent = 'Publisher';
+        if (loginTab) {
+          loginTab.classList.add('hidden');
+          loginTab.textContent = 'Publisher Login';
+        }
         if (createTab) createTab.classList.remove('hidden');
         if (cmpTab) cmpTab.classList.remove('hidden');
       } else {
+        if (loginTab) {
+          loginTab.classList.remove('hidden');
+          loginTab.textContent = 'Publisher Login';
+        }
         if (createTab) createTab.classList.add('hidden');
         if (cmpTab) cmpTab.classList.add('hidden');
       }
